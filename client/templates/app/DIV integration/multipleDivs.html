@@ -1,0 +1,37 @@
+<template name='multipleDivs'>
+
+
+<div class="ui message">
+  <div class="header">
+    Key things for this integration using DIV tags
+  </div>
+  <ul class="list">
+    <li>The Div tags connect to the local require.js which connects to the Sense Server</li>
+    <li>Ensure you copy our fonts and css to your webserver</li>
+    <li>Ensure you copy our require.js from C:\Program Files\Qlik\Sense\Client\assets\external\requirejs</li>
+    <li>see this <a href="https://onedrive.live.com/redir?page=view&resid=805405928A75727!1330&authkey=!ANwk5S8KPC__-dw&wd=target%28EMBEDDED%20ANALYTICS.one%7CBF2972BE-48A0-46FA-AF7A-F6D2F80CF06B%2FWeb%20integration%3A%20embed%20Sense%20charts%20inside%20your%20own%20website%7CE0B2C72E-4F90-4A3C-BC4F-8FC579D9427D%2F%29
+onenote:https://d.docs.live.net/0805405928a75727/OneNote/Publications/QlikSense/EMBEDDED%20ANALYTICS.one#Web%20integration%20embed%20Sense%20charts%20inside%20your%20own%20website&section-id={BF2972BE-48A0-46FA-AF7A-F6D2F80CF06B}&page-id={E0B2C72E-4F90-4A3C-BC4F-8FC579D9427D}&end"> link</a>  for more info on web integration</li>
+   </ul>
+</div>
+
+	<div class="ui two column stackable grid">
+	<div id="CurrentSelections" class="sixteen wide column" style="height:35px;"> </div>
+		<div class="four wide column">
+			<div  id="QV01" class="ui  Qdiv"></div>
+		</div>
+		<div class="twelve wide column">
+			<div id="QV02" class="ui  Qdiv"></div>
+		</div>
+
+		<div class="column row">
+			<div class="four wide column">
+			<div id="QV03" class="ui  Qdiv"></div>
+			</div>
+			<div class="twelve wide column">
+				<div id="QV04" class="ui  Qdiv"></div>
+			</div>
+			
+		</div>
+	</div>
+
+</template>

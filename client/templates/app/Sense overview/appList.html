@@ -1,0 +1,24 @@
+<template name="appList">
+
+
+<div class="ui message">
+        <div class="header">
+        The apps currently available in Sense
+        </div>
+        <ul class="list">                            
+            <li>Click to open the app</li>  
+            <li>This page makes use of the capabilities API; <a href="http://help.qlik.com/en-US/sense-developer/2.2/Subsystems/APIs/Content/MashupAPI/qlik-global-interface.htm"> global function </a> to get all apps running on Sense. </li>
+            <li>Example code: qlik.getAppList(function(apps){...do something with the apps you now have in a JSON object})</li>                             
+        </ul>
+    </div>
+    
+    <h3 class="ui dividing header">The dasbhoards (QVF files) on the Sense server</h3>
+
+    {{> reactiveTable collection=appList settings=settings}}
+
+<!-- 
+{{#each app in appList}} qDocId
+    {{appURL app.qDocName}}
+{{/each}} -->
+
+ </template>

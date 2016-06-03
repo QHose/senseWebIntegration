@@ -1,0 +1,12 @@
+.qChart {
+    /*line-height:30px;
+    background-color:#eeeeee;*/
+    height:400px;
+    width:100%;
+    /*float:left;
+    padding:5px; */
+}
+
+iframe {    
+ border:0 none;
+}

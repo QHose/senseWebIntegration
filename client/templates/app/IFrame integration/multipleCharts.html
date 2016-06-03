@@ -1,0 +1,45 @@
+<template name="multipleCharts">
+    
+  <div class="ui message">
+        <div class="header">
+            Demo which shows a stackable Grid using separate IFrames connecting to sense-demo.qlik.com
+        </div>
+        <ul class="list">
+            <li>A single line of code shows each chart individually</li>
+            <li>Each IFrame is connected to all the others because they share a user session</li>
+        </ul>
+    </div>
+
+  <div >
+    <button class="ui secondary button qToggleInteraction">
+    enable interaction
+    </button>
+  </div>
+  <div class="ui two column stackable grid">
+
+
+    <div class="column">
+      <div class="ui segment">
+        <iframe class="qChart" src='https://sense-demo.qlik.com/single?appid=075506ed-73ee-4f1a-b9a0-1955df0bb3e0&obj=pDKRhr&opt=nointeraction&select=clearall' frameborder='0'></iframe>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment ">
+        <iframe class="qChart" src='https://sense-demo.qlik.com/single?appid=075506ed-73ee-4f1a-b9a0-1955df0bb3e0&obj=BHTXyNM&opt=nointeraction&select=clearall' frameborder='0'></iframe>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment ">
+        <iframe class="qChart" src='https://sense-demo.qlik.com/single?appid=075506ed-73ee-4f1a-b9a0-1955df0bb3e0&obj=tmaqpf&opt=nointeraction&select=clearall' frameborder='0'></iframe>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment ">
+        <iframe class="qChart" src='https://sense-demo.qlik.com/single?appid=075506ed-73ee-4f1a-b9a0-1955df0bb3e0&obj=JEBdZz&opt=nointeraction&select=clearall' frameborder='0'></iframe>
+      </div>
+    </div>
+  </div>
+
+
+
+</template>
