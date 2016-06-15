@@ -19,20 +19,21 @@ Template.multipleDivs.events({
 Template.multipleDivs.onCreated(function() {
 	var currentAppId = Session.get('currentAppId');
     if(!currentAppId){
-    	currentAppId = 'debd03a3-a2a9-41cc-901c-d21b44279783' //set a default value for demo purposes
+    	currentAppId = '0d936428-7969-4b0c-a1e7-223ab22d39ff' //set a default value for demo purposes to 
     	Session.set('currentAppId', currentAppId);
     } 
 
-        myQlik(function(qlik, config) {
-            var app = qlik.openApp(currentAppId, config);
+    myQlik(function(qlik, config) {
+        var app1 = qlik.openApp(currentAppId, config);
 
             // match each DIV in the html to the Qlik Sense object GUID'
-            app.getObject('CurrentSelections', 'CurrentSelections');
-            app.getObject('QV04', 'grmSd');
-            app.getObject('QV02', 'GdjmWq');
-            app.getObject('QV01', 'JfpX');
-            app.getObject('QV03', 'Qjndk');
-
-        })
+            app1.getObject('CurrentSelections', 'CurrentSelections');
+           //get objects -- inserted here --
+           // app1.getObject('QV03','mhkbTp');
+           app1.getObject('QV01','ENfmjW');
+           app1.getObject('QV02','XGNFc');
+           app1.getObject('QV04','FPYwSz');
+           app1.getObject('QV03','pygyduy');
+       })
 
 });
