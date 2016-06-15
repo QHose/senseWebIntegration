@@ -1,5 +1,5 @@
  qConfig = {
-        host: window.location.hostname,
+        host: 92.111.9.190,
         prefix: "/",
         port: 80,
         isSecure: false, //window.location.protocol === "https:"
