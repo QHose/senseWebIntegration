@@ -1,0 +1,18 @@
+{
+    "public": {
+        "virtualProxyClientUsage": "meteor",
+        "host": "2008ENT",
+        "port": 80,
+        "useSSL": false,
+        "passphrase": null,
+        "authentication": "header",
+        "virtualProxy": "hdr",
+        "headerKey": "hdr-usr",
+        "UDC": "2008ENT",
+        "headerValue": "2008ENT\\Qlik",
+        "isSecure": false,
+        "engineHeaders": "UserDirectory=2008ENT;UserId=Qlik",
+        "enginePort": 4747,
+        "proxyPort": 4243
+    }
+}

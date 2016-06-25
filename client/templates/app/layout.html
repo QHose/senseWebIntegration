@@ -29,22 +29,11 @@
     </head>
     {{> nav}}
     <div class="ui layout container">
-        <!-- <div class="ui main text container"> -->
-        {{> sAlert}} 
-        <!-- {{#unless currentUser}}
-        <div class="ui warning message">
-          <i class="close icon"></i>
-          <div class="header">
-            Login
-        </div>
-        Je moet eerst (rechtsboven in dit scherm) inloggen om verder te gaan
-    </div> -->
-    {{> homeAbout}}
-    <!-- {{> register}} -->
-    <!-- {{else}} -->
+            {{> sAlert}} 
+        
     {{> yield}}
-    <!-- {{/unless}} -->
+    
     </div>
     
-    <!-- {{>footer}} -->
+    
 </template>
