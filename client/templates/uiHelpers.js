@@ -12,5 +12,5 @@ Template.registerHelper('host', function() {
 
 
 Template.registerHelper('hubURL', function() {
-    return (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix+"/hub"; 
+    return (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix+"hub"; 
 });
