@@ -1,8 +1,8 @@
  qConfig = {
-        host: '2008ENT',
-        prefix: "/meteor/",
-        port: 80,
-        isSecure: false, //window.location.protocol === "https:"
+        host: Meteor.settings.public.host,
+        prefix: '/'+Meteor.settings.public.virtualProxyClientUsage+'/',
+        port: Meteor.settings.public.port,
+        isSecure: Meteor.settings.public.isSecure,
     };
 
 
@@ -15,6 +15,7 @@ myQlik = function myQlik(callback) {
     require(["js/qlik"], function(qlik) {
         qlik.setOnError(function(error) {
             sAlert.error(error.message);
+            console.log(error);
         });
 
 

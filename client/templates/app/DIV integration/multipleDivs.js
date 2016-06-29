@@ -17,23 +17,24 @@ Template.multipleDivs.events({
 });
 
 Template.multipleDivs.onCreated(function() {
-	var currentAppId = Session.get('currentAppId');
-    if(!currentAppId){
-    	currentAppId = '0d936428-7969-4b0c-a1e7-223ab22d39ff' //set a default value for demo purposes to 
-    	Session.set('currentAppId', currentAppId);
-    } 
+    var currentAppId = Session.get('currentAppId');
+    if (!currentAppId) {
+        currentAppId = 'bd195c18-e1af-4e52-997f-774cc58eeb59' //set a default value for demo purposes
+        console.log('We try to make a mashup for this app guid: '+currentAppId); 
+        Session.set('currentAppId', currentAppId);
+    }
 
     myQlik(function(qlik, config) {
-        var app1 = qlik.openApp(currentAppId, config);
+        var app = qlik.openApp(currentAppId, config);
 
-            // match each DIV in the html to the Qlik Sense object GUID'
-            app1.getObject('CurrentSelections', 'CurrentSelections');
-           //get objects -- inserted here --
-           // app1.getObject('QV03','mhkbTp');
-           app1.getObject('QV01','ENfmjW');
-           app1.getObject('QV02','XGNFc');
-           app1.getObject('QV04','FPYwSz');
-           app1.getObject('QV03','pygyduy');
-       })
+        // match each DIV in the html to the Qlik Sense object GUID'
+        app.getObject('CurrentSelections', 'CurrentSelections');
+        app.getObject('QV03', 'grmSd');
+        app.getObject('QV05', 'wJPVL');
+        app.getObject('QV01', 'WmmqHK');
+        app.getObject('QV06', 'vEAJLgj');
+        app.getObject('QV04', 'mxJdtR');
+        app.getObject('QV02', 'JxjhqT');
+    })
 
 });
