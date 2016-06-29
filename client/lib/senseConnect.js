@@ -7,24 +7,22 @@
 
 
 myQlik = function myQlik(callback) {  
-    require.config({
-        baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
-        // baseUrl: (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
-    });
+    // require.config({
+    //     baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
+    //     // baseUrl: (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
+    // });
 
-    require(["js/qlik"], function(qlik) {
-        qlik.setOnError(function(error) {
-            sAlert.error(error.message);
-            console.log(error);
-        });
+    // require(["js/qlik"], function(qlik) {
+    //     qlik.setOnError(function(error) {
+    //         sAlert.error(error.message);
+    //         console.log(error);
+    //     });
 
 
-        callback(qlik, qConfig);
+    //     callback(qlik, qConfig);
         
 
-    });
-
-
+    // });
 };
 
 

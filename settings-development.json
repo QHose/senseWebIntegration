@@ -1,7 +1,7 @@
 {
     "public": {
         "virtualProxyClientUsage": "meteor",
-        "host": "http://92-111-9-190.static.chello.nl",
+        "host": "92-111-9-190.static.chello.nl",
         "port": 80,
         "useSSL": false,
         "passphrase": null,
