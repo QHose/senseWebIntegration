@@ -23,7 +23,7 @@ Template.multipleDivs.onRendered(function() {
     console.log('multipleDivs onRendered');
     console.log('the settings to connect to Sense are: ', config)
     require.config({
-        baseUrl: (config.isSecure ? "https://" : "http://") + config.host + (config.port ? ":" + config.port : "") + config.prefix + "resources"
+        baseUrl: "http://" + config.host + (config.port ? ":" + config.port : "") + config.prefix + "resources"
     });
 
     require(["js/qlik"], function(qlik) {
