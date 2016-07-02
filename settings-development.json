@@ -1,7 +1,7 @@
 {
     "public": {
         "virtualProxyClientUsage": "meteor",
-        "host": "92-111-9-190.static.chello.nl",
+        "host": "2008ENT",
         "port": 80,
         "useSSL": false,
         "passphrase": null,
@@ -13,6 +13,7 @@
         "isSecure": false,
         "engineHeaders": "UserDirectory=2008ENT;UserId=Qlik",
         "enginePort": 4747,
-        "proxyPort": 4243
+        "proxyPort": 4243,
+        "multipleDivAppGuid": "ae174822-d7d0-4281-9010-e0613afd3387"
     }
 }

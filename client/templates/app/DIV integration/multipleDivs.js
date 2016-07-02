@@ -31,35 +31,14 @@ Template.multipleDivs.onRendered(function() {
             çonsole.error(error);
             alert(error.message);
         });
-
-        //callbacks -- inserted here --
-        //open apps -- inserted here --
-        var app = qlik.openApp('bd195c18-e1af-4e52-997f-774cc58eeb59', config);
-
-        //get objects -- inserted here --
+        
+        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, config);
+       
         app.getObject('QV03', 'grmSd');
         app.getObject('QV05', 'wJPVL');
         app.getObject('QV01', 'WmmqHK');
         app.getObject('QV06', 'vEAJLgj');
         app.getObject('QV04', 'mxJdtR');
         app.getObject('QV02', 'JxjhqT');
-        //create cubes and lists -- inserted here --
-
     });
-
-
-    // myQlik(function(qlik, config) {
-    //     var app = qlik.openApp(currentAppId, config);
-
-    //     // match each DIV in the html to the Qlik Sense object GUID'
-    //     app.getObject('CurrentSelections', 'CurrentSelections');
-    //     app.getObject('QV03', 'grmSd');
-    //     app.getObject('QV05', 'wJPVL');
-    //     app.getObject('QV01', 'WmmqHK');
-    //     app.getObject('QV06', 'vEAJLgj');
-    //     app.getObject('QV04', 'mxJdtR');
-    //     app.getObject('QV02', 'JxjhqT');
-    // })
-
-
 });

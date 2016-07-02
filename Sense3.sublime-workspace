@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"config"
+			],
+			[
 				"If",
 				"IFrame"
 			],
@@ -52,10 +56,6 @@
 				"Session.set	Meteor: Session.set(key, value)"
 			],
 			[
-				"con",
-				"console"
-			],
-			[
 				"mul",
 				"multipleDivs"
 			],
@@ -87,7 +87,31 @@
 			"file": "client/templates/app/IFrame integration/hub.html",
 			"settings":
 			{
-				"buffer_size": 915,
+				"buffer_size": 1265,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/app/DIV integration/multipleDivs.js",
+			"settings":
+			{
+				"buffer_size": 2129,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/app/Sense overview/appList.js",
+			"settings":
+			{
+				"buffer_size": 1863,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/app/DIV integration/multipleDivs.html",
+			"settings":
+			{
+				"buffer_size": 2041,
 				"line_ending": "Windows"
 			}
 		},
@@ -108,10 +132,18 @@
 			}
 		},
 		{
+			"file": "client/templates/app/IFrame integration/multipleCharts.html",
+			"settings":
+			{
+				"buffer_size": 1689,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "client/lib/senseConnect.js",
 			"settings":
 			{
-				"buffer_size": 1422,
+				"buffer_size": 1558,
 				"line_ending": "Windows"
 			}
 		},
@@ -119,7 +151,7 @@
 			"file": "settings-development.json",
 			"settings":
 			{
-				"buffer_size": 479,
+				"buffer_size": 501,
 				"line_ending": "Windows"
 			}
 		}
@@ -172,8 +204,10 @@
 	[
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/lib",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration"
 	],
 	"file_history":
@@ -309,13 +343,15 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
 		"height": 102.0,
 		"where_history":
 		[
+			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client",
+			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client",
 			"C:\\Users\\Qlik\\Meteor projects\\Sense3",
 			"C:\\Users\\Qlik\\Meteor projects\\firstmeteor",
@@ -331,6 +367,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"qConfig",
+			"currentAppId",
 			"window.location",
 			"qConfig",
 			"qlik",
@@ -407,7 +445,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -416,72 +454,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 915,
+						"buffer_size": 1265,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								667,
-								667
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/templates/uiHelpers.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								576,
-								576
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/templates/app/nav.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2489,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1449,
-								1449
+								1018,
+								1018
 							]
 						],
 						"settings":
@@ -494,24 +475,54 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "client/lib/senseConnect.js",
+					"buffer": 1,
+					"file": "client/templates/app/DIV integration/multipleDivs.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1422,
+						"buffer_size": 2129,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								243,
-								243
+								841,
+								841
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/templates/app/Sense overview/appList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -524,24 +535,172 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "settings-development.json",
+					"buffer": 3,
+					"file": "client/templates/app/DIV integration/multipleDivs.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 479,
+						"buffer_size": 2041,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								83,
-								83
+								1374,
+								1374
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/templates/uiHelpers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								221,
+								21
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/templates/app/nav.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2489,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								752,
+								752
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/templates/app/IFrame integration/multipleCharts.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1689,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/lib/senseConnect.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								229,
+								1
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "settings-development.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 501,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								80
 							]
 						],
 						"settings":
@@ -562,7 +721,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -599,7 +758,7 @@
 	"project": "Sense3.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
