@@ -5,19 +5,20 @@
                 <img class="icon" src="images/webIntegration.png">
                 <div class="content">
                     <div class="header">
-                        <h4>IFrame Integration: Hub</h4>
+                        <h4>IFrame Integration: 1 chart in Iframe</h4>
                     </div>
                     <ul>
                         <li>Demo which shows a that you can integrate 1 Sense chart in your page using an IFrame </li>
                         <li>With an HTML IFrame you can show a website inside another website</li>
-                        <li>In the example below we included help.qlik.com</li>
+                        <li>In the example below we included this URL: {{chartIframeURL}} </li>
+                        <li>Look at the url, via parameters you can include or remove selections and disable interactivity, and include a selection bar</li>
                     </ul>
                 </div>
             </div>
         </div>
         
         <div class="ui segment">
-            <iframe src="https://sense-demo.qlik.com/single?appid=075506ed-73ee-4f1a-b9a0-1955df0bb3e0&obj=pDKRhr&opt=nointeraction&select=clearall" width="100%" height="900"></iframe>
+        <iframe src="{{chartIframeURL}}" width="100%" height="600" ></iframe>
         </div>
     </div>
 </template>

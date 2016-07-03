@@ -28,17 +28,21 @@ Template.multipleDivs.onRendered(function() {
 
     require(["js/qlik"], function(qlik) {
         qlik.setOnError(function(error) {
-            çonsole.error(error);
+            console.error(error);
             alert(error.message);
         });
-        
+
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, config);
-       
-        app.getObject('QV03', 'grmSd');
-        app.getObject('QV05', 'wJPVL');
-        app.getObject('QV01', 'WmmqHK');
-        app.getObject('QV06', 'vEAJLgj');
-        app.getObject('QV04', 'mxJdtR');
-        app.getObject('QV02', 'JxjhqT');
+    app.getObject('QV05','PsxJJJ');
+    app.getObject('QV01','NPhDEp');
+    app.getObject('QV03','HPGeL');
+    
+    app.getObject('QV06','71a2a9f1-17d7-4414-84bc-ea3df40d57fe');
+    
+    
+    
+    app.getObject('QV04','vSzNBn');
+    app.getObject('QV02','dvrJHQj');
+    
     });
 });

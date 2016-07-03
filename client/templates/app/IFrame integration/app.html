@@ -1,21 +1,19 @@
 <template name='app'>
-
-
-	<div class="ui message">
-		<div class="header">
-			This example shows how to integrate 1 app in your website
-		</div>
-		<ul class="list">                            
-		<li>This page includes an Iframe object which points to the app on the Sense server</li>                               
-		<li>'iframe src={{appURL}} width="100%" height="900" iframe' </li>
-		
-		</ul>
-	</div>
-
-
-
-	<iframe src={{appURL}} width="100%" height="900" ></iframe>
-
-
-
+    <div class="ui segment">
+        <div class="ui icon message">
+            <img class="icon" src="/images/webIntegration.png">
+            <div class="content">
+                <div class="header">
+                    <h4>IFrame Integration: App</h4>
+                </div>
+                <ul>
+                    <li>Demo which shows a that you can integrate 1 Sense app in your page using an IFrame </li>
+                    <li>With an HTML IFrame you can show a website inside another website</li>
+                    <li>This page includes an Iframe object which points to the app on the Sense server</li>
+                    <li>In the example below we included: {{appURL}} </li>                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <iframe src={{appURL}} width="100%" height="900"></iframe>
 </template>
