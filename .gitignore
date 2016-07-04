@@ -48,3 +48,4 @@ Temporary Items
 settings-development.json
 settings-production.json
 settings-development.json
+*.sublime-workspace

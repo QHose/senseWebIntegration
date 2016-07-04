@@ -7,7 +7,7 @@ Template.app.helpers({
             appGUID = Meteor.settings.public.multipleDivAppGuid
         }
 
-        url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "sense/app/" + appGUID;
+        url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "sense/app/" + appGUID+'/sheet/puEpZK/state/analysis';
 
         console.log('the generated IFrame URL is: ' + url);
         return url;
