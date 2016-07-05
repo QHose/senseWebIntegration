@@ -84,13 +84,13 @@
 	"buffers":
 	[
 		{
-			"contents": "<template name='multipleDivs'>\n    <div class=\"ui segment\">\n        <div class=\"ui icon message\">\n            <img class=\"icon\" src=\"/images/webIntegration.png\">\n            <div class=\"content\">\n                <div class=\"header\">\n                    <h4>Div tag Integration</h4>\n                </div>\n                <ul>\n                    <li>These charts are created using the <a href=\"http://{{host}}/dev-hub/\"> the Sense dev-hub</a> </li>\n                    <li>You just have to copy the generated code in your website, or use the Visual Studio Plugin</li>\n                    <li>The Div tags connect to the local require.js which connects to the Sense Server</li>\n                    <li>Ensure you copy our fonts and css to your webserver</li>\n                    <li>Ensure you copy our require.js from C:\\Program Files\\Qlik\\Sense\\Client\\assets\\external\\requirejs</li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <h3 class=\"ui center aligned header\">Sense charts in a Grid</h3>\n    <div class=\"ui two column doubling grid\">\n        <div class=\"column\">\n            <div class=\"ui segment\">\n                <div id=\"QV01\" class=\"ui  Qdiv\"></div>\n            </div>\n        </div>\n        <div class=\"column\">\n            <div class=\"ui segment\">\n                <div id=\"QV02\" class=\"ui  Qdiv\"></div>\n            </div>\n        </div>\n        <div class=\"column\">\n            <div class=\"ui segment\">\n                <div id=\"QV03\" class=\"ui  Qdiv\"></div>\n            </div>\n        </div>\n        <div class=\"column\">\n            <div class=\"ui segment\">\n                <div id=\"QV04\" class=\"ui  Qdiv\"></div>\n            </div>\n        </div>\n    </div>\n</template>\n\n\n",
-			"file": "client/templates/app/DIV integration/multipleDivs.html",
-			"file_size": 1751,
-			"file_write_time": 131120505939963895,
+			"contents": "var config = {\n    host: Meteor.settings.public.host,\n    prefix: '/' + Meteor.settings.public.virtualProxyClientUsage + '/',\n    port: Meteor.settings.public.port,\n    isSecure: Meteor.settings.public.isSecure,\n};\n\n\nTemplate.multipleDivs.events({\n    'click': function() {\n        // ...\n    }\n});\n\nTemplate.multipleDivs.onRendered(function() {\n    // var currentAppId = Session.get('currentAppId');\n    // if (!currentAppId) {\n    //     currentAppId = 'bd195c18-e1af-4e52-997f-774cc58eeb59' //set a default value for demo purposes\n    //     console.log('We try to make a mashup for this app guid: ' + currentAppId);\n    //     Session.set('currentAppId', currentAppId);\n    // }\n\n    console.log('multipleDivs onRendered');\n    console.log('the settings to connect to Sense are: ', config)\n    require.config({\n        baseUrl: \"http://\" + config.host + (config.port ? \":\" + config.port : \"\") + config.prefix + \"resources\"\n    });\n\n    require([\"js/qlik\"], function(qlik) {\n        qlik.setOnError(function(error) {\n            console.error(error);\n            alert(error.message);\n        });\n\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, config);\n    app.getObject('QV05','PsxJJJ');\n    app.getObject('QV01','NPhDEp');\n    app.getObject('QV03','HPGeL');\n    \n    app.getObject('QV06','71a2a9f1-17d7-4414-84bc-ea3df40d57fe');\n    \n    \n    \n    app.getObject('QV04','vSzNBn');\n    app.getObject('QV02','dvrJHQj');\n    \n    });\n});\n",
+			"file": "client/templates/app/DIV integration/multipleDivs.js",
+			"file_size": 1515,
+			"file_write_time": 131120274289691677,
 			"settings":
 			{
-				"buffer_size": 1711,
+				"buffer_size": 1467,
 				"line_ending": "Windows"
 			}
 		},
@@ -131,14 +131,6 @@
 			"settings":
 			{
 				"buffer_size": 576,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/DIV integration/multipleDivs.js",
-			"settings":
-			{
-				"buffer_size": 1467,
 				"line_ending": "Windows"
 			}
 		},
@@ -207,8 +199,6 @@
 	[
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/lib",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration",
@@ -216,13 +206,15 @@
 	],
 	"file_history":
 	[
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/exampleShop.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/exampleShop.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/nav.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/hub.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/app.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/lib/senseConnect.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/multipleCharts.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/nav.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/Sense overview/appList.js",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/uiHelpers.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/hub.js",
@@ -341,9 +333,7 @@
 		"/C/Users/Qlik/fashionTrade/client/templates/home/contact.html",
 		"/C/Users/Qlik/AppData/Local/Temp/Temp1_meteorjs-web-application.zip/1-exercise-files/rocket-shop-complete/lib/router.js",
 		"/C/Users/Qlik/fashionTrade/client/templates/app/404.html",
-		"/C/Users/Qlik/fashionTrade/client/templates/app/loading.html",
-		"/C/Users/Qlik/fashionTrade/client/templates/app/loading.js",
-		"/C/Users/Qlik/fashionTrade/client/stylesheets/app.css"
+		"/C/Users/Qlik/fashionTrade/client/templates/app/loading.html"
 	],
 	"find":
 	{
@@ -451,37 +441,37 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/templates/app/DIV integration/multipleDivs.html",
+					"file": "client/templates/app/DIV integration/multipleDivs.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1711,
+						"buffer_size": 1467,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1711,
-								1711
+								1467,
+								1467
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 175.0,
+						"translation.y": 486.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -541,7 +531,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -564,13 +554,14 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -592,13 +583,15 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -628,41 +621,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "client/templates/app/DIV integration/multipleDivs.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1467,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1033,
-								1033
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "settings-development.json",
 					"semi_transient": false,
 					"settings":
@@ -674,8 +637,8 @@
 						"selection":
 						[
 							[
-								481,
-								499
+								540,
+								480
 							]
 						],
 						"settings":
@@ -688,11 +651,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "client/stylesheets/client.css",
 					"semi_transient": false,
 					"settings":
@@ -717,7 +680,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -776,12 +739,16 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 750.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"C:\\Users\\MBJ\\Documents\\GitHub\\QRSMeteor\\qrs.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 570.0
 	},
 	"select_symbol":
 	{
@@ -800,7 +767,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 242.0,
+	"side_bar_width": 389.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
