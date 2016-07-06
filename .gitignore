@@ -1,3 +1,10 @@
+#Mr Developer
+settings-development.json
+settings-production.json
+startup.bat
+*.sublime*
+node_modules/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
