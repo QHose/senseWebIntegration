@@ -1,8 +1,8 @@
 #Mr Developer
 settings-development.json
 settings-production.json
-startup.bat
-*.sublime*
+meteor startup.bat
+*.sublime-workspace
 node_modules/
 
 # Windows image file caches
