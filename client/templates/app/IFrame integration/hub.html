@@ -1,5 +1,5 @@
 <template name="hub">
-<div class="container">
+    <div class="container">
         <div class="ui segment">
             <div class="ui icon message">
                 <img class="icon" src="/images/webIntegration.png">
@@ -8,21 +8,17 @@
                         <h4>IFrame Integration: Hub</h4>
                     </div>
                     <ul>
-                        <li>Demo which shows a that you can integrate 1 Sense chart in your page using an IFrame </li>
-                        <li>With an HTML IFrame you can show a website inside another website</li>
-                        <li>This is the most simple and loosely coupled integration. You will use our client (e.g. the buttons available and the looks). </li>                        
+                        <li>This demo shows a that you can integrate the Qlik Sense Hub using an IFrame </li>
+                        <li>With an HTML IFrame you can show a website inside another website.</li>
+                        <li>This is the most simple and loosely coupled integration.  You will use our Qlik Sense client (the Hub) to  display and modify content like apps and sheets</li>
                         <li>In the example below we included: {{hubURL}} </li>
-                        <li>Note that using this generic link, the content is automatically correct for the correct user. (because we have sent a ticket to Qlik Sense with all the information about the user (userId, group membership). Based on this we have 1 security rule: user.group = stream.name that ensures a flexible authorization concept</li>
+                        <li>Note that using this generic link, the hub automatically shows only authorized data for the logged in user. (This is possible because we have sent a ticket to Qlik Sense with all the information about the user (userId and group memberships). Based on this we have created 1 security rule in the QMC: user.group = resource.name (filter: Stream_*) that ensures a flexible authorization concept</li>
                     </ul>
                 </div>
             </div>
         </div>
-        
         <div class="ui segment">
             <iframe src="{{hubURL}}" width="100%" height="900"></iframe>
         </div>
-    </div>	
+    </div>
 </template>
-
-
-  
