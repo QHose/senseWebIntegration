@@ -116,18 +116,18 @@
 			}
 		},
 		{
-			"file": "client/templates/app/IFrame integration/multipleCharts.html",
+			"file": "client/templates/app/nav.html",
 			"settings":
 			{
-				"buffer_size": 1831,
+				"buffer_size": 2632,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/templates/app/IFrame integration/hub.js",
+			"file": "client/templates/app/IFrame integration/multipleCharts.html",
 			"settings":
 			{
-				"buffer_size": 74,
+				"buffer_size": 1831,
 				"line_ending": "Windows"
 			}
 		},
@@ -454,7 +454,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -544,7 +544,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -574,11 +574,41 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
+					"file": "client/templates/app/nav.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2632,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1272,
+								1272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "client/templates/app/IFrame integration/multipleCharts.html",
 					"semi_transient": false,
 					"settings":
@@ -605,34 +635,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/templates/app/IFrame integration/hub.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 74,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				},
 				{
