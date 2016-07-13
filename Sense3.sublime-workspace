@@ -103,7 +103,15 @@
 			"file": "client/templates/app/IFrame integration/hub.html",
 			"settings":
 			{
-				"buffer_size": 1510,
+				"buffer_size": 1508,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/app/layout.html",
+			"settings":
+			{
+				"buffer_size": 1592,
 				"line_ending": "Windows"
 			}
 		},
@@ -119,7 +127,7 @@
 			"file": "client/templates/app/nav.html",
 			"settings":
 			{
-				"buffer_size": 2632,
+				"buffer_size": 2647,
 				"line_ending": "Windows"
 			}
 		},
@@ -213,7 +221,8 @@
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app"
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration"
 	],
 	"file_history":
 	[
@@ -454,7 +463,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -470,8 +479,8 @@
 						"selection":
 						[
 							[
-								1467,
-								1467
+								727,
+								727
 							]
 						],
 						"settings":
@@ -484,7 +493,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -514,7 +523,7 @@
 						"translation.y": 36.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -523,15 +532,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1510,
+						"buffer_size": 1508,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								773,
-								773
+								424,
+								424
 							]
 						],
 						"settings":
@@ -544,11 +553,41 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "client/templates/app/layout.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1437,
+								1019
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "client/templates/app/IFrame integration/app.html",
 					"semi_transient": false,
 					"settings":
@@ -574,24 +613,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "client/templates/app/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2632,
+						"buffer_size": 2647,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1272,
-								1272
+								270,
+								270
 							]
 						],
 						"settings":
@@ -604,11 +643,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "client/templates/app/IFrame integration/multipleCharts.html",
 					"semi_transient": false,
 					"settings":
@@ -634,11 +673,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "client/templates/uiHelpers.js",
 					"semi_transient": false,
 					"settings":
@@ -664,11 +703,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "client/templates/app/IFrame integration/app.js",
 					"semi_transient": false,
 					"settings":
@@ -694,11 +733,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "settings-development.json",
 					"semi_transient": false,
 					"settings":
@@ -724,11 +763,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "client/stylesheets/client.css",
 					"semi_transient": false,
 					"settings":
@@ -753,7 +792,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
