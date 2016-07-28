@@ -30,5 +30,5 @@ Template.registerHelper('chartIframeURL', function() {
 });
 
 Template.registerHelper('SaaSDemoURL', function() {
-    return "http://" + window.location.hostname + ":3000"; 
+    return "http://" + Meteor.settings.public.host + ":"+Meteor.settings.public.port
 });
