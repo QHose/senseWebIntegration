@@ -92,18 +92,10 @@
 			}
 		},
 		{
-			"file": "settings-development.json",
+			"file": "settings-production.json",
 			"settings":
 			{
-				"buffer_size": 549,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/nav.html",
-			"settings":
-			{
-				"buffer_size": 2654,
+				"buffer_size": 447,
 				"line_ending": "Windows"
 			}
 		}
@@ -154,14 +146,12 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Qlik/Documents/senseWebIntegration/senseWebIntegration",
-		"/C/Users/Qlik/Documents/senseWebIntegration/senseWebIntegration/client",
-		"/C/Users/Qlik/Documents/senseWebIntegration/senseWebIntegration/client/templates",
-		"/C/Users/Qlik/Documents/senseWebIntegration/senseWebIntegration/client/templates/app",
-		"/C/Users/Qlik/Documents/senseWebIntegration/senseWebIntegration/client/templates/app/IFrame integration"
+		"/C/Users/Qlik/Documents/GitHub/senseWebIntegration",
+		"/C/Users/Qlik/Documents/GitHub/senseWebIntegration/client"
 	],
 	"file_history":
 	[
+		"/C/Users/Qlik/Documents/GitHub/senseWebIntegration/settings-development.json",
 		"/C/Users/Qlik/Documents/senseWebIntegration/senseWebIntegration/client/stylesheets/client.css",
 		"/C/Users/Qlik/Documents/senseWebIntegration/senseWebIntegration/settings-development.json",
 		"/C/Users/Qlik/Documents/senseWebIntegration/senseWebIntegration/client/templates/app/IFrame integration/app.js",
@@ -288,8 +278,7 @@
 		"/C/Users/Qlik/rocket-shop-bies/client/config/accounts.js",
 		"/C/Users/Qlik/rocket-shop-bies/client/stylesheets/app.css",
 		"/C/Users/Qlik/Downloads/meteorjs-web-application/1-exercise-files/rocket-shop-complete/client/favicons.html",
-		"/C/Users/Qlik/Downloads/meteorjs-web-application/1-exercise-files/rocket-shop-complete/client/main.js",
-		"/C/Users/Qlik/Downloads/meteorjs-web-application/1-exercise-files/rocket-shop-complete/client/main.html"
+		"/C/Users/Qlik/Downloads/meteorjs-web-application/1-exercise-files/rocket-shop-complete/client/main.js"
 	],
 	"find":
 	{
@@ -399,7 +388,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -429,16 +418,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "settings-development.json",
+					"file": "settings-production.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 549,
+						"buffer_size": 447,
 						"regions":
 						{
 						},
@@ -459,37 +448,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/templates/app/nav.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2654,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -554,7 +513,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\MBJ\\Documents\\GitHub\\QRSMeteor\\qrs.sublime-project"
+				"C:\\Users\\MBJ\\Documents\\GitHub\\QRSMeteor\\qrs.sublime-workspace"
 			]
 		],
 		"width": 570.0
