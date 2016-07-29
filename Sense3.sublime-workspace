@@ -92,10 +92,18 @@
 			}
 		},
 		{
+			"file": "client/templates/uiHelpers.js",
+			"settings":
+			{
+				"buffer_size": 1255,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "settings-production.json",
 			"settings":
 			{
-				"buffer_size": 447,
+				"buffer_size": 476,
 				"line_ending": "Windows"
 			}
 		}
@@ -147,7 +155,10 @@
 	"expanded_folders":
 	[
 		"/C/Users/Qlik/Documents/GitHub/senseWebIntegration",
-		"/C/Users/Qlik/Documents/GitHub/senseWebIntegration/client"
+		"/C/Users/Qlik/Documents/GitHub/senseWebIntegration/client",
+		"/C/Users/Qlik/Documents/GitHub/senseWebIntegration/client/templates",
+		"/C/Users/Qlik/Documents/GitHub/senseWebIntegration/client/templates/app",
+		"/C/Users/Qlik/Documents/GitHub/senseWebIntegration/client/templates/app/Sense overview"
 	],
 	"file_history":
 	[
@@ -418,29 +429,29 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "settings-production.json",
+					"file": "client/templates/uiHelpers.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 447,
+						"buffer_size": 1255,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1104,
+								1104
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -449,6 +460,36 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "settings-production.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 476,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								108
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 7.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
