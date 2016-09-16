@@ -33,16 +33,16 @@ Template.multipleDivs.onRendered(function() {
         });
 
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, config);
-    app.getObject('QV05','PsxJJJ');
-    app.getObject('QV01','NPhDEp');
-    app.getObject('QV03','HPGeL');
-    
-    app.getObject('QV06','71a2a9f1-17d7-4414-84bc-ea3df40d57fe');
-    
-    
-    
-    app.getObject('QV04','vSzNBn');
-    app.getObject('QV02','dvrJHQj');
-    
+        app.getObject('QV05', 'PsxJJJ');
+        app.getObject('QV01', 'NPhDEp');
+        app.getObject('QV03', 'HPGeL');
+
+        app.getObject('QV06', '71a2a9f1-17d7-4414-84bc-ea3df40d57fe');
+
+
+
+        app.getObject('QV04', 'vSzNBn');
+        app.getObject('QV02', 'dvrJHQj');
+
     });
 });

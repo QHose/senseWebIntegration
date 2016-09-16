@@ -87,7 +87,7 @@
 			"file": "client/templates/app/DIV integration/multipleDivs.js",
 			"settings":
 			{
-				"buffer_size": 1467,
+				"buffer_size": 1477,
 				"line_ending": "Windows"
 			}
 		},
@@ -152,6 +152,14 @@
 			"settings":
 			{
 				"buffer_size": 588,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/app/DIV integration/multipleDivs.html",
+			"settings":
+			{
+				"buffer_size": 1718,
 				"line_ending": "Windows"
 			}
 		},
@@ -465,15 +473,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1467,
+						"buffer_size": 1477,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								235,
-								235
+								1477,
+								1477
 							]
 						],
 						"settings":
@@ -486,7 +494,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -502,8 +510,8 @@
 						"selection":
 						[
 							[
-								862,
-								862
+								936,
+								951
 							]
 						],
 						"settings":
@@ -513,10 +521,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 36.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -546,7 +554,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -576,7 +584,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -606,7 +614,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -636,7 +644,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -666,7 +674,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -682,8 +690,8 @@
 						"selection":
 						[
 							[
-								1242,
-								1181
+								1131,
+								1142
 							]
 						],
 						"settings":
@@ -693,10 +701,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 124.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -712,20 +720,8 @@
 						"selection":
 						[
 							[
-								89,
-								89
-							],
-							[
-								320,
-								320
-							],
-							[
-								356,
-								356
-							],
-							[
-								441,
-								441
+								141,
+								141
 							]
 						],
 						"settings":
@@ -743,6 +739,36 @@
 				},
 				{
 					"buffer": 9,
+					"file": "client/templates/app/DIV integration/multipleDivs.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1319,
+								1323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "client/stylesheets/client.css",
 					"semi_transient": false,
 					"settings":
@@ -767,7 +793,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -826,7 +852,7 @@
 	},
 	"select_project":
 	{
-		"height": 875.0,
+		"height": 1000.0,
 		"last_filter": "",
 		"selected_items":
 		[
@@ -835,7 +861,7 @@
 				"C:\\Users\\MBJ\\Documents\\GitHub\\QRSMeteor\\qrs.sublime-project"
 			]
 		],
-		"width": 665.0
+		"width": 760.0
 	},
 	"select_symbol":
 	{
@@ -854,7 +880,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 547.0,
+	"side_bar_width": 575.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
