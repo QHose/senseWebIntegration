@@ -2055,6 +2055,7 @@
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   margin: 0;
+  border-radius: 0;
 }
 .lui-input-group .lui-input-group__item:invalid,
 .lui-input-group .lui-input-group__item.lui-invalid {
@@ -2092,7 +2093,7 @@
   margin-left: -1px;
 }
 .lui-input-group .lui-input-group__input {
-  border-radius: 0;
+  min-width: 44px;
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -2299,8 +2300,8 @@
   height: 38px;
   width: 100%;
   min-width: 0;
-  padding: 0 5px;
-  border: 2px solid transparent;
+  padding: 0;
+  border: none;
   background: transparent;
   color: inherit;
   font-size: 13px;
@@ -2326,15 +2327,11 @@
   text-transform: none;
   direction: ltr;
   line-height: 38px;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -webkit-flex: 0 0 32px;
+      -ms-flex: 0 0 32px;
+          flex: 0 0 32px;
+  text-align: center;
   cursor: default;
-  padding-left: 10px;
-}
-[dir="rtl"] .lui-search .lui-search__search-icon {
-  padding-left: 0;
-  padding-right: 10px;
 }
 .lui-search .lui-search__search-icon:before {
   content: "F";
@@ -2349,16 +2346,12 @@
   text-transform: none;
   direction: ltr;
   line-height: 38px;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -webkit-flex: 0 0 32px;
+      -ms-flex: 0 0 32px;
+          flex: 0 0 32px;
+  text-align: center;
   font-size: 12px;
   cursor: pointer;
-  padding-right: 10px;
-}
-[dir="rtl"] .lui-search .lui-search__clear-icon {
-  padding-right: 0;
-  padding-left: 10px;
 }
 .lui-search .lui-search__clear-icon:before {
   content: "\2030";
