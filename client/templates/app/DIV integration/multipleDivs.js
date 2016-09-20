@@ -34,12 +34,11 @@ Template.multipleDivs.onRendered(function() {
 
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, config);
         //get objects -- inserted here --
+        app.getObject('QV01', 'Ggpaxa');
+        app.getObject('QV03', 'PYcyD');
+        app.getObject('QV04', 'VzxsQBD');
         app.getObject('QV05', 'VaQjnV');
-
         app.getObject('QV06', 'LVqUFme');
-        app.getObject('QV03', 'VzxsQBD');
-        app.getObject('QV01', 'YjeJhj');
-        app.getObject('QV04', 'JDpwZ');
         app.getObject('QV02', 'eBwDCmJ');
 
     });
