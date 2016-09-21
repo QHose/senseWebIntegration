@@ -36,10 +36,10 @@
 });
 }
 
-console.log('Load houston, the admin package, config');
-//Houston.add_collection(Customers);
-Houston.add_collection(Meteor.users );
-Houston.add_collection(Houston._admins);
+// console.log('Load houston, the admin package, config');
+// //Houston.add_collection(Customers);
+// Houston.add_collection(Meteor.users );
+// Houston.add_collection(Houston._admins);
 
 //sense integration, get ticket when users logs in
 
