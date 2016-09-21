@@ -29,7 +29,7 @@ Template.multipleDivs.onRendered(function() {
     require(["js/qlik"], function(qlik) {
         qlik.setOnError(function(error) {
             console.error(error);
-            alert(error.message);
+            // alert(error.message);
         });
 
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, config);
