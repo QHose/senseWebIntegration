@@ -17,7 +17,7 @@
 			],
 			[
 				"Sess",
-				"Session.get	Meteor: Session.get(key)"
+				"Session.get\tMeteor: Session.get(key)"
 			],
 			[
 				"s",
@@ -29,7 +29,7 @@
 			],
 			[
 				"cu",
-				"currentAppId	(str)"
+				"currentAppId\t(str)"
 			],
 			[
 				"dele",
@@ -37,11 +37,11 @@
 			],
 			[
 				"cust",
-				"customerList	(?)"
+				"customerList\t(?)"
 			],
 			[
 				"customer",
-				"customers	(?)"
+				"customers\t(?)"
 			],
 			[
 				"to",
@@ -53,7 +53,7 @@
 			],
 			[
 				"Se",
-				"Session.set	Meteor: Session.set(key, value)"
+				"Session.set\tMeteor: Session.set(key, value)"
 			],
 			[
 				"mul",
@@ -61,15 +61,15 @@
 			],
 			[
 				"SEssion",
-				"Session.set	Meteor: Session.set(key, value)"
+				"Session.set\tMeteor: Session.set(key, value)"
 			],
 			[
 				"h",
-				"h1	Tag"
+				"h1\tTag"
 			],
 			[
 				"if",
-				"iframe	Tag"
+				"iframe\tTag"
 			],
 			[
 				"sel",
@@ -84,50 +84,26 @@
 	"buffers":
 	[
 		{
-			"file": "client/templates/app/DIV integration/multipleDivs.js",
-			"settings":
-			{
-				"buffer_size": 1477,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/IFrame integration/1chart.html",
-			"settings":
-			{
-				"buffer_size": 1109,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/IFrame integration/hub.html",
-			"settings":
-			{
-				"buffer_size": 1508,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/layout.html",
-			"settings":
-			{
-				"buffer_size": 1592,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/IFrame integration/app.html",
-			"settings":
-			{
-				"buffer_size": 1063,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "client/templates/app/nav.html",
 			"settings":
 			{
-				"buffer_size": 2660,
+				"buffer_size": 2641,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/app/IFrame integration/app.js",
+			"settings":
+			{
+				"buffer_size": 616,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "settings-production.json",
+			"settings":
+			{
+				"buffer_size": 534,
 				"line_ending": "Windows"
 			}
 		},
@@ -135,26 +111,49 @@
 			"file": "client/templates/uiHelpers.js",
 			"settings":
 			{
-				"buffer_size": 1402,
+				"buffer_size": 1986,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "settings-development - Copy.json",
-			"settings":
-			{
-				"buffer_size": 549,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "{\n    \"public\": {\n        \"virtualProxyClientUsage\": \"meteor\",\n        \"host\": \"PRESALES1\",\n        \"portMeteorQRS\": 3000,\n        \"port\": 81,\n        \"useSSL\": false,\n        \"passphrase\": null,\n        \"authentication\": \"header\",\n        \"virtualProxy\": \"hdr\",\n        \"headerKey\": \"hdr-usr\",\n        \"UDC\": \"PRESALES1\",\n        \"headerValue\": \"PRESALES1\\\\Qlik\",\n        \"isSecure\": false,\n        \"engineHeaders\": \"UserDirectory=PRESALES1;UserId=Qlik\",\n        \"enginePort\": 4747,\n        \"proxyPort\": 4243,\n        \"multipleDivAppGuid\": \"795fad64-ecea-44f9-ba17-a138d6342a76\"\n        \"rowLevelSecurityGuid: \"40ef70c9-be76-4844-ac6a-d53195146c85\"\n    }\n}\n",
 			"file": "settings-development.json",
-			"file_size": 608,
-			"file_write_time": 131178114745383477,
 			"settings":
 			{
-				"buffer_size": 658,
+				"buffer_size": 319,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/app/DIV integration/multipleDivs.js",
+			"settings":
+			{
+				"buffer_size": 1490,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/app/IFrame integration/multipleCharts.html",
+			"settings":
+			{
+				"buffer_size": 1955,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 282 files for \"houston\" (case sensitive)\n\n0 matches",
+			"settings":
+			{
+				"buffer_size": 61,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "server/Security.js",
+			"settings":
+			{
+				"buffer_size": 1585,
 				"line_ending": "Windows"
 			}
 		},
@@ -215,28 +214,31 @@
 	[
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/config",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates"
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/public/fonts"
 	],
 	"file_history":
 	[
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/multipleCharts.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/app.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/1chart.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/app.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/hub.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/nav.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/layout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/client.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/qlikui.css",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/multipleCharts.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/app.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/exampleShop.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/exampleShop.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/nav.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/hub.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/lib/senseConnect.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/Sense overview/appList.js",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/uiHelpers.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/hub.js",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/1chart.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/layout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/homeAbout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/startUp.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/router.js",
@@ -346,19 +348,19 @@
 		"/C/Users/Qlik/fashionTrade/client/main.html",
 		"/C/Users/Qlik/fashionTrade/fashiontrade.html",
 		"/C/Users/Qlik/fashionTrade/client/templates/_partials/nav.html",
-		"/C/Users/Qlik/fashionTrade/client/templates/home/about.html",
-		"/C/Users/Qlik/fashionTrade/client/templates/home/contact.html",
-		"/C/Users/Qlik/AppData/Local/Temp/Temp1_meteorjs-web-application.zip/1-exercise-files/rocket-shop-complete/lib/router.js"
+		"/C/Users/Qlik/fashionTrade/client/templates/home/about.html"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
 		"height": 102.0,
 		"where_history":
 		[
+			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client",
+			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client",
@@ -380,6 +382,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"console.log",
+			"houston",
+			"collection",
+			"opt=nointeraction",
 			"c85",
 			"row level",
 			"config",
@@ -465,174 +471,24 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/templates/app/DIV integration/multipleDivs.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1477,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1477,
-								1477
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/templates/app/IFrame integration/1chart.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1109,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								936,
-								951
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/templates/app/IFrame integration/hub.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1508,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1409,
-								1469
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/templates/app/layout.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1437,
-								1019
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "client/templates/app/IFrame integration/app.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1063,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								932,
-								932
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "client/templates/app/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2660,
+						"buffer_size": 2641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1289,
-								1289
+								1655,
+								1662
 							]
 						],
 						"settings":
@@ -649,20 +505,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "client/templates/uiHelpers.js",
+					"buffer": 1,
+					"file": "client/templates/app/IFrame integration/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1402,
+						"buffer_size": 616,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1282,
-								1298
+								3,
+								616
 							]
 						],
 						"settings":
@@ -675,16 +531,165 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "settings-production.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								211,
+								211
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/templates/uiHelpers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1986,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1863,
+								1879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 475.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "settings-development - Copy.json",
+					"buffer": 4,
+					"file": "settings-development.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/templates/app/DIV integration/multipleDivs.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1069,
+								1069
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/templates/app/IFrame integration/multipleCharts.html",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 549,
+						"buffer_size": 1955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1326,
+								1357
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 61,
 						"regions":
 						{
 						},
@@ -697,45 +702,50 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "settings-development.json",
+					"file": "server/Security.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 658,
+						"buffer_size": 1585,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								589,
-								609
+								86,
+								1270
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -765,7 +775,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -852,7 +862,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 575.0,
+	"side_bar_width": 560.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
