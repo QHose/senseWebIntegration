@@ -112,7 +112,7 @@
 			"file": "client/templates/uiHelpers.js",
 			"settings":
 			{
-				"buffer_size": 2030,
+				"buffer_size": 2037,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -137,7 +137,7 @@
 			"file": "client/templates/app/IFrame integration/multipleCharts.html",
 			"settings":
 			{
-				"buffer_size": 1915,
+				"buffer_size": 1977,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -485,7 +485,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -515,7 +515,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -561,8 +561,8 @@
 						"selection":
 						[
 							[
-								211,
-								211
+								275,
+								239
 							]
 						],
 						"settings":
@@ -575,7 +575,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -584,15 +584,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2030,
+						"buffer_size": 2037,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2002,
-								2002
+								2009,
+								2009
 							]
 						],
 						"settings":
@@ -602,10 +602,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 666.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -674,15 +674,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1915,
+						"buffer_size": 1977,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1071,
-								1091
+								536,
+								536
 							]
 						],
 						"settings":
@@ -695,7 +695,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -725,7 +725,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -795,7 +795,7 @@
 						"translation.y": 403.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
