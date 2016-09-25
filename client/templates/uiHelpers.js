@@ -52,5 +52,5 @@ Template.registerHelper('SaaSDemoURL', function() {
 
 //url of the Qlik sense server
 Template.registerHelper('QlikSenseDemoURL', function() {
-    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port
+    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port+"/"+Meteor.settings.virtualProxyClientUsage
 });
