@@ -84,27 +84,37 @@
 	"buffers":
 	[
 		{
-			"file": "client/templates/app/nav.html",
+			"file": "client/templates/app/DIV integration/multipleDivs.html",
 			"settings":
 			{
-				"buffer_size": 2652,
+				"buffer_size": 1724,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/templates/app/IFrame integration/app.js",
+			"file": "client/templates/app/IFrame integration/1chart.html",
 			"settings":
 			{
-				"buffer_size": 616,
+				"buffer_size": 1279,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "settings-production.json",
+			"file": "client/templates/app/IFrame integration/multipleCharts.html",
 			"settings":
 			{
-				"buffer_size": 534,
+				"buffer_size": 2374,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/app/IFrame integration/hub.html",
+			"settings":
+			{
+				"buffer_size": 1508,
 				"line_ending": "Windows"
 			}
 		},
@@ -113,66 +123,6 @@
 			"settings":
 			{
 				"buffer_size": 2037,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "settings-development.json",
-			"settings":
-			{
-				"buffer_size": 319,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/DIV integration/multipleDivs.js",
-			"settings":
-			{
-				"buffer_size": 1490,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/IFrame integration/multipleCharts.html",
-			"settings":
-			{
-				"buffer_size": 1977,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/IFrame integration/multipleCharts.js",
-			"settings":
-			{
-				"buffer_size": 451,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 282 files for \"houston\" (case sensitive)\n\n0 matches\n\nSearching 22 files for \"QlikSenseDemoURL\" (case sensitive)\n\nC:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\templates\\app\\DIV integration\\multipleDivs.html:\n    8                  </div>\n    9                  <ul>\n   10:                     <li>These charts are created using the <a href=\"http://{{QlikSenseDemoURL}}/dev-hub/\"> the Sense dev-hub</a> </li>\n   11                      <li>You just have to copy the generated code in your website, or use the Visual Studio Plugin</li>\n   12                      <li>The Div tags connect to the local require.js which connects to the Sense Server</li>\n\nC:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\templates\\app\\IFrame integration\\multipleCharts.html:\n   17          <div class=\"column\">\n   18              <div class=\"ui segment\">\n   19:                 <iframe src='{{QlikSenseDemoURL}}/single/?appid=6bd9b09d-15ad-4d3e-8149-dbb32ce1e1b0&obj=Ggpaxa&select=clearall' style='border:none;'></iframe>\n   20              </div>\n   21          </div>\n   22          <div class=\"column\">\n   23              <div class=\"ui segment \">\n   24:                 <iframe class=\"qChart\" src='{{QlikSenseDemoURL}}/single/?appid=6bd9b09d-15ad-4d3e-8149-dbb32ce1e1b0&obj=eBwDCmJ&select=clearall' style='border:none;'></iframe>\n   25              </div>\n   26          </div>\n   27          <div class=\"column\">\n   28:             <iframe class=\"qChart\" src='{{QlikSenseDemoURL}}/single/?appid=6bd9b09d-15ad-4d3e-8149-dbb32ce1e1b0&obj=LVqUFme&select=clearall' style='border:none;'></iframe>\n   29          </div>\n   30      </div>\n   31      <div class=\"column\">\n   32          <div class=\"ui segment \">\n   33:             <iframe class=\"qChart\" src='{{QlikSenseDemoURL}}/single/?appid=6bd9b09d-15ad-4d3e-8149-dbb32ce1e1b0&obj=psUdVVJ&select=clearall' style='border:none;'></iframe>\n   34              <!--  <iframe class=\"qChart\" src='https://sense-demo.qlik.com/single?appid=075506ed-73ee-4f1a-b9a0-1955df0bb3e0&obj=JEBdZz&select=clearall' frameborder='0'></iframe> -->\n   35          </div>\n\nC:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\templates\\app\\nav.html:\n   20                      <!-- <a class=\"item\" href=\"{{pathFor 'divSheet'}}\">See 1 sheet</a> -->\n   21                      <a class=\"item\" href=\"{{pathFor 'multipleDivs'}}\">See multiple charts</a>\n   22:                     <a class=\"item\" href=\"{{QlikSenseDemoURL}}/meteor/extensions/DemoMashup/home.html\">Citybike demo (by @Creatuluw)</a>\n   23                      <!-- <a class=\"item\" href=\"{{pathFor 'multipleDivsAndCustomControls'}}\">See multiple charts combined with custom HTML object filled with Sense data</a> -->\n   24                  </div>\n\nC:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\templates\\uiHelpers.js:\n   52  \n   53  //url of the Qlik sense server\n   54: Template.registerHelper('QlikSenseDemoURL', function() {\n   55      return \"http://\" + Meteor.settings.public.host + \":\" + Meteor.settings.public.port\n   56  });\n\n7 matches across 4 files\n",
-			"settings":
-			{
-				"buffer_size": 3069,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "server/Security.js",
-			"settings":
-			{
-				"buffer_size": 1585,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/DIV integration/multipleDivs.html",
-			"settings":
-			{
-				"buffer_size": 1723,
 				"line_ending": "Windows"
 			}
 		}
@@ -231,14 +181,18 @@
 	],
 	"file_history":
 	[
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/multipleCharts.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/server/Security.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/nav.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/app.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-production.json",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/uiHelpers.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-development.json",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/multipleCharts.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/1chart.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/app.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/hub.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/nav.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/layout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/client.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/qlikui.css",
@@ -247,7 +201,6 @@
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/lib/senseConnect.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/Sense overview/appList.js",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/uiHelpers.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/hub.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/homeAbout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/startUp.js",
@@ -355,10 +308,7 @@
 		"/C/Users/Qlik/semanticUItest/semantic/client/lib/custom.semantic.json",
 		"/C/Users/Qlik/fashionTrade/client/app/loading.html",
 		"/C/Users/Qlik/fashionTrade/client/templates/home/index.html",
-		"/C/Users/Qlik/fashionTrade/client/main.html",
-		"/C/Users/Qlik/fashionTrade/fashiontrade.html",
-		"/C/Users/Qlik/fashionTrade/client/templates/_partials/nav.html",
-		"/C/Users/Qlik/fashionTrade/client/templates/home/about.html"
+		"/C/Users/Qlik/fashionTrade/client/main.html"
 	],
 	"find":
 	{
@@ -485,24 +435,24 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/templates/app/nav.html",
+					"file": "client/templates/app/DIV integration/multipleDivs.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2652,
+						"buffer_size": 1724,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1272,
-								1272
+								455,
+								346
 							]
 						],
 						"settings":
@@ -520,84 +470,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "client/templates/app/IFrame integration/app.js",
+					"file": "client/templates/app/IFrame integration/1chart.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 616,
+						"buffer_size": 1279,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3,
-								616
+								730,
+								730
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "settings-production.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								275,
-								239
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/templates/uiHelpers.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2037,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2009,
-								2009
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -609,80 +499,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "settings-development.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 319,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27,
-								50
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/templates/app/DIV integration/multipleDivs.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1490,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1069,
-								1069
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 2,
 					"file": "client/templates/app/IFrame integration/multipleCharts.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1977,
+						"buffer_size": 2374,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								536,
-								536
+								903,
+								903
 							]
 						],
 						"settings":
@@ -699,12 +529,42 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "client/templates/app/IFrame integration/multipleCharts.js",
+					"buffer": 3,
+					"file": "client/templates/app/IFrame integration/hub.html",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 451,
+						"buffer_size": 1508,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/templates/uiHelpers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2037,
 						"regions":
 						{
 						},
@@ -721,141 +581,11 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 566.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3069,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										371,
-										387
-									],
-									[
-										901,
-										917
-									],
-									[
-										1212,
-										1228
-									],
-									[
-										1475,
-										1491
-									],
-									[
-										1767,
-										1783
-									],
-									[
-										2440,
-										2456
-									],
-									[
-										2906,
-										2922
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								2175,
-								2175
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 403.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "server/Security.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1585,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								86,
-								1270
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "client/templates/app/DIV integration/multipleDivs.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1723,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								419,
-								419
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
