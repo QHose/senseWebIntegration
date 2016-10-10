@@ -87,34 +87,25 @@
 			"file": "client/templates/app/DIV integration/multipleDivs.html",
 			"settings":
 			{
-				"buffer_size": 1724,
+				"buffer_size": 1716,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/templates/app/IFrame integration/1chart.html",
+			"file": "client/templates/app/nav.html",
 			"settings":
 			{
-				"buffer_size": 1279,
+				"buffer_size": 2632,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/templates/app/IFrame integration/multipleCharts.html",
+			"file": "client/stylesheets/semantic.css",
 			"settings":
 			{
-				"buffer_size": 2374,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/app/IFrame integration/hub.html",
-			"settings":
-			{
-				"buffer_size": 1508,
+				"buffer_size": 365,
 				"line_ending": "Windows"
 			}
 		},
@@ -175,12 +166,15 @@
 	[
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration"
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app"
 	],
 	"file_history":
 	[
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/1chart.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/hub.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/multipleCharts.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/server/Security.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/nav.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/app.js",
@@ -188,11 +182,8 @@
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/uiHelpers.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-development.json",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/DIV integration/multipleDivs.js",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/multipleCharts.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/1chart.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/app.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/hub.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/layout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/client.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/qlikui.css",
@@ -444,15 +435,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1724,
+						"buffer_size": 1716,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								455,
-								346
+								425,
+								425
 							]
 						],
 						"settings":
@@ -465,24 +456,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/templates/app/IFrame integration/1chart.html",
+					"file": "client/templates/app/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1279,
+						"buffer_size": 2632,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								730,
-								730
+								1110,
+								1110
 							]
 						],
 						"settings":
@@ -500,25 +491,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "client/templates/app/IFrame integration/multipleCharts.html",
-					"semi_transient": false,
+					"file": "client/stylesheets/semantic.css",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2374,
+						"buffer_size": 365,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								903,
-								903
+								187,
+								187
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -530,36 +521,6 @@
 				},
 				{
 					"buffer": 3,
-					"file": "client/templates/app/IFrame integration/hub.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1508,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "client/templates/uiHelpers.js",
 					"semi_transient": false,
 					"settings":
@@ -581,8 +542,8 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 566.0,
+						"translation.x": 0.0,
+						"translation.y": 427.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
