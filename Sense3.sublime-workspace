@@ -102,10 +102,11 @@
 			}
 		},
 		{
-			"file": "client/stylesheets/semantic.css",
+			"file": "client/templates/app/layout.html",
 			"settings":
 			{
-				"buffer_size": 365,
+				"buffer_size": 1665,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -491,25 +492,25 @@
 				},
 				{
 					"buffer": 2,
-					"file": "client/stylesheets/semantic.css",
-					"semi_transient": true,
+					"file": "client/templates/app/layout.html",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 365,
+						"buffer_size": 1665,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								187,
-								187
+								1477,
+								1477
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
