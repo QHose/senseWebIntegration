@@ -105,7 +105,7 @@
 			"file": "client/templates/app/layout.html",
 			"settings":
 			{
-				"buffer_size": 1665,
+				"buffer_size": 1679,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -496,15 +496,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1665,
+						"buffer_size": 1679,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1477,
-								1477
+								1441,
+								1441
 							]
 						],
 						"settings":

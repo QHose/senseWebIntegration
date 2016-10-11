@@ -1,6 +1,4 @@
 #Mr Developer
-settings-development.json
-settings-production.json
 meteor startup.bat
 *.sublime-workspace
 node_modules/
