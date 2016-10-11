@@ -1,0 +1,11 @@
+{
+    "public": {
+        "virtualProxyClientUsage": "meteor",
+        "host": "PRESALES1",
+        "portMeteorQRS": 3000,
+        "port": 81,
+        "isSecure": false,
+        "multipleDivAppGuid": "78f7312a-85c1-4428-b93e-0f2c1ea04b64", 
+        "rowLevelSecurityGuid": "40ef70c9-be76-4844-ac6a-d53195146c85"
+    }
+}
