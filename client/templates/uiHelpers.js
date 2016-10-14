@@ -45,9 +45,9 @@ Template.registerHelper('chartIframeURL', function() {
 });
 
 
-//url of the saas with qlik sense demo site (meteor)
+//url of QRS Meteor Server
 Template.registerHelper('SaaSDemoURL', function() {
-    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.portMeteorQRS
+    return "http://" + Meteor.settings.public.QRSHost + ":" + Meteor.settings.public.portMeteorQRS
 });
 
 //url of the Qlik sense server
