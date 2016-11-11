@@ -5,6 +5,10 @@
   .ui.menu .item img.logo {
     margin-right: 1.5em;
   }
+
+.ui.inverted.menu {
+    /*background: #ACAEB0;*/
+}
   .main.container {
     margin-top: 7em;
   }

@@ -6,13 +6,7 @@ var config = {
 };
 
 
-Template.multipleDivs.events({
-    'click': function() {
-        // ...
-    }
-});
-
-Template.multipleDivs.onRendered(function() {
+Template.multipleDIVs.onRendered(function() {
     // var currentAppId = Session.get('currentAppId');
     // if (!currentAppId) {
     //     currentAppId = 'bd195c18-e1af-4e52-997f-774cc58eeb59' //set a default value for demo purposes
