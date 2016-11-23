@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"pad",
+				"padding-top"
+			],
+			[
 				"bo",
 				"border"
 			],
@@ -95,7 +99,16 @@
 			"file": "client/ui/app/layout.html",
 			"settings":
 			{
-				"buffer_size": 2469,
+				"buffer_size": 2559,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/router.js",
+			"settings":
+			{
+				"buffer_size": 1610,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -104,19 +117,25 @@
 			"file": "client/ui/app/IFrame integration/hub.html",
 			"settings":
 			{
-				"buffer_size": 1563,
+				"buffer_size": 1258,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<template name=\"nav\">\n    <div class=\"ui fixed inverted menu\">\n        <div class=\"ui container\">\n            <div href=\"#\" class=\"header item\">\n                <!-- <img class=\"logo\" src=\"assets/images/logo.png\">  -->\n                Web integration examples\n            </div>\n        </div>\n        <!-- <a class=\"item\" href=\"{{SaaSDemoURL}}\">Back to SaaS multi tenant demo</a> -->\n    </div>\n</template>\n<template name=\"sideMenu\">\n    <div class=\"ui message\">\n        <i class=\"unlock alternate icon\"></i>\n        <div class=\"description\">\n            <p>The beauty of Qlik is it allows you choices for your integration. You can choose the level of web integration according to your business requirements. On the client side, you can choose to use our client/front-end or you can create your own.\n            </p>\n        </div>\n        <div class=\"ui accordion\">\n            <div class=\"title\">\n                <i class=\"dropdown icon\"></i>Read more...\n            </div>\n            <div class=\"content\">\n                <p>If you use the Qlik Sense client you have the following options.\n                </p>\n                <ul>\n                    <li>You can integrate the hub, an app, a sheet or individual charts.\n                    </li>\n                    <li>In most cases you have the flexibility to control whether you would like to see our menu, our selection bar or whether or not you would like to provide initial selections or make the charts static so that no selections are possible at all.\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <div class=\"ui vertical menu\">\n        <div class=\"item\">\n            <div class=\"header\">IFrame</div>\n            <div class=\"menu\">\n                <a class=\"item\" href=\"{{pathFor 'hub'}}\">The hub</a>\n                <a class=\"item\" href=\"{{pathFor 'app'}}\">Single app</a>\n                <a class=\"item\" href=\"{{pathFor '1chart'}}\">Single chart</a>\n                <a class=\"item\" href=\"{{pathFor 'multipleCharts'}}\">Multiple charts</a>\n            </div>\n        </div>\n        <div class=\"item\">\n            <div class=\"header\">DIV</div>\n            <div class=\"menu\">\n                <a class=\"item\" href=\"{{pathFor 'multipleDivs'}}\">Single chart</a>\n                <a class=\"item\" href=\"{{pathFor 'multipleDivs'}}\">Multiple charts</a>\n                <a class=\"item\" href=\"{{QlikSenseDemoURL}}/extensions/DemoMashup/home.html\">Citybike (example demo shop with Qlik embedded)</a>\n            </div>\n        </div>\n    </div>\n</template>\n",
 			"file": "client/ui/app/nav.html",
-			"file_size": 2405,
-			"file_write_time": 131244007721502835,
 			"settings":
 			{
-				"buffer_size": 2557,
+				"buffer_size": 2703,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/multipleDivs.html",
+			"settings":
+			{
+				"buffer_size": 1916,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -131,10 +150,10 @@
 			}
 		},
 		{
-			"file": "lib/router.js",
+			"file": "client/ui/app/IFrame integration/multipleCharts.html",
 			"settings":
 			{
-				"buffer_size": 1240,
+				"buffer_size": 1915,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -200,12 +219,17 @@
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration"
 	],
 	"file_history":
 	[
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/semantic.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/multipleCharts.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/nav.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/1chart.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/app.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/semantic.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-development.json",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-production.json",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
@@ -327,11 +351,7 @@
 		"/C/Users/Qlik/rocket-shop-bies/client/templates/home/contact.html",
 		"/C/Users/Qlik/Downloads/meteorjs-web-application/1-exercise-files/snippets/nav.html",
 		"/C/Users/Qlik/rocket-shop-bies/client/templates/products/show.html",
-		"/C/Users/Qlik/rocket-shop-bies/client/templates/_partials/nav.js",
-		"/C/Users/Qlik/rocket-shop-bies/client/config/accounts.js",
-		"/C/Users/Qlik/rocket-shop-bies/client/stylesheets/app.css",
-		"/C/Users/Qlik/Downloads/meteorjs-web-application/1-exercise-files/rocket-shop-complete/client/favicons.html",
-		"/C/Users/Qlik/Downloads/meteorjs-web-application/1-exercise-files/rocket-shop-complete/client/main.js"
+		"/C/Users/Qlik/rocket-shop-bies/client/templates/_partials/nav.js"
 	],
 	"find":
 	{
@@ -342,6 +362,7 @@
 		"height": 102.0,
 		"where_history":
 		[
+			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\ui\\app",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration",
@@ -370,6 +391,13 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"<li>",
+			"</li>",
+			"<li>",
+			"</li>",
+			"<li>",
+			"li",
+			"hubText",
 			"style='border:none;'",
 			"6bd9b09d-15ad-4d3e-8149-dbb32ce1e1b0",
 			"multipleDivAppGuid",
@@ -445,6 +473,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<div class=\"item\">",
+			"</div>",
+			"<div class=\"item\">",
+			"</div>",
+			" <div class=\"item\">",
 			"",
 			"{{appGUID}}",
 			"'+ Meteor.settings.public.multipleDivAppGuid +'",
@@ -476,7 +509,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -485,15 +518,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2469,
+						"buffer_size": 2559,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2115,
-								2131
+								2302,
+								2302
 							]
 						],
 						"settings":
@@ -503,27 +536,117 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 460.0,
+						"translation.y": 486.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/ui/app/IFrame integration/hub.html",
+					"file": "lib/router.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1563,
+						"buffer_size": 1610,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1543,
-								1543
+								1412,
+								1412
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 24.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/ui/app/IFrame integration/hub.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								315,
+								333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/ui/app/nav.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2703,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1092,
+								1092
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/ui/app/DIV integration/multipleDivs.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1285,
+								1285
 							]
 						],
 						"settings":
@@ -540,37 +663,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "client/ui/app/nav.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2557,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1535,
-								1535
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "client/stylesheets/semantic.css",
 					"semi_transient": false,
 					"settings":
@@ -600,37 +693,37 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "lib/router.js",
+					"buffer": 6,
+					"file": "client/ui/app/IFrame integration/multipleCharts.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1240,
+						"buffer_size": 1915,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								287,
-								287
+								852,
+								1304
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 24.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "client/ui/uiHelpers.js",
 					"semi_transient": false,
 					"settings":
@@ -656,7 +749,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
