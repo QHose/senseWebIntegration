@@ -1,6 +1,7 @@
 <template name="hub">
-    
+    <div class="ui segment ">
         <iframe src="{{hubURL}}" width="100%" height="900"></iframe>
+        </div>
 </template>
 <template name="hubExplanationText">
     <div class="ui message">
@@ -11,7 +12,7 @@
              <div class="item">This demo shows that you can integrate the Qlik Sense Hub using an IFrame </div>
              <div class="item">With an HTML IFrame you can show a website inside another website.</div>
              <div class="item">This is the most simple and loosely coupled integration. You will use our Qlik Sense client (the Hub) to display and modify content like apps and sheets</div>
-             <div class="item">In the example below we included: {{hubURL}} </div>
+             <div class="item">In this example we included: {{hubURL}} </div>
              <div class="item">Note that using this generic link, the hub automatically shows only authorized data for the logged in user. (This is possible because we have sent a ticket to Qlik Sense with all the information about the user (userId and group memberships). Based on this we have created 1 security rule in the QMC: user.group = resource.name (filter: Stream_*) that ensures a flexible authorization concept</div>
         </div>
     </div>
