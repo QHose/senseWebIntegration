@@ -29,6 +29,10 @@ Template.registerHelper('appURL', function() {
     return url;
 });
 
+Template.registerHelper('appGUID', function(){
+    return Meteor.settings.public.multipleDivAppGuid;
+})
+
 //1 CHART
 Template.registerHelper('chartIframeURL', function() {
     var appGUID = Session.get('currentAppId');

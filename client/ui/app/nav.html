@@ -1,0 +1,58 @@
+<template name="nav">
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+            <div href="#" class="header item">
+                <!-- <img class="logo" src="assets/images/logo.png">  -->
+                Web integration examples
+            </div>
+        </div>
+        <!-- <a class="item" href="{{SaaSDemoURL}}">Back to SaaS multi tenant demo</a> -->
+    </div>
+</template>
+<template name="sideMenu">
+    <!-- {{> webIntegrationMessage}} -->
+    
+    <div class="ui vertical fluid menu">
+        <div class="item">
+            <div class="header">IFrame</div>
+            <div class="menu">
+                <a class="item" href="{{pathFor 'hub'}}">The hub</a>
+                <a class="item" href="{{pathFor 'app'}}">Single app</a>
+                <a class="item" href="{{pathFor '1chart'}}">Single chart</a>
+                <a class="item" href="{{pathFor 'multipleCharts'}}">Multiple charts</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="header">DIV</div>
+            <div class="menu">
+                <!-- <a class="item" href="{{pathFor 'multipleDivs'}}">Single chart</a> -->
+                <a class="item" href="{{pathFor 'multipleDivs'}}">Multiple charts</a>
+                <a class="item" href="{{QlikSenseDemoURL}}/extensions/DemoMashup/home.html">Citybike (example demo shop with Qlik embedded)</a>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="webIntegrationMessage">
+    <div class="ui message">
+        <!-- <i class="unlock alternate icon"></i> -->
+        <div class="description">
+            <p>The beauty of Qlik is it allows you choices for your integration. You can choose the level of web integration according to your business requirements. On the client side, you can choose to use our client/front-end or you can create your own.
+            </p>
+        </div>
+        <div class="ui accordion">
+            <div class="title">
+                <i class="dropdown icon"></i>Read more...
+            </div>
+            <div class="content">
+                <p>If you use the Qlik Sense client you have the following options.
+                    <ul>
+                        <li>You can integrate the hub, an app, a sheet or individual charts.
+                        </li>
+                        <li>In most cases you have the flexibility to control whether you would like to see our menu, our selection bar or whether or not you would like to provide initial selections or make the charts static so that no selections are possible at all.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</template>

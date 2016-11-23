@@ -1,0 +1,17 @@
+<template name="1chart">
+    <iframe src="{{chartIframeURL}}" width="100%" height="600"></iframe>
+</template>
+<template name="chartExplanationText">
+    <div class="ui message">
+        <div class="header">
+            <h4>IFrame Integration: chart</h4>
+        </div>
+        <div class="ui bulleted list">
+            <div class="item">Demo which shows a that you can integrate 1 Sense chart in your page using an IFrame </div>
+            <div class="item">With an HTML IFrame you can show a website inside another website</div>
+            <div class="item">The code to integrate this chart can be created using the single configurator <a href="{{QlikSenseDemoURL}}/dev-hub/"> the Qlik Sense dev-hub.</a></div>
+            <div class="item">In the example below we included the URL: {{chartIframeURL}} </div>
+            <div class="item">Via parameters in the URL you can include or remove selections, disable interactivity, and include a selection bar.</div>
+        </div>
+    </div>
+</template>

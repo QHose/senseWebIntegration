@@ -1,0 +1,42 @@
+<template name="multipleCharts">
+    <div class="ui one column stackable grid">
+        <div class="column">
+            <div class="ui segment ">
+                <iframe class="qChart" src='{{QlikSenseDemoURL}}/single/?appid={{appGUID}}&obj=eBwDCmJ&opt=currsel&select=clearall'></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="ui two column stackable grid">
+        <div class="column">
+            <div class="ui segment">
+                <iframe class="qChart" src='{{QlikSenseDemoURL}}/single/?appid={{appGUID}}&obj=JDpwZ&select=clearall'></iframe>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui segment ">
+                <iframe class="qChart" src='{{QlikSenseDemoURL}}/single/?appid={{appGUID}}&obj=eBwDCmJ&select=clearall'></iframe>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui segment ">
+                <iframe class="qChart" src='{{QlikSenseDemoURL}}/single/?appid={{appGUID}}&obj=LVqUFme&select=clearall'></iframe>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui segment ">
+                <iframe class="qChart" src='{{QlikSenseDemoURL}}/single/?appid={{appGUID}}&obj=PYcyD&select=clearall'></iframe>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="multipleChartsExplanationText">
+    <div class="ui message">
+        <div class="header">
+            <h4>Multiple charts in separate IFrames</h4>
+        </div>
+        <div class="ui bulleted list">
+            <div class="item">This demo shows that you can integrate multiple charts using separate IFrames. This is a very simple approach.</div>
+            <div class="item">Each Frame is automatically "connected" to the others and will pass on selections. This will also happen if you navigate between separate pages.</div>
+        </div>
+    </div>
+</template>

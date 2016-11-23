@@ -1,0 +1,17 @@
+<template name='app'>
+    <iframe src={{appURL}} width="100%" height="900"></iframe>
+</template>
+<template name="appExplanationText">
+    <div class="ui message">
+        <div class="header">
+            <h4>IFrame Integration: app</h4>
+        </div>
+        <div class="ui bulleted list">
+            <div class="item">This demo shows a that you can integrate one Qlik Sense app using an IFrame </div>
+            <div class="item">With an HTML IFrame you can show a website inside another website.</div>
+            <div class="item">This is, next to integrating the Hub, the most simple and loosely coupled integration. You will use our Qlik Sense client (the Hub) to display and modify content like apps and sheets</div>
+            <div class="item">This page includes an Iframe object which points to the app on the Sense server</div>
+            <div class="item">In the example below we included: {{appURL}} </div>
+        </div>
+    </div>
+</template>

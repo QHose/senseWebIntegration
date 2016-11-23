@@ -1,4 +1,6 @@
-
+iframe {
+  border: none
+}
   body {
     background-color: #FFFFFF;
   }
@@ -7,7 +9,7 @@
   }
 
 .ui.inverted.menu {
-    /*background: #ACAEB0;*/
+    background: #545352;
 }
   .main.container {
     margin-top: 7em;

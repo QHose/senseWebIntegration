@@ -33,3 +33,28 @@
         </div>
     </div>
 </template>
+<template name="regionLayout">
+    <div class="ui internally celled grid">
+        <div class="sixteen wide column">
+            {{> yield "nav"}} {{> sAlert}}
+            <div class="ui stackable grid">
+                <div class="four wide column">
+                    <div class="row">
+                        {{> yield "aside"}}
+                    </div>
+                    <div class="row" style="padding-top: 10px">
+                        {{> yield "asideExplanation"}}
+                    </div>
+                </div>
+                <div class="twelve wide column">
+                    <div class="ui segment"> {{> yield}} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template name="oneColumnCenteredLayout">
+    <div class="ui two column centered grid">
+        <div class="column">{{> yield }}</div>
+    </div>
+</template>
