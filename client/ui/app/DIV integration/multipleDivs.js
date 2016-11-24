@@ -14,7 +14,6 @@ Template.multipleDivs.onRendered(function() {
     //     Session.set('currentAppId', currentAppId);
     // }
 
-    console.log('multipleDivs onRendered');
     console.log('the settings to connect to Sense are: ', config)
     require.config({
         baseUrl: "http://" + config.host + (config.port ? ":" + config.port : "") + config.prefix + "resources"
@@ -36,4 +35,13 @@ Template.multipleDivs.onRendered(function() {
         app.getObject('QV02', 'eBwDCmJ');
 
     });
+
+    this.$('.Qdiv')
+        .transition('scale in');
+
+    // $('.js-packery').packery({
+    //     // options
+    //     itemSelector: '.Qdiv',
+    //     gutter: 10
+    // });
 });
