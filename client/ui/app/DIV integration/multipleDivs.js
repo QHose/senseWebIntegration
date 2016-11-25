@@ -45,6 +45,7 @@ Template.multipleDivs.onRendered(function() {
 
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, config);
         //get objects -- inserted here --
+        app.getObject('CurrentSelections','CurrentSelections');
         app.getObject('QV01', 'Ggpaxa');
         app.getObject('QV03', 'PYcyD');
         app.getObject('QV04', 'VzxsQBD');
@@ -55,7 +56,7 @@ Template.multipleDivs.onRendered(function() {
     });
 
     //http://packery.metafizzy.co/#initialize-with-vanilla-javascript
-    var $grid = this.$('.container').packery({
+    var $grid = this.$('.grid').packery({
         itemSelector: '.grid-item',
         columnWidth: 100
     });

@@ -32,7 +32,7 @@ iframe {
 
 
 
-article.qvobject
+/*article.qvobject
 
 {
 
@@ -42,12 +42,18 @@ article.qvobject
 
   padding: 10px;
 
-}
+}*/
 
 .Qdiv{
   height: 300px;
   width: 40%;
 }
+
+.QlistBox{
+  height: 300px;
+  width: 300px;
+}
+
 /*
 .grid-item--width2 { width: 40%; }
 */
