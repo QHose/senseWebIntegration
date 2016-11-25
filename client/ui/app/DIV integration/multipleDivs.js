@@ -5,7 +5,6 @@ var config = {
     isSecure: Meteor.settings.public.isSecure,
 };
 
-
 Template.multipleDivs.onRendered(function() {
     // var currentAppId = Session.get('currentAppId');
     // if (!currentAppId) {
@@ -36,12 +35,28 @@ Template.multipleDivs.onRendered(function() {
 
     });
 
+    //http://packery.metafizzy.co/#initialize-with-vanilla-javascript
+    var elem = document.querySelector('.container');
+    var pckry = new Packery(elem, {
+        itemSelector: '.grid-item',
+        gutter: 10
+    });
+
+    // // make all grid-items draggable
+    // $('.grid-item').each(function(i, gridItem) {
+    //     var draggie = new Draggabilly(gridItem);
+    //     // bind drag events to Packery
+    //     elem.packery('bindDraggabillyEvents', draggie);
+    // });
+
+    pckry.getItemElements().forEach(function(itemElem) {
+        var draggie = new Draggabilly(itemElem);
+        pckry.bindDraggabillyEvents(draggie);
+    });
+
+
     this.$('.Qdiv')
         .transition('scale in');
 
-    // $('.js-packery').packery({
-    //     // options
-    //     itemSelector: '.Qdiv',
-    //     gutter: 10
-    // });
+
 });

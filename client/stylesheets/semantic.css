@@ -1,3 +1,14 @@
+.grid-item:hover {
+  border-color: black;
+  cursor: move;
+}
+
+.grid-item.is-dragging,
+.grid-item.is-positioning-post-drag {
+  border-color: white;
+  background: #09F;
+  z-index: 2;
+}
 .item {
   word-wrap: break-word
 }
@@ -28,3 +39,24 @@ iframe {
     margin: 5em 0em 0em;
     padding: 5em 0em;
   }
+
+
+
+
+article.qvobject
+
+{
+
+  position:relative;
+
+  overflow: hidden;
+
+  padding: 10px;
+
+}
+
+.Qdiv{
+  height: 300px;
+  width: 25%;
+}
+
