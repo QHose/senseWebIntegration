@@ -1,5 +1,12 @@
 <template name='multipleDivs'>
+   
 <h3 class="ui header">Drag the charts in the position you like</h3>
+<div class="field">
+        <div class="ui toggle checkbox">
+            <input type="checkbox" {{checked}} name="templateSelector">
+            <label>Enable to re-order the charts</label>
+        </div>
+    </div>
     <div class="ui container" style="position: relative; height: 800px;" >
         <div id="QV01" class="Qdiv grid-item" ></div>
         <div id="QV02" class="Qdiv grid-item" ></div>

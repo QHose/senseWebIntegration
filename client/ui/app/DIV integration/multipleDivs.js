@@ -5,6 +5,25 @@ var config = {
     isSecure: Meteor.settings.public.isSecure,
 };
 
+Template.multipleDivs.helpers({
+    checked() {
+        var drag = Session.get('draggable');
+        console.log('draggable is ', drag);
+        return drag ? 'checked' : '';
+    },
+})
+
+Template.multipleDivs.events({
+    'change .checkbox' (event, template) {
+        if (event.target.checked) {
+            Session.set('draggable', true);
+
+        } else {
+            Session.set('draggable', false);
+        }
+    }
+})
+
 Template.multipleDivs.onRendered(function() {
     // var currentAppId = Session.get('currentAppId');
     // if (!currentAppId) {
@@ -36,20 +55,32 @@ Template.multipleDivs.onRendered(function() {
     });
 
     //http://packery.metafizzy.co/#initialize-with-vanilla-javascript
-    var elem = document.querySelector('.container');
-    var pckry = new Packery(elem, {
+    var $grid = this.$('.container').packery({
         itemSelector: '.grid-item',
-        gutter: 10
+        columnWidth: 100
     });
 
-    pckry.getItemElements().forEach(function(itemElem) {
-        var draggie = new Draggabilly(itemElem);
-        pckry.bindDraggabillyEvents(draggie);
+    // collection of Draggabillies
+    var draggies = [];
+    var isDrag = false;
+
+    // make all grid-items draggable
+    $grid.find('.grid-item').each(function(i, gridItem) {
+        var draggie = new Draggabilly(gridItem);
+        draggies.push(draggie);
+        // bind drag events to Packery
+        $grid.packery('bindDraggabillyEvents', draggie);
     });
 
+    Tracker.autorun(function() {
+        var draggableEnabled = Session.get('draggable');
+        var method = draggableEnabled ? 'enable' : 'disable';
+        draggies.forEach(function(draggie) {
+            draggie[method]();
+        });
+    })
 
     this.$('.Qdiv')
         .transition('scale in');
-
 
 });
