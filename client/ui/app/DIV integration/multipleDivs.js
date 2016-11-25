@@ -42,13 +42,6 @@ Template.multipleDivs.onRendered(function() {
         gutter: 10
     });
 
-    // // make all grid-items draggable
-    // $('.grid-item').each(function(i, gridItem) {
-    //     var draggie = new Draggabilly(gridItem);
-    //     // bind drag events to Packery
-    //     elem.packery('bindDraggabillyEvents', draggie);
-    // });
-
     pckry.getItemElements().forEach(function(itemElem) {
         var draggie = new Draggabilly(itemElem);
         pckry.bindDraggabillyEvents(draggie);
