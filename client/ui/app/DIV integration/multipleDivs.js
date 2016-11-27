@@ -8,9 +8,14 @@ var config = {
 Template.multipleDivs.helpers({
     checked() {
         var drag = Session.get('draggable');
-        console.log('draggable is ', drag);
         return drag ? 'checked' : '';
     },
+})
+
+Template.divTagDefaultBullet.helpers({
+    SenseLayout() {
+        return Session.get('SenseLayout');
+    }
 })
 
 Template.multipleDivs.events({
@@ -25,12 +30,11 @@ Template.multipleDivs.events({
 })
 
 Template.multipleDivs.onRendered(function() {
-    setupQlikSenseDivs();
-    setupPackery();
+    var app = setupQlikSenseDivs();
+    setupPackery(this);
 
     this.$('.Qdiv')
-        .transition('scale in');
-
+    .transition('scale in');
 });
 
 function setupQlikSenseDivs() {
@@ -61,13 +65,23 @@ function setupQlikSenseDivs() {
         app.getObject('QV06', 'LVqUFme');
         app.getObject('QV02', 'eBwDCmJ');
 
+        getAppLayout(app, this); //this equals the multipleDivs template
+
     });
+
 
 }
 
-function setupPackery() {
+function getAppLayout(app, template) {
+    app.getAppLayout(function(layout) {
+        console.log('The Qlik Sense app layout is ', layout);
+        Session.set('SenseLayout', layout);
+    })
+};
+
+function setupPackery(layout) {
     //http://packery.metafizzy.co/#initialize-with-vanilla-javascript
-    var $grid = this.$('.grid').packery({
+    var $grid = layout.$('.grid').packery({
         itemSelector: '.grid-item',
         columnWidth: 100
     });
