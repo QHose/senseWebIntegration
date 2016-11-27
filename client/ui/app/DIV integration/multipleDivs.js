@@ -25,13 +25,21 @@ Template.multipleDivs.events({
 })
 
 Template.multipleDivs.onRendered(function() {
+    setupQlikSenseDivs();
+    setupPackery();
+
+    this.$('.Qdiv')
+        .transition('scale in');
+
+});
+
+function setupQlikSenseDivs() {
     // var currentAppId = Session.get('currentAppId');
     // if (!currentAppId) {
     //     currentAppId = 'bd195c18-e1af-4e52-997f-774cc58eeb59' //set a default value for demo purposes
     //     console.log('We try to make a mashup for this app guid: ' + currentAppId);
     //     Session.set('currentAppId', currentAppId);
     // }
-
     console.log('the settings to connect to Sense are: ', config)
     require.config({
         baseUrl: "http://" + config.host + (config.port ? ":" + config.port : "") + config.prefix + "resources"
@@ -45,7 +53,7 @@ Template.multipleDivs.onRendered(function() {
 
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, config);
         //get objects -- inserted here --
-        app.getObject('CurrentSelections','CurrentSelections');
+        app.getObject('CurrentSelections', 'CurrentSelections');
         app.getObject('QV01', 'Ggpaxa');
         app.getObject('QV03', 'PYcyD');
         app.getObject('QV04', 'VzxsQBD');
@@ -55,6 +63,9 @@ Template.multipleDivs.onRendered(function() {
 
     });
 
+}
+
+function setupPackery() {
     //http://packery.metafizzy.co/#initialize-with-vanilla-javascript
     var $grid = this.$('.grid').packery({
         itemSelector: '.grid-item',
@@ -80,8 +91,4 @@ Template.multipleDivs.onRendered(function() {
             draggie[method]();
         });
     })
-
-    this.$('.Qdiv')
-        .transition('scale in');
-
-});
+}
