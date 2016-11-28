@@ -116,16 +116,31 @@
 	"buffers":
 	[
 		{
-			"contents": "<template name=\"customTable\">\n    <script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js\"></script>\n    <div class=\"ui grid\">\n        <div class=\"row\">\n            <div class=\"seven wide column\">\n            <div></div>\n                <pre class=\"prettyprint \" style=\"border:none\">\n\t\t\t\t\tapp.visualization.create('barchart', ['Month', '=Count(distinct Day)']).then(function(vis) {\n\t\t\t\t\tconsole.log('viz created, now insert into a div', vis);\n\t\t\t\t\tvis.show(\"chart\")\n\t\t\t\t})\t\t\t\t\n\t\t\t</pre>\n            </div>\n\n            <div class=\"nine wide column\">\n                <div id=\"chart\" class=\"Qdiv grid-item\"></div>\n            </div>\n        </div>\n        \n    </div>\n    <!-- <div class=\"ui statistic\">\n  <div class=\"value\">\n    {{totalSales}}\n  </div>\n  <div class=\"label\">\n    Sales\n</div> -->\n    <!-- </div> -->\n</template>\n<template name=\"onTheFlyExplanation\">\n    <div class=\"ui message\">\n        <div class=\"header\">\n            <h4>Visualization API</h4>\n        </div>\n        <div class=\"ui bulleted link list\">\n            <div class=\"item\">The <a href=\"https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/VisualizationAPI/VisualizationAPI.htm\">Visualization API</a> is the external interface to Qlik Sense visualizations. You can create new visualizations on the fly based on a session object. These visualizations are not persisted in the app. You can also fetch already existing visualizations from an app using the Visualization API.</div>\n            <div class=\"item\">See more information in the <a href=\"http://branch.qlik.com/#!/blog/56cc5f2af9e755b0dd301559\">Qlik Branch blog</a></div>\n        </div>\n    </div>\n</template>\n",
 			"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
-			"file_size": 1774,
-			"file_write_time": 131248106587836594,
 			"settings":
 			{
-				"buffer_size": 1694,
+				"buffer_size": 2338,
 				"encoding": "UTF-8",
 				"line_ending": "Windows",
 				"name": "<template name=\"table\">"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/multipleDivs.html",
+			"settings":
+			{
+				"buffer_size": 3873,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/IFrame integration/app.html",
+			"settings":
+			{
+				"buffer_size": 1070,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -150,7 +165,7 @@
 			"file": "client/ui/app/nav.html",
 			"settings":
 			{
-				"buffer_size": 3352,
+				"buffer_size": 3340,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -168,7 +183,7 @@
 			"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
 			"settings":
 			{
-				"buffer_size": 1770,
+				"buffer_size": 1737,
 				"encoding": "UTF-8",
 				"line_ending": "Windows",
 				"name": "ta"
@@ -539,15 +554,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1694,
+						"buffer_size": 2338,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								244,
-								244
+								702,
+								702
 							]
 						],
 						"settings":
@@ -565,6 +580,68 @@
 				},
 				{
 					"buffer": 1,
+					"file": "client/ui/app/DIV integration/multipleDivs.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1981,
+								1981
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/ui/app/IFrame integration/app.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1070,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1013,
+								1013
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "client/stylesheets/pre prettyprint .css",
 					"semi_transient": false,
 					"settings":
@@ -588,11 +665,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "lib/router.js",
 					"semi_transient": false,
 					"settings":
@@ -619,24 +696,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "client/ui/app/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3352,
+						"buffer_size": 3340,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1464,
-								1464
+								1410,
+								1410
 							]
 						],
 						"settings":
@@ -650,11 +727,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "client/ui/app/layout.html",
 					"semi_transient": false,
 					"settings":
@@ -681,7 +758,7 @@
 						"translation.y": 570.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -691,20 +768,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1770,
+						"buffer_size": 1737,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								839,
-								839
+								101,
+								101
 							]
 						],
 						"settings":
@@ -719,7 +796,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
