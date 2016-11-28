@@ -42,7 +42,7 @@ Template.registerHelper('chartIframeURL', function() {
         appGUID = Meteor.settings.public.multipleDivAppGuid
     }
 
-    url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single?appid=" + Meteor.settings.public.multipleDivAppGuid + '&obj=VzxsQBD&select=clearall';
+    url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single?appid=" + Meteor.settings.public.multipleDivAppGuid + '&obj=VzxsQBD';
 
     console.log('the generated IFrame URL is: ' + url);
     return url;

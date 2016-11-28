@@ -1,0 +1,14 @@
+.qvobject {
+  padding: 0 20px;
+}
+
+#currsel {
+  width: 100%;
+}
+
+#chart,
+#chart2 {
+  margin-top: 20px;
+  width: 600px;
+  height: 400px;
+}

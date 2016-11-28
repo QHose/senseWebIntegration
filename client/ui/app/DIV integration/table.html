@@ -1,0 +1,56 @@
+<template name="customTable">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <div class="ui grid">
+        <div class="row">
+            <div class="five wide column">
+                <h5 class="ui header">Javascript code in your SaaS platform</h5>
+                <pre class="prettyprint " style="border:none">
+				var app = qlik.openApp(appGuid, qConfig);
+
+         app.visualization.create('barchart', ["Country", "=Sum(SalesAmount)"]).then(function(vis) {
+                 vis.show("chart")
+             });    
+			</pre>
+            </div>
+            <div class="eleven wide column">
+                <h5 class="ui header">Generated chart</h5>
+                <div id="chart" class="Qdiv grid-item"></div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="five wide column">
+                <h5 class="ui header">Javascript code</h5>
+                <pre class="prettyprint " style="border:none">
+				var app = qlik.openApp(appGuid, qConfig);
+
+         app.visualization.create('barchart', ["Country", "=Sum(SalesAmount)"]).then(function(vis) {
+                 vis.show("chart")
+             });    
+			</pre>
+            </div>
+            <div class="eleven wide column">
+                <h5 class="ui header">Qlik Sense output</h5>
+                <div id="chart" class="Qdiv grid-item"></div>
+            </div>
+        </div> -->
+    </div>
+    <!-- <div class="ui statistic">
+  <div class="value">
+    {{totalSales}}
+  </div>
+  <div class="label">
+    Sales
+</div> -->
+    <!-- </div> -->
+</template>
+<template name="onTheFlyExplanation">
+    <div class="ui message">
+        <div class="header">
+            <h4>Visualization API</h4>
+        </div>
+        <div class="ui bulleted link list">
+            <div class="item">The <a href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/VisualizationAPI/VisualizationAPI.htm">Visualization API</a> is the external interface to Qlik Sense visualizations. It allows you to create and modify visualizations on the fly without making use of the Qlik Sense client.</div>
+            <div class="item">See more information in the <a href="http://branch.qlik.com/#!/blog/56cc5f2af9e755b0dd301559">Qlik Branch blog</a></div>
+        </div>
+    </div>
+</template>

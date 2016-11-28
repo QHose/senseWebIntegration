@@ -1,9 +1,4 @@
-var config = {
-    host: Meteor.settings.public.host,
-    prefix: '/' + Meteor.settings.public.virtualProxyClientUsage + '/',
-    port: Meteor.settings.public.port,
-    isSecure: Meteor.settings.public.isSecure,
-};
+
 
 Template.multipleDivs.helpers({
     draggableChecked() {
@@ -57,9 +52,9 @@ function setupQlikSenseDivs() {
     //     console.log('We try to make a mashup for this app guid: ' + currentAppId);
     //     Session.set('currentAppId', currentAppId);
     // }
-    console.log('the settings to connect to Sense are: ', config)
+    console.log('the settings to connect to Sense are: ', qConfig)
     require.config({
-        baseUrl: "http://" + config.host + (config.port ? ":" + config.port : "") + config.prefix + "resources"
+        baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
     });
 
     require(["js/qlik"], function(qlik) {
@@ -68,7 +63,7 @@ function setupQlikSenseDivs() {
             // alert(error.message);
         });
 
-        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, config);
+        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
 
         Tracker.autorun(function() {
             var options = {};

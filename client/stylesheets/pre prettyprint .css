@@ -1,0 +1,9 @@
+pre.prettyprint {
+    padding: 2px;
+    border: 0px solid #888;
+}
+
+pre {
+    /*text-align: left;*/
+    white-space: pre-line;
+  }
