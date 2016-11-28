@@ -119,19 +119,10 @@
 			"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
 			"settings":
 			{
-				"buffer_size": 2338,
+				"buffer_size": 2797,
 				"encoding": "UTF-8",
 				"line_ending": "Windows",
 				"name": "<template name=\"table\">"
-			}
-		},
-		{
-			"file": "client/ui/app/DIV integration/multipleDivs.html",
-			"settings":
-			{
-				"buffer_size": 3873,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
 			}
 		},
 		{
@@ -144,37 +135,10 @@
 			}
 		},
 		{
-			"file": "client/stylesheets/pre prettyprint .css",
-			"settings":
-			{
-				"buffer_size": 129,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "lib/router.js",
-			"settings":
-			{
-				"buffer_size": 2070,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "client/ui/app/nav.html",
 			"settings":
 			{
 				"buffer_size": 3340,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/ui/app/layout.html",
-			"settings":
-			{
-				"buffer_size": 2187,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -247,17 +211,18 @@
 	],
 	"file_history":
 	[
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/router.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/vizApi.css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/semantic.css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/packery.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/router.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/cityBike.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/styles.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-development.json",
@@ -373,8 +338,7 @@
 		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/lib/collections/carts.js",
 		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/lib/collections/products.js",
 		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/lib/permissions.js",
-		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/client/templates/home/index.js",
-		"/C/Users/Qlik/Meteor projects/rocketshop/client/stylesheets/app.css"
+		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/client/templates/home/index.js"
 	],
 	"find":
 	{
@@ -554,25 +518,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2338,
+						"buffer_size": 2797,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								702,
-								702
+								805,
+								805
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"auto_name": "<template name=\"table\">",
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -580,37 +546,6 @@
 				},
 				{
 					"buffer": 1,
-					"file": "client/ui/app/DIV integration/multipleDivs.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3873,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1981,
-								1981
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "client/ui/app/IFrame integration/app.html",
 					"semi_transient": false,
 					"settings":
@@ -641,66 +576,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "client/stylesheets/pre prettyprint .css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "lib/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2070,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1875,
-								1875
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 2,
 					"file": "client/ui/app/nav.html",
 					"semi_transient": false,
 					"settings":
@@ -712,8 +588,8 @@
 						"selection":
 						[
 							[
-								1410,
-								1410
+								1746,
+								1762
 							]
 						],
 						"settings":
@@ -724,51 +600,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 402.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "client/ui/app/layout.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2187,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1909,
-								1909
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 570.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 7,
+					"buffer": 3,
 					"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
 					"semi_transient": false,
 					"settings":
@@ -796,7 +635,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -819,18 +658,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
