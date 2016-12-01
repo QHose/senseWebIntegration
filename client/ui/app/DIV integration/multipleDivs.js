@@ -1,5 +1,3 @@
-
-
 Template.multipleDivs.helpers({
     draggableChecked() {
         var drag = Session.get('draggable');
@@ -70,13 +68,12 @@ function setupQlikSenseDivs() {
             Session.get('allowInteractions') ? null : options = { noInteraction: true };
             //get objects -- inserted here --
 
-            app.getObject('CurrentSelections', 'CurrentSelections');
-            app.getObject('QV01', 'Ggpaxa', options);
-            app.getObject('QV03', 'PYcyD', options);
-            app.getObject('QV04', 'VzxsQBD', options);
-            app.getObject('QV05', 'VaQjnV', options);
-            // app.getObject('QV06', 'LVqUFme', options);
-            // app.getObject('QV02', 'eBwDCmJ', options);
+            app.getObject('QV01', 'Ggpaxa', options); //sales by country bar
+            app.getObject('QV03', 'PYcyD', options); //customers per country bar
+            app.getObject('QV04', 'VzxsQBD', options); //customers scatter
+            app.getObject('QV05', 'VaQjnV', options); //listbox
+            //app.getObject('QV06', 'LVqUFme', options); //map
+            // app.getObject('QV02', 'eBwDCmJ', options); //sales over time linechart
 
             getAppLayout(app, this); //this equals the multipleDivs template
         })
