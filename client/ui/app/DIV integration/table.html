@@ -1,58 +1,34 @@
-<template name="customTable">
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <div class="ui grid">
-        <div class="row">
-            <div class="five wide column">
-                <h5 class="ui header">Javascript code in your SaaS platform</h5>
-                <pre class="prettyprint " style="border:none">
-				var app = qlik.openApp(appGuid, qConfig);
+<template name="tableUsingWidgets">
+	<table class="ui celled table">
+		<thead>
+			<tr>
+				{{#each head in headers}}
+				<th>{{head.qFallbackTitle}} </th>
+				{{/each}}
+			</tr>
+		</thead>
+		<tbody>
+			{{#each row in rows }}
+			<tr>
+				{{#each cell in row.cells}}
+				<td> {{cell.qText}} </td>
+				{{/each}}
+			</tr>
+			{{/each}}
 
-         app.visualization.create('barchart', ["Country", "=Sum(SalesAmount)"]).then(function(vis) {
-                 vis.show("chart")
-             });    
-			</pre>
-            </div>
-            <div class="eleven wide column">
-                <h5 class="ui header">Generated chart</h5>
-                <div id="chart" class="Qdiv grid-item"></div>
-            </div>
-        </div>
-        <!-- <div class="row">
-            <div class="five wide column">
-                <h5 class="ui header">Javascript code</h5>
-                <pre class="prettyprint " style="border:none">
-				var app = qlik.openApp(appGuid, qConfig);
-
-         app.visualization.create('barchart', ["Country", "=Sum(SalesAmount)"]).then(function(vis) {
-                 vis.show("chart")
-             });    
-			</pre>
-            </div>
-            <div class="eleven wide column">
-                <h5 class="ui header">Qlik Sense output</h5>
-                <div id="chart" class="Qdiv grid-item"></div>
-            </div>
-        </div> -->
-    </div>
-    <!-- <div class="ui statistic">
-  <div class="value">
-    {{totalSales}}
-  </div>
-  <div class="label">
-    Sales
-</div> -->
-    <!-- </div> -->
+		</tbody>
+	</table>
 </template>
-<template name="onTheFlyExplanation">
-    <div class="ui message">
-        <div class="header">
-            <h4>Visualization API</h4>
-        </div>
-        <div class="ui bulleted link list">
-            <div class="item">The <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/VisualizationAPI/VisualizationAPI.htm">Visualization API</a> is the external interface to Qlik Sense visualizations. It allows you to create and modify visualizations on the fly without making use of the Qlik Sense client.</div>
-            <div class="item">You can easily create charts and combine any field you like, without thinking about data structures or having to write queries.</div>
-            <div class="item">See more information in the <a htarget="_blank" ref="http://branch.qlik.com/#!/blog/56cc5f2af9e755b0dd301559">Qlik Branch blog</a></div>
-            <div class="item">Play around with the API on <a target="_blank" href="https://jsfiddle.net/mindspank/fs62hwk3/3/">JSFidlle</a></div>
-        </div>
-    </div>
+<template name="tableUsingWidgetsExplanation">
+	<div class="ui message">
+		<div class="header">
+			<h4>Table and hyperCube API</h4>
+		</div>
+		<div class="ui bulleted link list">
+		<div class="item">Here you see a plain old HTML table, but automatically populated with Qlik Sense data. So the layout of the table you see is not a Qlik Sense object. Only the data is retreived from Qlik Sense using the Table API.</div>
+		<div class="item">The <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/TableAPI/QTable.htm"> Table API</a> is an easy way to get a table of data in your web site. It will return an array of headers, rows and columns which you can directly use in your HTML. Press F12 - console to see these arrays.</div>
+		<div class="item">You can also register an event in Qlik Sense, so your table will be updated based on selections made in Qlik Sense. But you can also do it the other way around. If you make a selection in your SaaS platform you can <a href="http://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/SelectionAPI/qlik-selectionState-interface.htm">forward the selection to Qlik Sense</a>.</div>
+		<div class="item">See the widget <a href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/Extensions/Content/extensions-work-with-data.htm#anchor-8">tutorial</a> for extended version of how to use Qlik as a query engine which returns "raw JSON" min a so called <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/Extensions/Content/Widget/widgets-data-hypercubes.htm#anchor-1">"hyperCube"</a>.</div>
+		</div>
+	</div>
 </template>

@@ -5,6 +5,7 @@ qConfig = {
     isSecure: Meteor.settings.public.isSecure,
 };
 
+
 Template.registerHelper('host', function() {
     return Meteor.settings.public.host;
 });

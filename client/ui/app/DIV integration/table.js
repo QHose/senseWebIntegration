@@ -1,60 +1,44 @@
- Meteor.startup(function() {
-     require.config({
-         baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
-     });
- })
-
- Template.customTable.helpers({
-     table() {
-         // Session.get('table');
-     },
-     totalSales() {
-         // return Session.get('table').totals[0].qNum.val();
-     }
- })
-
-
- Template.customTable.onCreated(function() {
-     // getCube();
- })
-
- Template.customTable.onRendered(function() {
-     console.log('customTable onRendered');
-     require(["js/qlik"], function(qlik) {
-         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
-
-         app.visualization.create('barchart', ["Country", "=Sum(SalesAmount)"]).then(function(vis) {
-                 vis.show("chart")
-             });             
-     })
- })
+Template.tableUsingWidgets.helpers({
+    table() {
+        Session.get('table');
+    },
+    totalSales() {
+        // return Session.get('table').totals[0].qNum.val();
+    },
+    headers() {
+        var headers = Template.instance().table.get().headers;
+        if (headers) {
+            console.log('table has these headers', headers);
+            return headers;
+        }
+    },
+    rows() {
+        var rows = Template.instance().table.get().rows;
+        if (rows) {
+            console.log('table has these rows', rows);
+            return rows;
+        }
+    }
+})
 
 
- function getCube() {
-     //create cubes and lists -- inserted here -- 
-     require.config({
-         baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
-     });
+Template.tableUsingWidgets.onCreated(function() {
+    this.table = new ReactiveVar('test');
+    var reactiveTable = this.table;
+    console.log('getCube function', this.table.get());
 
+    require(["js/qlik"], function(qlik) {
+        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
 
-     require(["js/qlik"], function(qlik) {
-         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
-         var table = app.createTable(["Country", "City"], ["Sum(SalesAmount)"], { rows: 100 });
-         console.log(table.totals);
-         // Session.set('table', table);
+        // Returns a table object of type QTable, which is initially empty but that eventually will contain data. The table object will be updated when selection state changes.
+        // var table = app.createTable(["Country", "City"], ["Sum(SalesAmount)"], { rows: 5 });
+        var table = app.createTable(["Country", "City"], ["Sum(SalesAmount)"], { rows: 30 });
 
-         app.visualization.create('table', ['Month', '=1'], {
-             qHyperCubeDef: {
-                 qInitialDataFetch: [{
-                     qTop: 0,
-                     qLeft: 0,
-                     qWidth: 2,
-                     qHeight: 1000
-                 }]
-             }
-         }).then(model => {
-             console.log(model)
-
-         })
-     })
- }
+        var listener = function() {
+            console.log('table is: ', table);
+            reactiveTable.set(table);
+            table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.
+        };
+        table.OnData.bind(listener); //bind the listener
+    })
+})

@@ -34,5 +34,6 @@ aslagle:reactive-table
 # houston:admin
 # shell-server@0.2.1
 # modules
-# reactive-var
-u2622:persistent-session
+reactive-var
+# u2622:persistent-session
+practicalmeteor:mocha
