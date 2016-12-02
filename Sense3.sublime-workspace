@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"a",
+				"array"
+			],
+			[
+				"Cou",
+				"Country"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
 				"list",
 				"listener"
 			],
@@ -62,10 +74,6 @@
 			[
 				"re",
 				"registerHelper"
-			],
-			[
-				"con",
-				"config"
 			],
 			[
 				"If",
@@ -139,28 +147,38 @@
 			"file": "client/ui/app/DIV integration/table.html",
 			"settings":
 			{
-				"buffer_size": 3162,
+				"buffer_size": 4335,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Template.tableUsingWidgets.helpers({\n    countries() {\n        if (Template.instance().countryList) {\n            var countries = Template.instance().countryList.get();\n            console.log('helper: app.createList returned these countries', countries);\n            countries.forEach\n            return countries;\n        }\n    },\n    headers() {\n        if (Template.instance().table) {\n            var headers = Template.instance().table.get().headers;\n            console.log('helper: table has these headers', headers);\n            return Template.instance().table.get().headers;\n        }\n    },\n    rows() {\n        if (Template.instance().table) {\n            var rows = Template.instance().table.get().rows;\n            console.log('helper: table has these rows', rows);\n            return rows;\n        }\n    }\n})\n\nTemplate.tableUsingWidgets.events({})\n\n\n\n\nTemplate.tableUsingWidgets.onRendered(function() {\n    this.$('.ui.dropdown')\n        .dropdown();\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        //create dropdown list for country\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n        app.createList({\n            \"qDef\": {\n                \"qFieldDefs\": [\n                    \"Country\"\n                ]\n            },\n            \"qInitialDataFetch\": [{\n                qTop: 0,\n                qLeft: 0,\n                qHeight: 100,\n                qWidth: 1\n            }]\n        }, function(reply) {\n            var countries = reply.qListObject.qDataPages[0].qMatrix;\n            console.log('List of Countries received via app.createList: ', countries);\n            this.countryList = new ReactiveVar(countries);\n            var str = \"\";\n            $.each(reply.qListObject.qDataPages[0].qMatrix, function(key, value) {\n                str += '<div class=\"item\" >' + value[0].qText + '</div>';\n            });\n            this.$('#list').html(str);\n        });\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n    })\n\n})\n\nTemplate.tableUsingWidgets.onCreated(function() {\n    this.table = new ReactiveVar('test');\n    var reactiveTable = this.table;\n    console.log('getCube function', this.table.get());\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        // Returns a table object of type QTable, which is initially empty but that eventually will contain data. The table object will be updated when selection state changes.\n        // var table = app.createTable([\"Country\", \"City\"], [\"Sum(SalesAmount)\"], { rows: 5 });\n        var table = app.createTable([\"Country\", \"City\"], [\"Sum(SalesAmount)\"], { rows: 30 });\n\n        var listener = function() {\n            console.log('table is: ', table);\n            reactiveTable.set(table);\n            table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.\n        };\n        table.OnData.bind(listener); //bind the listener\n    })\n})\n",
+			"contents": "var table = {};\n\nTemplate.tableUsingWidgets.helpers({\n    countries() {\n        if (Template.instance().countryList) {\n            var countries = Template.instance().countryList.get();\n            console.log('helper: app.createList returned these countries', countries);\n            countries.forEach\n            return countries;\n        }\n    },\n    headers() {\n        if (Template.instance().table) {\n            var headers = Template.instance().table.get().headers;\n            console.log('helper: table has these headers', headers);\n            return Template.instance().table.get().headers;\n        }\n    },\n    rows() {\n        if (Template.instance().table) {\n            var rows = Template.instance().table.get().rows;\n            console.log('helper: table has these rows', rows);\n            return rows;\n        }\n    }\n})\n\nTemplate.tableUsingWidgets.events({\n    'change .country.dropdown': function(event, template) {\n        var selected = template.$('.countryList').val(); //returns [1, 5]\n        var array = selected.split(',').map(Number); //make an array of selections\n        console.log(array);\n\n        //make the selection in Qlik Sense\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/select-method.htm\n        require([\"js/qlik\"], function(qlik) {\n            var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n            app.field('Country').select(array, false, true); //works fine, turn toggle to false for multi select\n\n        })\n\n    }\n})\n\nTemplate.tableUsingWidgets.onRendered(function() {\n    this.$('.ui.dropdown')\n        .dropdown();\n\n    require.config({\n        baseUrl: \"http://\" + qConfig.host + (qConfig.port ? \":\" + qConfig.port : \"\") + qConfig.prefix + \"resources\"\n    });\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        //create dropdown list for country\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n        app.createList({\n            \"qDef\": {\n                \"qFieldDefs\": [\n                    \"Country\"\n                ]\n            },\n            \"qInitialDataFetch\": [{\n                qTop: 0,\n                qLeft: 0,\n                qHeight: 100,\n                qWidth: 1\n            }]\n        }, function(reply) {\n            var countries = reply.qListObject.qDataPages[0].qMatrix;\n            console.log('List of Countries received via app.createList: ', countries);\n            this.countryList = new ReactiveVar(countries);\n            var str = \"\";\n            $.each(reply.qListObject.qDataPages[0].qMatrix, function(key, value) {\n                str += '<div class=\"item\" data-value=\"'+value[0].qElemNumber+ '\" >' + value[0].qText + '</div>';\n            });\n            this.$('#list').html(str);\n        });\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n    })\n\n})\n\nTemplate.tableUsingWidgets.onCreated(function() {\n    this.table = new ReactiveVar('test');\n    var reactiveTable = this.table;\n    console.log('getCube function', this.table.get());\n\n    require.config({\n        baseUrl: \"http://\" + qConfig.host + (qConfig.port ? \":\" + qConfig.port : \"\") + qConfig.prefix + \"resources\"\n    });\n\n    \n})\n\nTemplate.tableUsingWidgets.onDestroyed(function() {\n    if (table.OnData) {\n        table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.\n    }\n})\n",
 			"file": "client/ui/app/DIV integration/table.js",
-			"file_size": 3210,
-			"file_write_time": 131250823719228015,
+			"file_size": 4288,
+			"file_write_time": 131251452229282920,
 			"settings":
 			{
-				"buffer_size": 3173,
+				"buffer_size": 3589,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/ui/app/DIV integration/multipleDivs.js",
+			"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
 			"settings":
 			{
-				"buffer_size": 3792,
+				"buffer_size": 1916,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/onTheFlybarChart.js",
+			"settings":
+			{
+				"buffer_size": 487,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -352,7 +370,7 @@
 	],
 	"find":
 	{
-		"height": 55.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -391,6 +409,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"resources",
 			"{{#each col in row}}\n                <td> {{col.qText}} </td>\n                {{/each}}",
 			"qDataPages",
 			"qDataPages ",
@@ -524,7 +543,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -533,15 +552,77 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3162,
+						"buffer_size": 4335,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								290,
-								36
+								186,
+								186
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/ui/app/DIV integration/table.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3395,
+								3395
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 473.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35,
+								137
 							]
 						],
 						"settings":
@@ -559,64 +640,32 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "client/ui/app/DIV integration/table.js",
+					"buffer": 3,
+					"file": "client/ui/app/DIV integration/onTheFlybarChart.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3173,
+						"buffer_size": 487,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								864,
-								864
+								197,
+								54
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/ui/app/DIV integration/multipleDivs.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3792,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								431,
-								431
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -665,7 +714,7 @@
 	"project": "Sense3.sublime-project",
 	"replace":
 	{
-		"height": 104.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
