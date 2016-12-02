@@ -10,10 +10,10 @@
 
                    table = app.createTable(["Country", "City"], ["Sum(SalesAmount)"], { rows: 3000 });
 
-                   var listener = function() { //if the data is ready
-                   Session.set("MyTable", table);
+                   var listener = function() { //if the data is ready 
+                   //Create your HTML table
                };
-               table.OnData.bind(listener); //bind the listener so this table updates when user makes selection in Sense or your platform
+               table.OnData.bind(listener); //bind the event listener <!-- so this table updates when user makes selection in Sense or your platform -->
            })
        </pre>
             </div>

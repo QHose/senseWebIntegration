@@ -29,33 +29,24 @@ Template.tableUsingWidgets.events({
     'change .country.dropdown': function(event, template) {
         var selected = template.$('.countryList').val(); //returns [1, 5]
         var array = selected.split(',').map(Number); //make an array of selections
-        console.log(array);
+        console.log('the array with selected IDs is: ', array);
+
 
         //make the selection in Qlik Sense
         //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/select-method.htm
         require(["js/qlik"], function(qlik) {
             var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
-            app.field('Country').clear();
-            app.field('Country').select(array, false, true); //works fine, turn toggle to false for multi select
-
+            if (selected) {
+                app.field('Country').select(array, false, true); //works fine, turn toggle to false for multi select
+            } else {
+                app.field('Country').clear();
+            }
         })
 
     }
 })
 
-Template.tableUsingWidgets.onRendered(function() {
-    getCurrentSelections();
-    getCountryList();
-
-    this.$('.ui.dropdown')
-        .dropdown();
-})
-
 function getCountryList() {
-    require.config({
-        baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
-    });
-
     require(["js/qlik"], function(qlik) {
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
 
@@ -159,7 +150,19 @@ function getTable(template) {
     })
 }
 
+Template.tableUsingWidgets.onRendered(function() {
+    getCurrentSelections();
+    getCountryList();
+
+    this.$('.ui.dropdown')
+        .dropdown();
+})
+
 Template.tableUsingWidgets.onCreated(function() {
+    require.config({
+        baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
+    });
+
     getTable(this);
 })
 
