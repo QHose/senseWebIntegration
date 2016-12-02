@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"list",
+				"listener"
+			],
+			[
+				"cou",
+				"countries"
+			],
+			[
+				"app",
+				"app.createList"
+			],
+			[
+				"Co",
+				"Country"
+			],
+			[
+				"cre",
+				"createTable"
+			],
+			[
 				"get",
 				"getCube"
 			],
@@ -42,10 +62,6 @@
 			[
 				"re",
 				"registerHelper"
-			],
-			[
-				"app",
-				"appGUID"
 			],
 			[
 				"con",
@@ -120,68 +136,32 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
+			"file": "client/ui/app/DIV integration/table.html",
 			"settings":
 			{
-				"buffer_size": 2681,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "<template name=\"table\">"
-			}
-		},
-		{
-			"file": ".meteor/packages",
-			"settings":
-			{
-				"buffer_size": 1405,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "test/app-test.js",
-			"settings":
-			{
-				"buffer_size": 224,
+				"buffer_size": 3162,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/ui/app/DIV integration/multipleDivs.html",
+			"contents": "Template.tableUsingWidgets.helpers({\n    countries() {\n        if (Template.instance().countryList) {\n            var countries = Template.instance().countryList.get();\n            console.log('helper: app.createList returned these countries', countries);\n            countries.forEach\n            return countries;\n        }\n    },\n    headers() {\n        if (Template.instance().table) {\n            var headers = Template.instance().table.get().headers;\n            console.log('helper: table has these headers', headers);\n            return Template.instance().table.get().headers;\n        }\n    },\n    rows() {\n        if (Template.instance().table) {\n            var rows = Template.instance().table.get().rows;\n            console.log('helper: table has these rows', rows);\n            return rows;\n        }\n    }\n})\n\nTemplate.tableUsingWidgets.events({})\n\n\n\n\nTemplate.tableUsingWidgets.onRendered(function() {\n    this.$('.ui.dropdown')\n        .dropdown();\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        //create dropdown list for country\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n        app.createList({\n            \"qDef\": {\n                \"qFieldDefs\": [\n                    \"Country\"\n                ]\n            },\n            \"qInitialDataFetch\": [{\n                qTop: 0,\n                qLeft: 0,\n                qHeight: 100,\n                qWidth: 1\n            }]\n        }, function(reply) {\n            var countries = reply.qListObject.qDataPages[0].qMatrix;\n            console.log('List of Countries received via app.createList: ', countries);\n            this.countryList = new ReactiveVar(countries);\n            var str = \"\";\n            $.each(reply.qListObject.qDataPages[0].qMatrix, function(key, value) {\n                str += '<div class=\"item\" >' + value[0].qText + '</div>';\n            });\n            this.$('#list').html(str);\n        });\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n    })\n\n})\n\nTemplate.tableUsingWidgets.onCreated(function() {\n    this.table = new ReactiveVar('test');\n    var reactiveTable = this.table;\n    console.log('getCube function', this.table.get());\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        // Returns a table object of type QTable, which is initially empty but that eventually will contain data. The table object will be updated when selection state changes.\n        // var table = app.createTable([\"Country\", \"City\"], [\"Sum(SalesAmount)\"], { rows: 5 });\n        var table = app.createTable([\"Country\", \"City\"], [\"Sum(SalesAmount)\"], { rows: 30 });\n\n        var listener = function() {\n            console.log('table is: ', table);\n            reactiveTable.set(table);\n            table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.\n        };\n        table.OnData.bind(listener); //bind the listener\n    })\n})\n",
+			"file": "client/ui/app/DIV integration/table.js",
+			"file_size": 3210,
+			"file_write_time": 131250823719228015,
 			"settings":
 			{
-				"buffer_size": 3903,
+				"buffer_size": 3173,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/ui/app/IFrame integration/app.html",
+			"file": "client/ui/app/DIV integration/multipleDivs.js",
 			"settings":
 			{
-				"buffer_size": 1070,
-				"encoding": "UTF-8",
+				"buffer_size": 3792,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/ui/app/nav.html",
-			"settings":
-			{
-				"buffer_size": 3349,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
-			"settings":
-			{
-				"buffer_size": 1736,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "ta"
 			}
 		}
 	],
@@ -232,23 +212,35 @@
 	"expanded_folders":
 	[
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/test"
 	],
 	"file_history":
 	[
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/test/test.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/router.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/main.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/app.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/test/app-test.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/test/test.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/vizApi.css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.js",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/semantic.css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/packery.css",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/cityBike.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/styles.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-development.json",
@@ -264,7 +256,6 @@
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/multipleCharts.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/nav.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/1chart.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/app.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-production.json",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/1chart.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/layout.html",
@@ -357,17 +348,11 @@
 		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/lib/shopping_cart.js",
 		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/client/templates/_partials/product_tile.html",
 		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/client/templates/checkout/show.html",
-		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/client/templates/cart/show.html",
-		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/client/config/notification.js",
-		"/C/Users/Qlik/Meteor projects/Slager/server/sales_repo.js",
-		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/lib/collections/vendors.js",
-		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/lib/collections/carts.js",
-		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/lib/collections/products.js",
-		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/lib/permissions.js"
+		"/C/Users/Qlik/Meteor projects/pluralsight/1-exercise-files/rocket-shop-complete/client/templates/cart/show.html"
 	],
 	"find":
 	{
-		"height": 64.0
+		"height": 55.0
 	},
 	"find_in_files":
 	{
@@ -406,6 +391,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"{{#each col in row}}\n                <td> {{col.qText}} </td>\n                {{/each}}",
+			"qDataPages",
+			"qDataPages ",
+			"customTable",
 			"pre",
 			"qlik",
 			"config",
@@ -496,6 +485,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"onTheFlybarChart",
 			"Qconfig",
 			"<div class=\"ui bulleted link list\">",
 			"<div class=\"item\">",
@@ -539,215 +529,94 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
+					"file": "client/ui/app/DIV integration/table.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2681,
+						"buffer_size": 3162,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2547,
-								2547
+								290,
+								36
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"auto_name": "<template name=\"table\">",
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": ".meteor/packages",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1405,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1404,
-								741
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 338.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "test/app-test.js",
+					"buffer": 1,
+					"file": "client/ui/app/DIV integration/table.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 224,
+						"buffer_size": 3173,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3,
-								224
+								864,
+								864
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/ui/app/DIV integration/multipleDivs.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								431,
+								431
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/ui/app/DIV integration/multipleDivs.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3903,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2928,
-								2928
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 337.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "client/ui/app/IFrame integration/app.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1070,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1013,
-								1013
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/ui/app/nav.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3349,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1113,
-								1113
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 402.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1736,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1309,
-								1309
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"auto_name": "ta",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 67.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -796,7 +665,7 @@
 	"project": "Sense3.sublime-project",
 	"replace":
 	{
-		"height": 120.0
+		"height": 104.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -810,7 +679,7 @@
 	},
 	"select_project":
 	{
-		"height": 1000.0,
+		"height": 885.0,
 		"last_filter": "",
 		"selected_items":
 		[
@@ -838,7 +707,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 481.0,
+	"side_bar_width": 297.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

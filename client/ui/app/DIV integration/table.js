@@ -1,14 +1,15 @@
+var table = {};
+
 Template.tableUsingWidgets.helpers({
     countries() {
         if (Template.instance().countryList) {
             var countries = Template.instance().countryList.get();
-            console.log('helper: app.createList returned these countries', countries);
+            // console.log('helper: app.createList returned these countries', countries);
             countries.forEach
             return countries;
         }
     },
     headers() {
-        console.log('helper: headers');
         if (Template.instance().table) {
             var headers = Template.instance().table.get().headers;
             // console.log('helper: table has these headers', headers);
@@ -18,15 +19,41 @@ Template.tableUsingWidgets.helpers({
     rows() {
         if (Template.instance().table) {
             var rows = Template.instance().table.get().rows;
-            console.log('helper: table has these rows', rows);
+            // console.log('helper: table has these rows', rows);
             return rows;
         }
     }
 })
 
+Template.tableUsingWidgets.events({
+    'change .country.dropdown': function(event, template) {
+        var selected = template.$('.countryList').val();
+        var array = selected.split(','); //make an array of selections
+        console.log(array);
+
+        //make the selection in Qlik Sense
+        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/select-method.htm
+        require(["js/qlik"], function(qlik) {
+            var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
+            // app.field('Country').select(["Canada"], false, false);
+            app.field('Country').select([0, 1, 2], false, false);
+
+            // app.field('Country').select(array, true, true);
+        })
+
+    }
+})
+
+
+
+
 Template.tableUsingWidgets.onRendered(function() {
     this.$('.ui.dropdown')
         .dropdown();
+
+    require.config({
+        baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
+    });
 
     require(["js/qlik"], function(qlik) {
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
@@ -65,18 +92,26 @@ Template.tableUsingWidgets.onCreated(function() {
     var reactiveTable = this.table;
     console.log('getCube function', this.table.get());
 
+    require.config({
+        baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
+    });
+
     require(["js/qlik"], function(qlik) {
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
 
         // Returns a table object of type QTable, which is initially empty but that eventually will contain data. The table object will be updated when selection state changes.
         // var table = app.createTable(["Country", "City"], ["Sum(SalesAmount)"], { rows: 5 });
-        var table = app.createTable(["Country", "City"], ["Sum(SalesAmount)"], { rows: 30 });
+        table = app.createTable(["Country", "City"], ["Sum(SalesAmount)"], { rows: 30 });
 
         var listener = function() {
             console.log('table is: ', table);
             reactiveTable.set(table);
-            table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.
+            // table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.
         };
         table.OnData.bind(listener); //bind the listener
     })
+})
+
+Template.tableUsingWidgets.OnDestoyed(function() {
+    table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.
 })

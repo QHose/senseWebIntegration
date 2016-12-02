@@ -1,13 +1,13 @@
 <template name="tableUsingWidgets">
-     <div class="ui selection dropdown">
-        <input type="hidden" name="country">
+    <div class="ui sub header">Select Country</div>
+    <div class="ui multiple search selection country dropdown">
+        <!-- This will receive comma separated value like OH,TX,WY !-->
+        <input name="countries" type="hidden" class="countryList">
         <i class="dropdown icon"></i>
-        <div class="default text">Select Country</div>
+        <div class="default text">countries</div>
         <div id="list" class="menu">
-            
         </div>
     </div>
-
     <table class="ui selectable celled table">
         <thead>
             <tr>
