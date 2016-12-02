@@ -1,11 +1,45 @@
 <template name="tableUsingWidgets">
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <div class="ui grid">
-        <div class="eight wide column">
-            <div class="row">
+    <div class="ui two column grid">
+        <div class="row">
+            <!-- <div class="eight wide column"> -->
+            <!-- <div class="ui one column grid"> -->
+            <div class="column">
+                <h5 class="ui header">Javascript code in your SaaS platform (selection)</h5>
+                <pre class="prettyprint " style="border:none">
+                  <!-- require(["js/qlik"], function(qlik) { -->
+            var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
+            
+                app.field('Country').select(selectedArray, false, true);
+           
+        <!-- }) -->
+       </pre>
+            </div>
+            <div class="colum">
+                <div class="ui one column grid">
+                    <div class="column">
+                        <div class="ui sub header">Custom "current selections" box</div>
+                        <div id="myselections"> </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui sub header">Custom select Country</div>
+                        <div class="ui search multiple selection country dropdown">
+                            <!-- This will receive comma separated value like OH,TX,WY !-->
+                            <input name="countries" type="hidden" class="countryList">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">countries</div>
+                            <div id="list" class="menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
                 <h5 class="ui header">Javascript code in your SaaS platform (table)</h5>
                 <pre class="prettyprint " style="border:none">
-                   require(["js/qlik"], function(qlik) {
+                   <!-- require(["js/qlik"], function(qlik) { -->
                    var app = qlik.openApp(appGuid, qConfig);
 
                    table = app.createTable(["Country", "City"], ["Sum(SalesAmount)"], { rows: 3000 });
@@ -14,49 +48,58 @@
                    //Create your HTML table
                };
                table.OnData.bind(listener); //bind the event listener <!-- so this table updates when user makes selection in Sense or your platform -->
-           })
+           <!-- }) -->
        </pre>
             </div>
-        </div>
-        <div class="eight wide column">
-            <div class="ui one column grid">
-                <div class="column">
-                    <div class="ui sub header">Custom "current selections" box</div>
-                    <div id="myselections"> </div>
-                </div>
-                <div class="column">
-                    <div class="ui sub header">Custom select Country</div>
-                    <div class="ui search multiple selection country dropdown">
-                        <!-- This will receive comma separated value like OH,TX,WY !-->
-                        <input name="countries" type="hidden" class="countryList">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">countries</div>
-                        <div id="list" class="menu">
-                        </div>
+            <div class="colum">
+                <div class="ui one column grid">
+                    <div class="column">
+                        <div class="ui sub header">Custom chart</div>
+                        <table class="ui selectable celled table">
+                            <thead>
+                                <tr>
+                                    {{#each head in headers}}
+                                    <th>{{head.qFallbackTitle}} </th>
+                                    {{/each}}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each row in rows }}
+                                <tr>
+                                    {{#each cell in row.cells}}
+                                    <td> {{cell.qText}} </td>
+                                    {{/each}}
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div class="ui sub header">Custom chart</div>
-            <table class="ui selectable celled table">
-                <thead>
-                    <tr>
-                        {{#each head in headers}}
-                        <th>{{head.qFallbackTitle}} </th>
+            <!-- <div class="column">
+                <div class="ui sub header">Custom chart</div>
+                <table class="ui selectable celled table">
+                    <thead>
+                        <tr>
+                            {{#each head in headers}}
+                            <th>{{head.qFallbackTitle}} </th>
+                            {{/each}}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each row in rows }}
+                        <tr>
+                            {{#each cell in row.cells}}
+                            <td> {{cell.qText}} </td>
+                            {{/each}}
+                        </tr>
                         {{/each}}
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each row in rows }}
-                    <tr>
-                        {{#each cell in row.cells}}
-                        <td> {{cell.qText}} </td>
-                        {{/each}}
-                    </tr>
-                    {{/each}}
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div> -->
         </div>
     </div>
+    <!-- </div> -->
 </template>
 <template name="tableUsingWidgetsExplanation">
     <div class="ui message">
