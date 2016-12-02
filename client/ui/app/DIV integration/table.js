@@ -27,7 +27,7 @@ Template.tableUsingWidgets.helpers({
 
 Template.tableUsingWidgets.events({
     'change .country.dropdown': function(event, template) {
-        var selected = template.$('.countryList').val();
+        var selected = template.$('.countryList').val(); //returns ["france", "united kingdom"]
         var array = selected.split(','); //make an array of selections
         console.log(array);
 
@@ -35,17 +35,12 @@ Template.tableUsingWidgets.events({
         //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/select-method.htm
         require(["js/qlik"], function(qlik) {
             var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
-            // app.field('Country').select(["Canada"], false, false);
-            app.field('Country').select([0, 1, 2], false, false);
+            app.field('Country').selectMatch(array[0], true, true); //works fine
 
-            // app.field('Country').select(array, true, true);
         })
 
     }
 })
-
-
-
 
 Template.tableUsingWidgets.onRendered(function() {
     this.$('.ui.dropdown')
@@ -112,6 +107,8 @@ Template.tableUsingWidgets.onCreated(function() {
     })
 })
 
-Template.tableUsingWidgets.OnDestoyed(function() {
-    table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.
+Template.tableUsingWidgets.onDestroyed(function() {
+    if (table.OnData) {
+        table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.
+    }
 })

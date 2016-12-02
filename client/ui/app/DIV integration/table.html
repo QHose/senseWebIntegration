@@ -1,6 +1,6 @@
 <template name="tableUsingWidgets">
     <div class="ui sub header">Select Country</div>
-    <div class="ui multiple search selection country dropdown">
+    <div class="ui search selection country dropdown">
         <!-- This will receive comma separated value like OH,TX,WY !-->
         <input name="countries" type="hidden" class="countryList">
         <i class="dropdown icon"></i>
@@ -36,7 +36,7 @@
             <div class="item">Here you see a plain old HTML table, but automatically populated with Qlik Sense data. So the layout of the table you see is not a Qlik Sense object. Only the data is retreived from Qlik Sense using the Table API.</div>
             <div class="item">You can easily get and combine any field you like, without having to think about data structures or difficult queries. Why? Well, Qlik Sense associates (combines) the data for you, which means any field is directly available for you to use.</div>
             <div class="item">The <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/TableAPI/QTable.htm"> Table API</a> is an easy way to get a table of data in your web site. It will return an array of headers, rows and columns which you can directly use in your HTML. Press F12 - console to see these arrays.</div>
-            <div class="item">You can also register an event in Qlik Sense, so your table will be updated based on selections made in Qlik Sense. But you can also do it the other way around. If you make a selection in your SaaS platform you can <a target="_blank" href="http://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/SelectionAPI/qlik-selectionState-interface.htm">forward the selection to Qlik Sense</a>.</div>
+            <div class="item">You can also register an event in Qlik Sense, so your table will be updated based on selections made in Qlik Sense. But you can also do it the other way around. If you make a selection in your SaaS platform you can <a target="_blank" href="http://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/SelectionAPI/qlik-selectionState-interface.htm">forward the selection to Qlik Sense</a>. That is what happens when you select something in the country dropdown.</div>
             <div class="item">See the widget <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/Extensions/Content/extensions-work-with-data.htm#anchor-8">tutorial</a> for extended version of how to use Qlik as a query engine which returns "raw JSON" in a so called <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/Extensions/Content/Widget/widgets-data-hypercubes.htm#anchor-1">"hyperCube"</a>.</div>
             <div class="item">View the source <a target="_blank" href="https://github.com/QHose/senseWebIntegration/blob/master/client/ui/app/DIV%20integration/table.html">HTML</a> and <a target="_blank" href="https://github.com/QHose/senseWebIntegration/blob/master/client/ui/app/DIV%20integration/table.js"> javascript</a></div>
         </div>
