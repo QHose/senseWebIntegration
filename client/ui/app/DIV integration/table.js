@@ -136,10 +136,10 @@ function getCurrentSelections() { //source: http://snipplr.com/view/100939/custo
     })
 }
 
-Template.tableUsingWidgets.onCreated(function() {
-    this.table = new ReactiveVar('test');
-    var reactiveTable = this.table;
-    console.log('getCube function', this.table.get());
+function getTable(template) {
+    template.table = new ReactiveVar('test');
+    var reactiveTable = template.table;
+    console.log('getCube function', template.table.get());
 
     require.config({
         baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
@@ -157,6 +157,10 @@ Template.tableUsingWidgets.onCreated(function() {
         };
         table.OnData.bind(listener); //bind the listener
     })
+}
+
+Template.tableUsingWidgets.onCreated(function() {
+    getTable(this);
 })
 
 Template.tableUsingWidgets.onDestroyed(function() {
