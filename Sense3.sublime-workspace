@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"sel",
+				"selected"
+			],
+			[
 				"a",
 				"array"
 			],
@@ -132,10 +136,6 @@
 				"iframe\tTag"
 			],
 			[
-				"sel",
-				"selectedProduct"
-			],
-			[
 				"Prod",
 				"ProductId"
 			]
@@ -144,22 +144,30 @@
 	"buffers":
 	[
 		{
+			"contents": "<template name=\"tableUsingWidgets\">\n    <script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js\"></script>\n    <script src=\"https://{{QlikSenseDemoURL}}/resources/translate/en-US/common.js\"></script>\n    <div class=\"ui two column grid\">\n        <div class=\"row\">\n            <!-- <div class=\"eight wide column\"> -->\n            <!-- <div class=\"ui one column grid\"> -->\n            <div class=\"column\">\n                <h5 class=\"ui header\">Javascript code in your SaaS platform (selection)</h5>\n                <pre class=\"prettyprint \" style=\"border:none\">\n                  <!-- require([\"js/qlik\"], function(qlik) { -->\n            var app = qlik.openApp(appGuid, qConfig);\n            \n                app.field('Country').select(selectedArray, false, true);\n           \n        <!-- }) -->\n       </pre>\n            </div>\n            <div class=\"colum\">\n                <div class=\"ui one column grid\">\n                    <div class=\"column\">\n                        <div class=\"ui sub header\">Custom \"current selections\" box</div>\n                        <div id=\"myselections\"> </div>\n                    </div>\n                    <div class=\"column\">\n                        <div class=\"ui sub header\">Custom select Country</div>\n                        <div class=\"ui search multiple selection country dropdown\">\n                            <!-- This will receive comma separated value like OH,TX,WY !-->\n                            <input name=\"countries\" type=\"hidden\" class=\"countryList\">\n                            <i class=\"dropdown icon\"></i>\n                            <div class=\"default text\">countries</div>\n                            <div id=\"list\" class=\"menu\">\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"row\">\n            <div class=\"column\">\n                <h5 class=\"ui header\">Javascript code in your SaaS platform (table)</h5>\n                <pre class=\"prettyprint \" style=\"border:none\">\n                   <!-- require([\"js/qlik\"], function(qlik) { -->\n                   var app = qlik.openApp(appGuid, qConfig);\n\n                   table = app.createTable([\"Country\", \"City\"], [\"Sum(SalesAmount)\"], { rows: 3000 });\n\n                   var listener = function() { //if the data is ready \n                   //Create your HTML table\n               };\n               table.OnData.bind(listener); //bind the event listener <!-- so this table updates when user makes selection in Sense or your platform -->\n           <!-- }) -->\n       </pre>\n            </div>\n            <div class=\"colum\">\n                <div class=\"ui one column grid\">\n                    <div class=\"column\">\n                        <div class=\"ui sub header\">Custom chart</div>\n                        <table class=\"ui selectable celled table\">\n                            <thead>\n                                <tr>\n                                    {{#each head in headers}}\n                                    <th>{{head.qFallbackTitle}} </th>\n                                    {{/each}}\n                                </tr>\n                            </thead>\n                            <tbody>\n                                {{#each row in rows }}\n                                <tr>\n                                    {{#each cell in row.cells}}\n                                    <td> {{cell.qText}} </td>\n                                    {{/each}}\n                                </tr>\n                                {{/each}}\n                            </tbody>\n                        </table>\n                    </div>\n                </div>\n            </div>\n            <!-- <div class=\"column\">\n                <div class=\"ui sub header\">Custom chart</div>\n                <table class=\"ui selectable celled table\">\n                    <thead>\n                        <tr>\n                            {{#each head in headers}}\n                            <th>{{head.qFallbackTitle}} </th>\n                            {{/each}}\n                        </tr>\n                    </thead>\n                    <tbody>\n                        {{#each row in rows }}\n                        <tr>\n                            {{#each cell in row.cells}}\n                            <td> {{cell.qText}} </td>\n                            {{/each}}\n                        </tr>\n                        {{/each}}\n                    </tbody>\n                </table>\n            </div> -->\n        </div>\n    </div>\n    <!-- </div> -->\n</template>\n<template name=\"tableUsingWidgetsExplanation\">\n    <div class=\"ui message\">\n        <div class=\"header\">\n            <h4>Table and selection API</h4>\n        </div>\n        <div class=\"ui bulleted link list\">\n            <div class=\"item\">Here you see a plain old HTML table and \"input select\" box, but automatically populated with Qlik Sense data. So the layout of the table you see is not a Qlik Sense object. Only the data is retreived from Qlik Sense using the Table API.</div>\n            <div class=\"item\">You can easily get and combine any field you like, without having to think about data structures or difficult queries. Why? Well, Qlik Sense associates (combines) the data for you, which means any field is directly available for you to use.</div>\n            <div class=\"item\">The <a target=\"_blank\" href=\"https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/TableAPI/QTable.htm\"> Table API</a> is an easy way to get a table of data in your web site. It will return an array of headers, rows and columns which you can directly use in your HTML. Press F12 - console to see these arrays.</div>\n            <div class=\"item\">You can also register an event in Qlik Sense, so your table will be updated based on selections made in Qlik Sense. But you can also do it the other way around. If you make a selection in your SaaS platform you can <a target=\"_blank\" href=\"http://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/SelectionAPI/qlik-selectionState-interface.htm\">forward the selection to Qlik Sense</a>. That is what happens when you select something in the country dropdown.</div>\n            <div class=\"item\">See the widget <a target=\"_blank\" href=\"https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/Extensions/Content/extensions-work-with-data.htm#anchor-8\">tutorial</a> for extended version of how to use Qlik as a query engine which returns \"raw JSON\" in a so called <a target=\"_blank\" href=\"https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/Extensions/Content/Widget/widgets-data-hypercubes.htm#anchor-1\">\"hyperCube\"</a>.</div>\n            <div class=\"item\">View the source <a target=\"_blank\" href=\"https://github.com/QHose/senseWebIntegration/blob/master/client/ui/app/DIV%20integration/table.html\">HTML</a> and <a target=\"_blank\" href=\"https://github.com/QHose/senseWebIntegration/blob/master/client/ui/app/DIV%20integration/table.js\"> javascript</a></div>\n        </div>\n    </div>\n</template>\n",
 			"file": "client/ui/app/DIV integration/table.html",
+			"file_size": 7229,
+			"file_write_time": 131251538938277374,
 			"settings":
 			{
-				"buffer_size": 4335,
+				"buffer_size": 7110,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "var table = {};\n\nTemplate.tableUsingWidgets.helpers({\n    countries() {\n        if (Template.instance().countryList) {\n            var countries = Template.instance().countryList.get();\n            console.log('helper: app.createList returned these countries', countries);\n            countries.forEach\n            return countries;\n        }\n    },\n    headers() {\n        if (Template.instance().table) {\n            var headers = Template.instance().table.get().headers;\n            console.log('helper: table has these headers', headers);\n            return Template.instance().table.get().headers;\n        }\n    },\n    rows() {\n        if (Template.instance().table) {\n            var rows = Template.instance().table.get().rows;\n            console.log('helper: table has these rows', rows);\n            return rows;\n        }\n    }\n})\n\nTemplate.tableUsingWidgets.events({\n    'change .country.dropdown': function(event, template) {\n        var selected = template.$('.countryList').val(); //returns [1, 5]\n        var array = selected.split(',').map(Number); //make an array of selections\n        console.log(array);\n\n        //make the selection in Qlik Sense\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/select-method.htm\n        require([\"js/qlik\"], function(qlik) {\n            var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n            app.field('Country').select(array, false, true); //works fine, turn toggle to false for multi select\n\n        })\n\n    }\n})\n\nTemplate.tableUsingWidgets.onRendered(function() {\n    this.$('.ui.dropdown')\n        .dropdown();\n\n    require.config({\n        baseUrl: \"http://\" + qConfig.host + (qConfig.port ? \":\" + qConfig.port : \"\") + qConfig.prefix + \"resources\"\n    });\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        //create dropdown list for country\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n        app.createList({\n            \"qDef\": {\n                \"qFieldDefs\": [\n                    \"Country\"\n                ]\n            },\n            \"qInitialDataFetch\": [{\n                qTop: 0,\n                qLeft: 0,\n                qHeight: 100,\n                qWidth: 1\n            }]\n        }, function(reply) {\n            var countries = reply.qListObject.qDataPages[0].qMatrix;\n            console.log('List of Countries received via app.createList: ', countries);\n            this.countryList = new ReactiveVar(countries);\n            var str = \"\";\n            $.each(reply.qListObject.qDataPages[0].qMatrix, function(key, value) {\n                str += '<div class=\"item\" data-value=\"'+value[0].qElemNumber+ '\" >' + value[0].qText + '</div>';\n            });\n            this.$('#list').html(str);\n        });\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n    })\n\n})\n\nTemplate.tableUsingWidgets.onCreated(function() {\n    this.table = new ReactiveVar('test');\n    var reactiveTable = this.table;\n    console.log('getCube function', this.table.get());\n\n    require.config({\n        baseUrl: \"http://\" + qConfig.host + (qConfig.port ? \":\" + qConfig.port : \"\") + qConfig.prefix + \"resources\"\n    });\n\n    \n})\n\nTemplate.tableUsingWidgets.onDestroyed(function() {\n    if (table.OnData) {\n        table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.\n    }\n})\n",
-			"file": "client/ui/app/DIV integration/table.js",
-			"file_size": 4288,
-			"file_write_time": 131251452229282920,
+			"file": "client/ui/uiHelpers.js",
 			"settings":
 			{
-				"buffer_size": 3589,
+				"buffer_size": 2367,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/table.js",
+			"settings":
+			{
+				"buffer_size": 6401,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -409,6 +417,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"that",
+			"layout",
 			"resources",
 			"{{#each col in row}}\n                <td> {{col.qText}} </td>\n                {{/each}}",
 			"qDataPages",
@@ -504,6 +514,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"template",
 			"onTheFlybarChart",
 			"Qconfig",
 			"<div class=\"ui bulleted link list\">",
@@ -543,7 +554,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -552,15 +563,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4335,
+						"buffer_size": 7110,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								186,
-								186
+								220,
+								220
 							]
 						],
 						"settings":
@@ -574,24 +585,54 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/ui/app/DIV integration/table.js",
-					"semi_transient": false,
+					"file": "client/ui/uiHelpers.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 3589,
+						"buffer_size": 2367,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3395,
-								3395
+								1930,
+								1946
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 372.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/ui/app/DIV integration/table.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1331,
+								1693
 							]
 						],
 						"settings":
@@ -602,14 +643,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 473.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
 					"semi_transient": false,
 					"settings":
@@ -636,11 +677,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "client/ui/app/DIV integration/onTheFlybarChart.js",
 					"semi_transient": false,
 					"settings":
@@ -728,7 +769,7 @@
 	},
 	"select_project":
 	{
-		"height": 885.0,
+		"height": 1000.0,
 		"last_filter": "",
 		"selected_items":
 		[
@@ -756,7 +797,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 297.0,
+	"side_bar_width": 639.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

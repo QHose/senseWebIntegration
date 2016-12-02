@@ -35,6 +35,8 @@ Template.multipleDivs.events({
 })
 
 Template.multipleDivs.onRendered(function() {
+    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
+
     var app = setupQlikSenseDivs();
     setupPackery(this);
     Session.set('allowInteractions', true);
@@ -51,9 +53,6 @@ function setupQlikSenseDivs() {
     //     Session.set('currentAppId', currentAppId);
     // }
     console.log('the settings to connect to Sense are: ', qConfig)
-    require.config({
-        baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
-    });
 
     require(["js/qlik"], function(qlik) {
         qlik.setOnError(function(error) {

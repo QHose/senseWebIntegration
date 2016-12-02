@@ -1,5 +1,6 @@
 <template name="tableUsingWidgets">
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <!-- <script src="{{QlikSenseDemoURL}}/resources/translate/en-US/common.js"></script> -->
     <div class="ui two column grid">
         <div class="row">
             <!-- <div class="eight wide column"> -->
@@ -8,7 +9,7 @@
                 <h5 class="ui header">Javascript code in your SaaS platform (selection)</h5>
                 <pre class="prettyprint " style="border:none">
                   <!-- require(["js/qlik"], function(qlik) { -->
-            var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
+            var app = qlik.openApp(appGuid, qConfig);
             
                 app.field('Country').select(selectedArray, false, true);
            

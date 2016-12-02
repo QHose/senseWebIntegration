@@ -159,10 +159,7 @@ Template.tableUsingWidgets.onRendered(function() {
 })
 
 Template.tableUsingWidgets.onCreated(function() {
-    require.config({
-        baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
-    });
-
+    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
     getTable(this);
 })
 

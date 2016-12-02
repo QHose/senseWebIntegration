@@ -57,8 +57,12 @@ Template.registerHelper('SaaSDemoURL', function() {
 
 //url of the Qlik sense server
 Template.registerHelper('QlikSenseDemoURL', function() {
-    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port+"/"+Meteor.settings.public.virtualProxyClientUsage
+    return QlikSenseDemoURL();
 });
+
+QlikSenseDemoURL = function QlikSenseDemoURL(){
+    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port+"/"+Meteor.settings.public.virtualProxyClientUsage;
+}
 
 //url of the Qlik sense server
 Template.registerHelper('cityBikeURL', function() {
