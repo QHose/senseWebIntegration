@@ -66,7 +66,7 @@ function setupQlikSenseDivs() {
             var options = {};
             Session.get('allowInteractions') ? null : options = { noInteraction: true };
             //get objects -- inserted here --
-
+            app.getObject('CurrentSelections', 'CurrentSelections');
             app.getObject('QV01', 'Ggpaxa', options); //sales by country bar
             app.getObject('QV03', 'PYcyD', options); //customers per country bar
             app.getObject('QV04', 'VzxsQBD', options); //customers scatter
