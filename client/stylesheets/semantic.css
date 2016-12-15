@@ -29,6 +29,9 @@ iframe {
     padding: 5em 0em;
   }
 
+.ui.bulleted.link.list > .item a {
+  color: black;
+}
 
 
 
