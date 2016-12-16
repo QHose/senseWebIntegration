@@ -130,7 +130,6 @@ function getCurrentSelections() { //source: http://snipplr.com/view/100939/custo
 function getTable(template) {
     template.table = new ReactiveVar('test');
     var reactiveTable = template.table;
-    console.log('getCube function', template.table.get());
 
     require.config({
         baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
@@ -139,7 +138,8 @@ function getTable(template) {
     require(["js/qlik"], function(qlik) {
         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
 
-        // Returns a table object of type QTable, which is initially empty but that eventually will contain data. The table object will be updated when selection state changes.
+        // Returns a table object of type QTable, which is initially empty but that eventually will contain data. 
+        // The table object will be updated when selection state changes.
         table = app.createTable(["Country", "City"], ["Sum(SalesAmount)"], { rows: 3000 });
 
         var listener = function() {

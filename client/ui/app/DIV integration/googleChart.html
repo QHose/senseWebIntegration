@@ -1,26 +1,34 @@
-<template name="onTheFlybarChart">
+<template name="google">
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
     <div class="ui grid">
         <div class="row">
-            <div class="five wide column">
+            <div class="eight wide column">
                 <h5 class="ui header">Javascript code in your SaaS platform</h5>
                 <pre class="prettyprint " style="border:none">
-                var app = qlik.openApp(appGuid, qConfig);
+                var googleFormattedData = _.map(table.qHyperCube.qDataPages["0"].qMatrix, function(currentItem) {       
+	                var itemArray = [];
+	                itemArray.push(currentItem["0"].qText);
+	                itemArray.push(currentItem[1].qNum);
+	                return itemArray;
+            })
+               var data = google.visualization.arrayToDataTable(googleFormattedData);
 
-         app.visualization.create('barchart', ["Country", "=Sum(SalesAmount)"]).then(function(vis) {
-                 vis.show("chart")
-             });    
+               var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
             </pre>
             </div>
-            <div class="eleven wide column">
-                <h5 class="ui header">Generated chart</h5>
-                <div id="chart" class="Qdiv grid-item"></div>                
+            <div class="eight wide column">
+                 <h5 class="ui header">Google chart</h5>
+    <div id="regions_div" style="height: 500px;"></div>             
             </div>
         </div>
     </div>
 </template>
-<template name="onTheFlyExplanation">
+
+
+<template name="googleExplanation">
     <div class="ui message">
         <div class="header">
             <h4>Visualization API</h4>

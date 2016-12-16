@@ -1,5 +1,7 @@
 <template name="tableUsingWidgets">
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-_8y6ySvL5M5jzoYSeRp2ITZOgXuuq8I&callback=initMap"
+  type="text/javascript"></script>
     <!-- <script src="{{QlikSenseDemoURL}}/resources/translate/en-US/common.js"></script> -->
     <div class="ui two column grid">
         <div class="row">
@@ -108,7 +110,8 @@
             <h4>Table and selection API</h4>
         </div>
         <div class="ui bulleted link list">
-            <div class="item">Here you see a plain old HTML table and "input select" box, but automatically populated with Qlik Sense data. So the layout of the table you see is not a Qlik Sense object. Only the data is retreived from Qlik Sense using the Table API.</div>
+         <div class="item">The <a href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/TableAPI/qlik-table-interface.htm">Table API</a> allow developers to work with tabular JSON data returned from the Qlik engine.</div>
+            <div class="item">In this demo you see a plain old HTML table and "input select" box, but automatically populated with Qlik Sense data. So the layout of the table you see is not a Qlik Sense object. Only the data is retreived from Qlik Sense using the Table API.</div>
             <div class="item">You can easily get and combine any field you like, without having to think about data structures or difficult queries. Why? Well, Qlik Sense associates (combines) the data for you, which means any field is directly available for you to use.</div>
             <div class="item">The <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/TableAPI/QTable.htm"> Table API</a> is an easy way to get a table of data in your web site. It will return an array of headers, rows and columns which you can directly use in your HTML. Press F12 - console to see these arrays.</div>
             <div class="item">You can also register an event in Qlik Sense, so your table will be updated based on selections made in Qlik Sense. But you can also do it the other way around. If you make a selection in your SaaS platform you can <a target="_blank" href="http://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/SelectionAPI/qlik-selectionState-interface.htm">forward the selection to Qlik Sense</a>. That is what happens when you select something in the country dropdown.</div>
