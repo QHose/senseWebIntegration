@@ -1,0 +1,55 @@
+<template name="chartJS">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <div class="ui grid">
+        <div class="row">
+            <div class="eight wide column">
+                <h5 class="ui header">Javascript code in your SaaS platform</h5>
+                <pre class="prettyprint " style="border:none">
+					function getTable() {
+					require.config({
+					baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
+				});
+
+				require(["js/qlik"], function(qlik) {
+				var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
+				table = app.createTable(["Country"], ["Sum(SalesAmount)"], { rows: 3000 });
+
+				var listener = function() {
+				drawChartJs(table);
+			};
+			table.OnData.bind(listener); //bind the listener
+		})
+	}
+
+	function drawChartJs(table) {
+	var ctx = $("#myChart");
+	var rows = table.rows;
+	var labels = _.map(rows, function(row){
+	return row.cells["0"].qText
+})
+var data = _.map(rows, function(row){
+return 	row.measures["0"].qNum;
+})
+
+var myChart = new Chart(ctx, {
+type: 'bar',
+data: {
+labels: labels, 
+datasets: [{
+label: 'Sales Amount',
+data: data, 
+...
+}]
+}
+});
+}
+
+</pre>
+            </div>
+            <div class="eight wide column">
+                <h5 class="ui header">Chart.js chart populated with Sense data</h5>
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+</template>
