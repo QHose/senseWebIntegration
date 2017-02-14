@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"la",
+				"labels"
+			],
+			[
+				"goo",
+				"googleFormattedData〔variable〕"
+			],
+			[
+				"curre",
+				"currentItem"
+			],
+			[
+				"data",
+				"dataWithHeaders"
+			],
+			[
+				"cr",
+				"createGoogleChart"
+			],
+			[
+				"google",
+				"googleFormattedData"
+			],
+			[
+				"go",
+				"googleFormattedData"
+			],
+			[
+				"g",
+				"google"
+			],
+			[
+				"cret",
+				"createGoogleChart〔function〕"
+			],
+			[
+				"cre",
+				"createQlikBarChart"
+			],
+			[
 				"co",
 				"color"
 			],
@@ -42,10 +82,6 @@
 			[
 				"Co",
 				"Country"
-			],
-			[
-				"cre",
-				"createTable"
 			],
 			[
 				"get",
@@ -151,6 +187,93 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/ui/app/layout.html",
+			"settings":
+			{
+				"buffer_size": 2187,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "var table = {};\n\nTemplate.tableUsingWidgets.helpers({\n    countries() {\n        if (Template.instance().countryList) {\n            var countries = Template.instance().countryList.get();\n            console.log('helper: app.createList returned these countries', countries);\n            countries.forEach\n            return countries;\n        }\n    },\n    headers() {\n        if (Template.instance().table) {\n            var headers = Template.instance().table.get().headers;\n            console.log('helper: table has these headers', headers);\n            return Template.instance().table.get().headers;\n        }\n    },\n    rows() {\n        if (Template.instance().table) {\n            var rows = Template.instance().table.get().rows;\n            console.log('helper: table has these rows', rows);\n            return rows;\n        }\n    }\n})\n\nTemplate.tableUsingWidgets.events({\n    'change .country.dropdown': function(event, template) {\n        var selected = template.$('.countryList').val(); //returns [1, 5]\n        var array = selected.split(',').map(Number); //make an array of selections\n        console.log('the array with selected IDs is: ', array);\n\n\n        //make the selection in Qlik Sense\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/select-method.htm\n        require([\"js/qlik\"], function(qlik) {\n            var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n            if (selected) {\n                app.field('Country').select(array, false, true); //works fine, turn toggle to false for multi select\n            } else {\n                app.field('Country').clear();\n            }\n        })\n\n    }\n})\n\nfunction getCountryList() {\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        //create dropdown list for country\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n        app.createList({\n            \"qDef\": {\n                \"qFieldDefs\": [\n                    \"Country\"\n                ]\n            },\n            \"qInitialDataFetch\": [{\n                qTop: 0,\n                qLeft: 0,\n                qHeight: 100,\n                qWidth: 1\n            }]\n        }, function(reply) {\n            var countries = reply.qListObject.qDataPages[0].qMatrix;\n            console.log('List of Countries received via app.createList: ', countries);\n            this.countryList = new ReactiveVar(countries);\n            var str = \"\";\n            $.each(reply.qListObject.qDataPages[0].qMatrix, function(key, value) {\n                str += '<div class=\"item\" data-value=\"' + value[0].qElemNumber + '\" >' + value[0].qText + '</div>';\n            });\n            this.$('#list').html(str);\n        });\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n    })\n}\n\nfunction getCurrentSelections() { //source: http://snipplr.com/view/100939/custom-current-selections/\n    require.config({\n        baseUrl: \"http://\" + qConfig.host + (qConfig.port ? \":\" + qConfig.port : \"\") + qConfig.prefix + \"resources\"\n    });\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n        console.log('App layout object: ', app);\n        app.getList(\"CurrentSelections\", function(reply) {\n\n            selectionslist = \"\";\n            var mySelectedFields = reply.qSelectionObject.qSelections;\n            console.log(mySelectedFields);\n\n            //loop through selected fields\n            var mySelectedFields_arrayLength = mySelectedFields.length;\n            for (var i = 0; i < mySelectedFields_arrayLength; i++) {\n                var text = mySelectedFields[i].qField + \" \";\n                console.log(mySelectedFields[i].qField);\n\n                if (mySelectedFields[i].qLocked == true) {\n                    var labeltype = 'label label-warning'\n                } else {\n                    var labeltype = 'label-success';\n                }\n\n                console.log(mySelectedFields[i].qLocked);\n\n                //loop through selected field values\n                var currentFieldValues = mySelectedFields[i].qSelectedFieldSelectionInfo\n                var currentFieldValues_arrayLength = currentFieldValues.length;\n\n                for (var y = 0; y < currentFieldValues_arrayLength; y++) {\n                    text += \"<span class='label \" + labeltype + \"'>\" + currentFieldValues[y].qName + \"</span> \";\n                }\n\n                if (i == 0) {\n                    selectionslist = text;\n                } else {\n                    selectionslist += text;\n                }\n            }\n\n            console.log(selectionslist);\n            $(\"#myselections\").html(selectionslist);\n        });\n    })\n}\n\nfunction getTable(template) {\n    template.table = new ReactiveVar('test');\n    var reactiveTable = template.table;\n\n   \n}\n\nTemplate.tableUsingWidgets.onRendered(function() {\n    getCurrentSelections();\n    getCountryList();\n\n    this.$('.ui.dropdown')\n        .dropdown();\n})\n\nTemplate.tableUsingWidgets.onCreated(function() {\n    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));\n    getTable(this);\n})\n\nTemplate.tableUsingWidgets.onDestroyed(function() {\n    if (table.OnData) {\n        table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.\n    }\n})\n",
+			"file": "client/ui/app/DIV integration/table.js",
+			"file_size": 6450,
+			"file_write_time": 131270510995862751,
+			"settings":
+			{
+				"buffer_size": 5534,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/IFrame integration/app.html",
+			"settings":
+			{
+				"buffer_size": 988,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<template name=\"onTheFlybarChart\">\n\n    <div class=\"ui grid\">\n        <div class=\"row\">\n            <div class=\"five wide column\">\n                <h5 class=\"ui header\">Javascript code in your SaaS platform</h5>\n                <pre class=\"prettyprint \" style=\"border:none\">\n                var app = qlik.openApp(appGuid, qConfig);\n\n         app.visualization.create('barchart', [\"Country\", \"=Sum(SalesAmount)\"]).then(function(vis) {\n                 vis.show(\"chart\")\n             });    \n            </pre>\n            </div>\n            <div class=\"eleven wide column\">\n                <h5 class=\"ui header\">Generated chart</h5>\n                <div id=\"chart\" class=\"Qdiv grid-item\"></div>                \n            </div>\n        </div>\n    </div>\n</template>\n<template name=\"onTheFlyExplanation\">\n    <div class=\"ui message\">\n        <div class=\"header\">\n            <h4>Visualization API</h4>\n        </div>\n        <div class=\"ui bulleted link list\">\n            <div class=\"item\">The <a target=\"_blank\" href=\"https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/VisualizationAPI/VisualizationAPI.htm\">Visualization API</a> is the external interface to Qlik Sense visualizations. It allows you to create and modify visualizations on the fly without making use of the Qlik Sense client.</div>\n            <div class=\"item\">You can easily create charts and combine any field you like, without thinking about data structures or having to write queries.</div>\n            <div class=\"item\">See more information in the <a target=\"_blank\" href=\"http://branch.qlik.com/#!/blog/56cc5f2af9e755b0dd301559\">Qlik Branch blog</a></div>\n            <div class=\"item\">Play around with this API on <a target=\"_blank\" href=\"https://jsfiddle.net/mindspank/fs62hwk3/3/\">JSFidlle</a></div>\n        </div>\n    </div>\n</template>\n",
+			"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
+			"file_size": 1975,
+			"file_write_time": 131263584267653256,
+			"settings":
+			{
+				"buffer_size": 1838,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<template name=\"slideGenerator\">\n   <div id=\"jmpress\"></div>\n</template>\n",
+			"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.html",
+			"file_size": 76,
+			"file_write_time": 131270500022755894,
+			"settings":
+			{
+				"buffer_size": 73,
+				"line_ending": "Windows",
+				"name": "s"
+			}
+		},
+		{
+			"contents": "\nTemplate.slideGenerator.onRendered(function() {\n    console.log('slideGenerator  onRendered');\n    $('#jmpress').jmpress();\n})\n\n\nfunction getTable(template) {\n    template.table = new ReactiveVar('test');\n    var reactiveTable = template.table;\n\n    require.config({\n        baseUrl: \"http://\" + qConfig.host + (qConfig.port ? \":\" + qConfig.port : \"\") + qConfig.prefix + \"resources\"\n    });\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        // Returns a table object of type QTable, which is initially empty but that eventually will contain data. \n        // The table object will be updated when selection state changes.\n        table = app.createTable([\"Country\", \"City\"], [\"Sum(SalesAmount)\"], { rows: 3000 });\n\n        var listener = function() {\n            console.log('app.createTable([\"Country\", \"City\"], [\"Sum(SalesAmount)\"], result: ', table);\n            reactiveTable.set(table);\n        };\n        table.OnData.bind(listener); //bind the listener\n    })\n}\n\n",
+			"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.js",
+			"file_size": 1087,
+			"file_write_time": 131270508605630011,
+			"settings":
+			{
+				"buffer_size": 1057,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".meteor/packages",
+			"settings":
+			{
+				"buffer_size": 1405,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/router.js",
+			"settings":
+			{
+				"buffer_size": 2797,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/layout.js",
+			"settings":
+			{
+				"buffer_size": 113,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -200,33 +323,44 @@
 	[
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/compatibility",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib"
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration"
 	],
 	"file_history":
 	[
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/router.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/compatibility/chartJS.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/multipleCharts.html",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/compatibility/googleCharts.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/compatibility/googleCharts.js",
+		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/nav.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/semantic.css",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/hub.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/app.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/1chart.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/layout.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/authenticationCheck.js",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/router.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/main.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/test/app-test.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/test/test.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
@@ -246,7 +380,6 @@
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/app.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/1chart.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.html",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/multipleCharts.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/nav.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-production.json",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/templates/app/IFrame integration/1chart.html",
@@ -325,20 +458,11 @@
 		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/layout.html",
 		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/bestelling.js",
 		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/bestelling.html",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/node_modules/qlik-auth/index.js",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/client/lib/custom.semantic.json",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Bestelling/show.js",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Reports/ordersByPickUpDay.js",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Bestelling/show.html",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/server/publications.js",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/lib/Collections/carts.js",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/lib/Collections/seeds.js",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/homeIndex.html",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/error.html"
+		"/C/Users/Qlik/Meteor projects/firstmeteor/node_modules/qlik-auth/index.js"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -376,9 +500,20 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"OnData",
+			"on",
+			"qConfig",
+			"js/qlik",
+			"Qlik",
+			"module.exports",
+			"matrix",
+			"cube",
+			"export",
+			"refresh",
+			"createGoogleChart",
 			"webIntegrationMessage",
 			"dropdown",
 			"ui bulleted link list",
@@ -480,6 +615,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"createGoogleMapChart",
 			"ui bulleted link list z",
 			"template",
 			"onTheFlybarChart",
@@ -515,20 +651,296 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/ui/app/layout.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1767,
+								1767
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/ui/app/DIV integration/table.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2991,
+								2991
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 884.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/ui/app/IFrame integration/app.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								333,
+								333
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 73,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								30
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_name": "s",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1057,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								100,
+								124
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": ".meteor/packages",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1387,
+								1387
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "lib/router.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2797,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2765,
+								2765
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1074.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "client/ui/app/layout.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 113,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -569,7 +981,7 @@
 	"project": "Sense3.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -611,7 +1023,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 449.0,
+	"side_bar_width": 329.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
