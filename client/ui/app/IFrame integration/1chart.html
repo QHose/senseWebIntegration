@@ -1,6 +1,6 @@
 <template name="1chart">
     <div class="ui segment ">
-        <iframe src="{{chartIframeURL}}" width="100%" height="600"></iframe>
+        <iframe src="{{chartIframeURL}}"></iframe>
     </div>
 </template>
 <template name="chartExplanationText">
@@ -11,9 +11,9 @@
         <div class="ui bulleted link list">
             <div class="item">This Demo shows that you can integrate one (or more) Sense charts in your page using an IFrame. (You can also insert multiple IFrames, Qlik ensures the charts are connected and respond to selections made.) </div>
             <div class="item">The <a href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/single-integration-api.htm">Single Integration API</a> provides parameters that can be used to create an URL that returns a complete HTML page containing an embedded Qlik Sense visualization.</div>
-            <div class="item">The code to integrate this chart can be created using the single configurator <a href="{{QlikSenseDemoURL}}/dev-hub/"> the Qlik Sense dev-hub.</a></div>
+            <div class="item">The code to integrate this chart can be created using the single configurator in <a href="{{QlikSenseDemoURL}}/dev-hub/"> the Qlik Sense dev-hub.</a></div>
             <div class="item">In the example below we included the URL: {{chartIframeURL}} </div>
-            <div class="item">Via parameters in the URL you can include or remove selections, disable interactivity, and include a selection bar.</div>
+            <div class="item">Via parameters in the URL you can include selections, disable interactivity, and include a selection bar.</div>
         </div>
     </div>
 </template>

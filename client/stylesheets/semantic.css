@@ -1,38 +1,45 @@
 .item {
-  word-wrap: break-word
+    word-wrap: break-word
 }
 
 iframe {
-  border: none
+    border: none;
+    width: 100%; 
+    height: calc(100vh - 150px);
 }
-  body {
+
+body {
     background-color: #FFFFFF;
-  }
-  .ui.menu .item img.logo {
+}
+
+.ui.menu .item img.logo {
     margin-right: 1.5em;
-  }
+}
 
 .ui.inverted.menu {
     background: #545352;
 }
-  .main.container {
-    margin-top: 7em;
-  }
-   .layout.container {
-    margin-top: 7em;
-  }
-  .wireframe {
-    margin-top: 2em;
-  }
-  .ui.footer.segment {
-    margin: 5em 0em 0em;
-    padding: 5em 0em;
-  }
 
-.ui.bulleted.link.list > .item a {
-  color: black;
+.main.container {
+    margin-top: 7em;
 }
 
+.layout.container {
+    margin-top: 7em;
+}
+
+.wireframe {
+    margin-top: 2em;
+}
+
+.ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+}
+
+.ui.bulleted.link.list > .item a {
+    color: black;
+}
 
 
 /*article.qvobject
@@ -47,19 +54,19 @@ iframe {
 
 }*/
 
-.Qdiv{
-  height: 300px;
-  width: 40%;
+.Qdiv {
+    height: 300px;
+    width: 40%;
 }
 
-.QlistBox{
-  height: 300px;
-  width: 200px;
+.QlistBox {
+    height: 300px;
+    width: 200px;
 }
 
-.QScatter{
-  height: 650px;
- width: 600px;
+.QScatter {
+    height: 650px;
+    width: 600px;
 }
 
 

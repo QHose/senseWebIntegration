@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"widht",
+				"width: 〔property〕"
+			],
+			[
 				"la",
 				"labels"
 			],
@@ -191,19 +195,17 @@
 			"file": "client/ui/app/layout.html",
 			"settings":
 			{
-				"buffer_size": 2187,
+				"buffer_size": 2186,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "var table = {};\n\nTemplate.tableUsingWidgets.helpers({\n    countries() {\n        if (Template.instance().countryList) {\n            var countries = Template.instance().countryList.get();\n            console.log('helper: app.createList returned these countries', countries);\n            countries.forEach\n            return countries;\n        }\n    },\n    headers() {\n        if (Template.instance().table) {\n            var headers = Template.instance().table.get().headers;\n            console.log('helper: table has these headers', headers);\n            return Template.instance().table.get().headers;\n        }\n    },\n    rows() {\n        if (Template.instance().table) {\n            var rows = Template.instance().table.get().rows;\n            console.log('helper: table has these rows', rows);\n            return rows;\n        }\n    }\n})\n\nTemplate.tableUsingWidgets.events({\n    'change .country.dropdown': function(event, template) {\n        var selected = template.$('.countryList').val(); //returns [1, 5]\n        var array = selected.split(',').map(Number); //make an array of selections\n        console.log('the array with selected IDs is: ', array);\n\n\n        //make the selection in Qlik Sense\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/select-method.htm\n        require([\"js/qlik\"], function(qlik) {\n            var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n            if (selected) {\n                app.field('Country').select(array, false, true); //works fine, turn toggle to false for multi select\n            } else {\n                app.field('Country').clear();\n            }\n        })\n\n    }\n})\n\nfunction getCountryList() {\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        //create dropdown list for country\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n        app.createList({\n            \"qDef\": {\n                \"qFieldDefs\": [\n                    \"Country\"\n                ]\n            },\n            \"qInitialDataFetch\": [{\n                qTop: 0,\n                qLeft: 0,\n                qHeight: 100,\n                qWidth: 1\n            }]\n        }, function(reply) {\n            var countries = reply.qListObject.qDataPages[0].qMatrix;\n            console.log('List of Countries received via app.createList: ', countries);\n            this.countryList = new ReactiveVar(countries);\n            var str = \"\";\n            $.each(reply.qListObject.qDataPages[0].qMatrix, function(key, value) {\n                str += '<div class=\"item\" data-value=\"' + value[0].qElemNumber + '\" >' + value[0].qText + '</div>';\n            });\n            this.$('#list').html(str);\n        });\n        //https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/MashupAPI/Methods/createList-method.htm\n    })\n}\n\nfunction getCurrentSelections() { //source: http://snipplr.com/view/100939/custom-current-selections/\n    require.config({\n        baseUrl: \"http://\" + qConfig.host + (qConfig.port ? \":\" + qConfig.port : \"\") + qConfig.prefix + \"resources\"\n    });\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n        console.log('App layout object: ', app);\n        app.getList(\"CurrentSelections\", function(reply) {\n\n            selectionslist = \"\";\n            var mySelectedFields = reply.qSelectionObject.qSelections;\n            console.log(mySelectedFields);\n\n            //loop through selected fields\n            var mySelectedFields_arrayLength = mySelectedFields.length;\n            for (var i = 0; i < mySelectedFields_arrayLength; i++) {\n                var text = mySelectedFields[i].qField + \" \";\n                console.log(mySelectedFields[i].qField);\n\n                if (mySelectedFields[i].qLocked == true) {\n                    var labeltype = 'label label-warning'\n                } else {\n                    var labeltype = 'label-success';\n                }\n\n                console.log(mySelectedFields[i].qLocked);\n\n                //loop through selected field values\n                var currentFieldValues = mySelectedFields[i].qSelectedFieldSelectionInfo\n                var currentFieldValues_arrayLength = currentFieldValues.length;\n\n                for (var y = 0; y < currentFieldValues_arrayLength; y++) {\n                    text += \"<span class='label \" + labeltype + \"'>\" + currentFieldValues[y].qName + \"</span> \";\n                }\n\n                if (i == 0) {\n                    selectionslist = text;\n                } else {\n                    selectionslist += text;\n                }\n            }\n\n            console.log(selectionslist);\n            $(\"#myselections\").html(selectionslist);\n        });\n    })\n}\n\nfunction getTable(template) {\n    template.table = new ReactiveVar('test');\n    var reactiveTable = template.table;\n\n   \n}\n\nTemplate.tableUsingWidgets.onRendered(function() {\n    getCurrentSelections();\n    getCountryList();\n\n    this.$('.ui.dropdown')\n        .dropdown();\n})\n\nTemplate.tableUsingWidgets.onCreated(function() {\n    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));\n    getTable(this);\n})\n\nTemplate.tableUsingWidgets.onDestroyed(function() {\n    if (table.OnData) {\n        table.OnData.unbind(listener); //unregister the listener when no longer notification is needed.\n    }\n})\n",
-			"file": "client/ui/app/DIV integration/table.js",
-			"file_size": 6450,
-			"file_write_time": 131270510995862751,
+			"file": "client/ui/app/IFrame integration/1chart.html",
 			"settings":
 			{
-				"buffer_size": 5534,
+				"buffer_size": 1359,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -211,41 +213,71 @@
 			"file": "client/ui/app/IFrame integration/app.html",
 			"settings":
 			{
-				"buffer_size": 988,
+				"buffer_size": 962,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<template name=\"onTheFlybarChart\">\n\n    <div class=\"ui grid\">\n        <div class=\"row\">\n            <div class=\"five wide column\">\n                <h5 class=\"ui header\">Javascript code in your SaaS platform</h5>\n                <pre class=\"prettyprint \" style=\"border:none\">\n                var app = qlik.openApp(appGuid, qConfig);\n\n         app.visualization.create('barchart', [\"Country\", \"=Sum(SalesAmount)\"]).then(function(vis) {\n                 vis.show(\"chart\")\n             });    \n            </pre>\n            </div>\n            <div class=\"eleven wide column\">\n                <h5 class=\"ui header\">Generated chart</h5>\n                <div id=\"chart\" class=\"Qdiv grid-item\"></div>                \n            </div>\n        </div>\n    </div>\n</template>\n<template name=\"onTheFlyExplanation\">\n    <div class=\"ui message\">\n        <div class=\"header\">\n            <h4>Visualization API</h4>\n        </div>\n        <div class=\"ui bulleted link list\">\n            <div class=\"item\">The <a target=\"_blank\" href=\"https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/VisualizationAPI/VisualizationAPI.htm\">Visualization API</a> is the external interface to Qlik Sense visualizations. It allows you to create and modify visualizations on the fly without making use of the Qlik Sense client.</div>\n            <div class=\"item\">You can easily create charts and combine any field you like, without thinking about data structures or having to write queries.</div>\n            <div class=\"item\">See more information in the <a target=\"_blank\" href=\"http://branch.qlik.com/#!/blog/56cc5f2af9e755b0dd301559\">Qlik Branch blog</a></div>\n            <div class=\"item\">Play around with this API on <a target=\"_blank\" href=\"https://jsfiddle.net/mindspank/fs62hwk3/3/\">JSFidlle</a></div>\n        </div>\n    </div>\n</template>\n",
+			"file": "client/ui/app/IFrame integration/hub.html",
+			"settings":
+			{
+				"buffer_size": 1273,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/IFrame integration/multipleCharts.html",
+			"settings":
+			{
+				"buffer_size": 1911,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/stylesheets/semantic.css",
+			"settings":
+			{
+				"buffer_size": 793,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/table.js",
+			"settings":
+			{
+				"buffer_size": 5534,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
-			"file_size": 1975,
-			"file_write_time": 131263584267653256,
 			"settings":
 			{
 				"buffer_size": 1838,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<template name=\"slideGenerator\">\n   <div id=\"jmpress\"></div>\n</template>\n",
-			"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.html",
-			"file_size": 76,
-			"file_write_time": 131270500022755894,
+			"file": "client/ui/app/jmpress/slideGenerator.html",
 			"settings":
 			{
 				"buffer_size": 73,
+				"encoding": "UTF-8",
 				"line_ending": "Windows",
 				"name": "s"
 			}
 		},
 		{
-			"contents": "\nTemplate.slideGenerator.onRendered(function() {\n    console.log('slideGenerator  onRendered');\n    $('#jmpress').jmpress();\n})\n\n\nfunction getTable(template) {\n    template.table = new ReactiveVar('test');\n    var reactiveTable = template.table;\n\n    require.config({\n        baseUrl: \"http://\" + qConfig.host + (qConfig.port ? \":\" + qConfig.port : \"\") + qConfig.prefix + \"resources\"\n    });\n\n    require([\"js/qlik\"], function(qlik) {\n        var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);\n\n        // Returns a table object of type QTable, which is initially empty but that eventually will contain data. \n        // The table object will be updated when selection state changes.\n        table = app.createTable([\"Country\", \"City\"], [\"Sum(SalesAmount)\"], { rows: 3000 });\n\n        var listener = function() {\n            console.log('app.createTable([\"Country\", \"City\"], [\"Sum(SalesAmount)\"], result: ', table);\n            reactiveTable.set(table);\n        };\n        table.OnData.bind(listener); //bind the listener\n    })\n}\n\n",
-			"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.js",
-			"file_size": 1087,
-			"file_write_time": 131270508605630011,
+			"file": "client/ui/app/jmpress/slideGenerator.js",
 			"settings":
 			{
 				"buffer_size": 1057,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -321,13 +353,12 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/compatibility",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration",
-		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration"
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration"
 	],
 	"file_history":
 	[
@@ -657,7 +688,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -666,15 +697,46 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2187,
+						"buffer_size": 2186,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1767,
-								1767
+								1914,
+								1914
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 338.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/ui/app/IFrame integration/1chart.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								95,
+								95
 							]
 						],
 						"settings":
@@ -688,11 +750,133 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
+					"file": "client/ui/app/IFrame integration/app.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								82
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/ui/app/IFrame integration/hub.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/ui/app/IFrame integration/multipleCharts.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1911,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/stylesheets/semantic.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "client/ui/app/DIV integration/table.js",
 					"semi_transient": false,
 					"settings":
@@ -719,41 +903,11 @@
 						"translation.y": 884.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "client/ui/app/IFrame integration/app.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 988,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 7,
 					"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
 					"semi_transient": false,
 					"settings":
@@ -780,12 +934,12 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.html",
+					"buffer": 8,
+					"file": "client/ui/app/jmpress/slideGenerator.html",
 					"semi_transient": false,
 					"settings":
 					{
@@ -812,12 +966,12 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.js",
+					"buffer": 9,
+					"file": "client/ui/app/jmpress/slideGenerator.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -844,11 +998,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 10,
 					"file": ".meteor/packages",
 					"semi_transient": false,
 					"settings":
@@ -872,11 +1026,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 11,
 					"file": "lib/router.js",
 					"semi_transient": false,
 					"settings":
@@ -903,11 +1057,11 @@
 						"translation.y": 1074.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 12,
 					"file": "client/ui/app/layout.js",
 					"semi_transient": false,
 					"settings":
@@ -932,7 +1086,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
