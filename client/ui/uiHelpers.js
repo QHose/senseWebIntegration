@@ -26,7 +26,7 @@ Template.registerHelper('appURL', function() {
 
     url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "sense/app/" + appGUID + '/sheet/VUkssjz/state/analysis';
 
-    console.log('the generated IFrame URL is: ' + url);
+    // console.log('the generated IFrame URL is: ' + url);
     return url;
 });
 
@@ -43,9 +43,9 @@ Template.registerHelper('chartIframeURL', function() {
         appGUID = Meteor.settings.public.multipleDivAppGuid
     }
 
-    url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single?appid=" + Meteor.settings.public.multipleDivAppGuid + '&obj=VzxsQBD';
+    url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single?appid=" + Meteor.settings.public.multipleDivAppGuid + '&obj=LVqUFme';
 
-    console.log('the generated IFrame URL is: ' + url);
+    // console.log('the generated IFrame URL is: ' + url);
     return url;
 });
 
