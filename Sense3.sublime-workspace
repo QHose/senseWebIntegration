@@ -623,7 +623,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -701,8 +701,8 @@
 						"selection":
 						[
 							[
-								339,
-								348
+								322,
+								322
 							]
 						],
 						"settings":
@@ -716,7 +716,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -746,7 +746,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -838,7 +838,7 @@
 	},
 	"select_project":
 	{
-		"height": 1000.0,
+		"height": 885.0,
 		"last_filter": "",
 		"selected_items":
 		[
