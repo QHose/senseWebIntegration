@@ -217,16 +217,17 @@
 			"file": "lib/router.js",
 			"settings":
 			{
-				"buffer_size": 3193,
+				"buffer_size": 3197,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/ui/app/IFrame integration/multipleCharts.js",
+			"file": "client/ui/app/IFrame integration/1chart.html",
 			"settings":
 			{
-				"buffer_size": 451,
+				"buffer_size": 1431,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -694,15 +695,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3193,
+						"buffer_size": 3197,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								322,
-								322
+								284,
+								284
 							]
 						],
 						"settings":
@@ -721,24 +722,25 @@
 				},
 				{
 					"buffer": 3,
-					"file": "client/ui/app/IFrame integration/multipleCharts.js",
-					"semi_transient": true,
+					"file": "client/ui/app/IFrame integration/1chart.html",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 451,
+						"buffer_size": 1431,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								145,
+								155
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -866,7 +868,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 557.0,
+	"side_bar_width": 301.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
