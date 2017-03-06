@@ -217,7 +217,7 @@
 			"file": "lib/router.js",
 			"settings":
 			{
-				"buffer_size": 3197,
+				"buffer_size": 3198,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -226,7 +226,7 @@
 			"file": "client/ui/app/IFrame integration/1chart.html",
 			"settings":
 			{
-				"buffer_size": 1431,
+				"buffer_size": 1439,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -695,15 +695,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3197,
+						"buffer_size": 3198,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								284,
-								284
+								349,
+								349
 							]
 						],
 						"settings":
@@ -726,7 +726,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1431,
+						"buffer_size": 1439,
 						"regions":
 						{
 						},
