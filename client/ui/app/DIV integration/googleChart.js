@@ -29,7 +29,7 @@ function getTable(template) {
                 itemArray.push(currentItem[1].qNum);
                 return itemArray;
             })
-            createGoogleMapChart(googleFormattedData);
+            // createGoogleMapChart(googleFormattedData);
         };
         table.OnData.bind(listener); //bind the listener
     })

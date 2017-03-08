@@ -702,13 +702,14 @@
 						"selection":
 						[
 							[
-								349,
-								349
+								313,
+								313
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
+							"git_gutter_enabled": true,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -840,7 +841,7 @@
 	},
 	"select_project":
 	{
-		"height": 885.0,
+		"height": 1000.0,
 		"last_filter": "",
 		"selected_items":
 		[
