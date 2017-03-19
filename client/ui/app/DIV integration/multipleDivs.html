@@ -1,33 +1,42 @@
 <template name='multipleDivs'>
-    
-    <h5 class="ui header">Example configurations</h5>
-    <div class="ui form">
-        <div class="grouped fields">
-            <div class="field">
-                <div class="ui toggle checkbox draggable">
-                    <input type="checkbox" {{draggableChecked}} name="draggable">
-                    <label>Enable to re-arrange the charts by "drag and drop".</label>
+    <div class="ui two column grid">
+        <div class="row">
+            <div class="colomn">
+                <h5 class="ui header">Example configurations</h5>
+                <div class="ui form">
+                    <div class="grouped fields">
+                        <div class="field">
+                            <div class="ui toggle checkbox draggable">
+                                <input type="checkbox" {{draggableChecked}} name="draggable">
+                                <label>Enable to re-arrange the charts by "drag and drop".</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui toggle checkbox allowInteractions">
+                                <input type="checkbox" {{allowInteractionsChecked}} name="allowInteractions">
+                                <label>Enable Qlik Sense interaction.</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="field">
-                <div class="ui toggle checkbox allowInteractions">
-                    <input type="checkbox" {{allowInteractionsChecked}} name="allowInteractions">
-                    <label>Enable Qlik Sense interaction.</label>
+            <div class="column">
+                <h5 class="ui header">Your selections</h5>
+                <div id="CurrentSelections" class="qvobjects" style="width: 100%"> </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sixteen wide column">
+                <div class="grid">
+                    <div id="QV01" class="grid-item "></div>
+                    <!-- <div id="QV02" class=" grid-item "></div> -->
+                    <div id="QV03" class="column grid-item "></div>
+                    <div id="QV04" class="column QScatter grid-item "></div>
+                    <div id="QV05" class="column QlistBox grid-item "></div>
+                    <!-- <div id="QV06" class=" grid-item "></div> -->
                 </div>
             </div>
         </div>
-    </div>
-    <div class="ui divider"></div>
-    <h5 class="ui header">Your selections</h5>
-    <div id="CurrentSelections" class="qvobjects" style="position:relative; top:0; left:0; width:100%; height:35px;"> </div>
-    <div class="ui divider"></div>
-    <div class="ui grid" style="position: relative; height: 800px;">
-        <div id="QV01" class="Qdiv grid-item"></div>
-        <div id="QV02" class="Qdiv grid-item"></div>
-        <div id="QV03" class="Qdiv grid-item"></div>
-        <div id="QV04" class="QScatter grid-item"></div>
-        <div id="QV05" class="QlistBox grid-item"></div>
-        <div id="QV06" class="Qdiv grid-item"></div>
     </div>
 </template>
 <template name="multipleDivExplanationText">
@@ -41,8 +50,8 @@
     </div>
 </template>
 <template name="divTagDefaultBullet">
-    <div class="item">Use the Mashups API when you want to display Qlik Sense objects on your website. Amongst many other functions, it allows you to get objects, add buttons, create bookmarks and interact with fields.</div>
-    <div class="item">Using the APIs we can obtain all data of the app, like the title "{{SenseLayout.qTitle}}". (Press "F12" - "console" to see all properties.)</div>
+    <div class="item">Use the <a href="https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/Platform/Content/Integration/embed-qlik-sense.htm">Mashup APIs</a> when you want to display Qlik Sense objects on your website. Amongst many other functions, it allows you to get objects, add buttons, create bookmarks and interact with fields.</div>
+    <div class="item">Using the APIs we can obtain all data and properties of the app, like the title of the app: "{{SenseLayout.qTitle}}". (Press "F12" - "console" to see all properties.)</div>
     <div class="item">You can generate the code to embed in your site using the <a href="{{QlikSenseDemoURL}}/dev-hub/">the Sense dev-hub.</a> or use the Visual Studio Plugin.</div>
     <div class="item">Qlik Sense generates the charts and in this demo we make use of an external javascript package <a href="http://packery.metafizzy.co">"packery"</a> to make the DIVs "draggable". This to just give you an idea what you can do with this technology.</div>
     <div class="item">You can also just use the data from our associative engine, and get <a href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/Dev-Hub/Content/MashupEditor/mashup-editor-field-list-builder.htm">field values</a> or "hypercubes" (tables) and create your own vizualization or HTML element.</div>

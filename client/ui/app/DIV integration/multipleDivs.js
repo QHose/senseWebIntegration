@@ -40,6 +40,7 @@ Template.multipleDivs.onRendered(function() {
     var app = setupQlikSenseDivs();
     setupPackery(this);
     Session.set('allowInteractions', true);
+    Session.set('draggable', false);
 
     this.$('.Qdiv')
         .transition('scale in');

@@ -9,16 +9,16 @@
 
 .grid-item {
   float: left;
-  width: 100px;
-  height: 100px;
-  /*background: #C09;*/
-  /*border: 2px solid hsla(0, 0%, 0%, 0.5);*/
+  width: 40%;
+  height: 400px;
+  /*background: #e6e5e4;*/
+  border: 2px solid #b6b5b4;
+  margin: 20px;
+  padding: 10px;
 }
 
-.grid-item--width2 { width: 200px; }
-.grid-item--height2 { height: 200px; }
 
-.grid-item:hover {
+/*.grid-item:hover {
   border-color: hsla(0, 0%, 100%, 0.5);
   cursor: move;
 }
@@ -41,3 +41,4 @@
   background: #52CC52;
   z-index: 2;
 }
+*/
