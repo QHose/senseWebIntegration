@@ -1,6 +1,10 @@
 Template.onTheFlybarChart.onRendered(function() {
     checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
     createQlikBarChart();
+    this.$('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+
 })
 
 

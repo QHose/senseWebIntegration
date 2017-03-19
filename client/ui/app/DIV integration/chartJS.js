@@ -1,6 +1,9 @@
 //http://www.chartjs.org/docs/#getting-started-creating-a-chart
 Template.chartJS.onRendered(function() {
 	getTable();
+     this.$('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
 })
 
 function getTable() {
