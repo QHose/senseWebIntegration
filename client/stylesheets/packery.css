@@ -9,12 +9,12 @@
 
 .grid-item {
   float: left;
-  width: 40%;
+  width: 45%;
   height: 400px;
   /*background: #e6e5e4;*/
-  border: 2px solid #b6b5b4;
-  margin: 20px;
-  padding: 10px;
+  /*border: 2px solid #DEDEDE;*/
+  /*margin: 20px;
+  padding: 10px;*/
 }
 
 
