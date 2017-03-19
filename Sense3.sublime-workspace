@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"Chart",
+				"Chart.js"
+			],
+			[
 				"y",
 				"yield"
 			],
@@ -196,13 +204,37 @@
 	"buffers":
 	[
 		{
-			"contents": "<template name=\"onTheFlybarChart\">\n    <div class=\"ui two column grid\">\n        <div class=\"column\">\n            <h5 class=\"ui header\">Javascript code in your SaaS platform</h5>\n            \n            \n                var app = qlik.openApp(appGuid, qConfig); app.visualization.create('barchart', [\"Country\", \"=Sum(SalesAmount)\"]).then(function(vis) { vis.show(\"chart\") });\n            \n            \n            <div class=\"column\">\n                <h5 class=\"ui header\">Generated chart</h5>\n                <div id=\"chart\" class=\"Qdiv grid-item\"></div>\n            </div>\n        </div>\n    </div>\n</template>\n<template name=\"onTheFlyExplanation\">\n    <div class=\"ui message\">\n        <div class=\"header\">\n            <h4>Visualization API</h4>\n        </div>\n        <div class=\"ui bulleted link list\">\n            <div class=\"item\">The <a target=\"_blank\" href=\"https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/VisualizationAPI/VisualizationAPI.htm\">Visualization API</a> is the external interface to Qlik Sense visualizations. It allows you to create and modify visualizations on the fly without making use of the Qlik Sense client.</div>\n            <div class=\"item\">You can easily create charts and combine any field you like, without thinking about data structures or having to write queries.</div>\n            <div class=\"item\">See more information in the <a target=\"_blank\" href=\"http://branch.qlik.com/#!/blog/56cc5f2af9e755b0dd301559\">Qlik Branch blog</a></div>\n            <div class=\"item\">Play around with this API on <a target=\"_blank\" href=\"https://jsfiddle.net/mindspank/fs62hwk3/3/\">JSFidlle</a></div>\n        </div>\n    </div>\n</template>\n",
 			"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
-			"file_size": 1738,
-			"file_write_time": 131344061893921079,
 			"settings":
 			{
-				"buffer_size": 1683,
+				"buffer_size": 1588,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/table.html",
+			"settings":
+			{
+				"buffer_size": 7495,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/chartJS.html",
+			"settings":
+			{
+				"buffer_size": 1131,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/multipleDivs.html",
+			"settings":
+			{
+				"buffer_size": 5007,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -211,7 +243,17 @@
 			"file": "client/ui/app/DIV integration/onTheFlybarChart.js",
 			"settings":
 			{
-				"buffer_size": 462,
+				"buffer_size": 556,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/chartJS.js",
+			"settings":
+			{
+				"buffer_size": 2514,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -603,7 +645,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -612,15 +654,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1683,
+						"buffer_size": 1588,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								203,
-								203
+								1395,
+								1395
 							]
 						],
 						"settings":
@@ -635,34 +677,130 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 1,
-					"file": "client/ui/app/DIV integration/onTheFlybarChart.js",
+					"file": "client/ui/app/DIV integration/table.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 462,
+						"buffer_size": 7495,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								6649,
+								6649
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1050.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/ui/app/DIV integration/chartJS.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								606,
+								606
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/ui/app/DIV integration/multipleDivs.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3812,
+								3812
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 168.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "client/ui/app/DIV integration/onTheFlybarChart.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								151,
+								240
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
 							"git_gutter_enabled": true,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
@@ -670,7 +808,39 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/ui/app/DIV integration/chartJS.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2514,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								211,
+								211
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
