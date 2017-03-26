@@ -1,7 +1,11 @@
 //http://www.chartjs.org/docs/#getting-started-creating-a-chart
+Template.chartJS.onCreated(function() {
+    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
+})
+
 Template.chartJS.onRendered(function() {
-	getTable();
-     this.$('pre code').each(function(i, block) {
+    getTable();
+    this.$('pre code').each(function(i, block) {
         hljs.highlightBlock(block);
     });
 })
@@ -29,11 +33,11 @@ function getTable() {
 function drawChartJs(table) {
     var ctx = $("#myChart");
     var rows = table.rows;
-    var labels = _.map(rows, function(row){
-    	return row.cells["0"].qText
+    var labels = _.map(rows, function(row) {
+        return row.cells["0"].qText
     })
-    var data = _.map(rows, function(row){
-    	return 	row.measures["0"].qNum;
+    var data = _.map(rows, function(row) {
+        return row.measures["0"].qNum;
     })
 
     console.log('labels array is ', labels);
