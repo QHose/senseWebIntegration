@@ -252,7 +252,25 @@
 			"file": "client/ui/app/DIV integration/chartJS.js",
 			"settings":
 			{
-				"buffer_size": 2514,
+				"buffer_size": 2639,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/layout.html",
+			"settings":
+			{
+				"buffer_size": 2247,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/nav.html",
+			"settings":
+			{
+				"buffer_size": 3862,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -308,8 +326,7 @@
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/.meteor",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration"
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app"
 	],
 	"file_history":
 	[
@@ -645,7 +662,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -677,7 +694,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -706,10 +723,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1050.0,
+						"translation.y": 1137.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -740,7 +757,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -772,15 +789,9 @@
 						"translation.y": 168.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 4,
 					"file": "client/ui/app/DIV integration/onTheFlybarChart.js",
@@ -802,13 +813,15 @@
 						{
 							"auto_complete": false,
 							"git_gutter_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -817,15 +830,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2514,
+						"buffer_size": 2639,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								211,
-								211
+								90,
+								90
 							]
 						],
 						"settings":
@@ -841,6 +854,70 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/ui/app/layout.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1777,
+								1777
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 392.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/ui/app/nav.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3862,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1010,
+								1010
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 377.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -863,18 +940,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -938,7 +1008,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 298.0,
+	"side_bar_width": 659.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

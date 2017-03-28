@@ -12,9 +12,13 @@
         <div class="item">
             <div class="header">IFrame</div>
             <div class="menu">
-                <a class="item" href="{{pathFor 'hub'}}">The hub</a>
-                <a class="item" href="{{pathFor 'app'}}">Single app</a>
-                <a class="item" href="{{pathFor '1chart'}}">Single chart</a>
+                {{#unless QSE}}
+                    <a class="item" href="{{pathFor 'hub'}}">The hub</a>
+                    <a class="item" href="{{pathFor 'app'}}">Sheet - with menu</a>
+                    {{else}}
+                        <a class="item" href="{{pathFor 'app'}}">Sheet - without menu</a>
+                {{/unless}}
+                <!-- <a class="item" href="{{pathFor '1chart'}}">Single chart</a> -->
                 <a class="item" href="{{pathFor 'multipleCharts'}}">Multiple charts</a>
             </div>
         </div>
@@ -31,8 +35,8 @@
             <div class="menu">
                 <!-- <a class="item" href="{{pathFor 'multipleDivs'}}">Single chart</a> -->
                 <a class="item" href="{{pathFor 'onTheFlybarChart'}}">Qlik Sense bar chart</a>
-                <!-- <a class="item" href="{{pathFor 'tableUsingWidgets'}}">Populate your own HTML table</a>
-                <a class="item" href="{{pathFor 'google'}}">Populate Google charts with Sense data</a> -->
+                <!-- <a class="item" href="{{pathFor 'tableUsingWidgets'}}">Populate your own HTML table</a> -->
+                <!-- <a class="item" href="{{pathFor 'google'}}">Populate Google charts with Sense data</a> -->
                 <a class="item" href="{{pathFor 'chartJS'}}">Populate Chart.js charts with Sense data</a>
             </div>
         </div>
@@ -43,6 +47,17 @@
                 <a class="item" target="_blank" href="http://branch.qlik.com">Qlik Branch - Developer community</a>
                 <a class="item" target="_blank" href="http://webapps.qlik.com/#/">Qlik demo - embedded demo apps</a>
                 <a class="item" target="_blank" href="http://playground.qlik.com/learn/noobs/intro">Qlik playground - learn our APIs</a>
+            </div>
+        </div>
+        <div class="item">
+            <!-- <div class="header">QAP</div> -->
+            <div class="menu">
+                <div class="ui toggle checkbox template item">
+                    <input type="checkbox" {{checked}} name="QAPSelector">
+                    <label>
+                        <a class="item" target="_blank" href="https://youtu.be/yLTqzftDa7s?t=475">Only show QAP options</a>
+                    </label>
+                </div>
             </div>
         </div>
     </div>

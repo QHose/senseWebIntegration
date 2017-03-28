@@ -24,13 +24,19 @@ Template.registerHelper('appURL', function() {
         appGUID = Meteor.settings.public.multipleDivAppGuid
     }
 
+    if (Session.get('QAPOnly')) //show the link without menu
+    //http://presales1:81/single/?appid=78f7312a-85c1-4428-b93e-0f2c1ea04b64&sheet=PumJhh&opt=currsel
+url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single/?appid=" + appGUID + "&sheet=VUkssjz&opt=currsel";
+
+else {
     url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "sense/app/" + appGUID + '/sheet/VUkssjz/state/analysis';
+}
 
     // console.log('the generated IFrame URL is: ' + url);
     return url;
 });
 
-Template.registerHelper('appGUID', function(){
+Template.registerHelper('appGUID', function() {
     return Meteor.settings.public.multipleDivAppGuid;
 })
 
@@ -60,12 +66,16 @@ Template.registerHelper('QlikSenseDemoURL', function() {
     return QlikSenseDemoURL();
 });
 
-QlikSenseDemoURL = function QlikSenseDemoURL(){
-    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port+"/"+Meteor.settings.public.virtualProxyClientUsage;
+//only show stuff if it is part of qlik sense or QAP
+Template.registerHelper('QSE', function() {
+    return Session.get('QAPOnly');
+});
+
+QlikSenseDemoURL = function QlikSenseDemoURL() {
+    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage;
 }
 
 //url of the Qlik sense server
 Template.registerHelper('cityBikeURL', function() {
-    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port+"/"+Meteor.settings.public.virtualProxyClientUsage+"/extensions/DemoMashup/home.html";
+    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage + "/extensions/DemoMashup/home.html";
 });
-
