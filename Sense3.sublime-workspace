@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"n",
+				"!important〔value〕"
+			],
+			[
 				"di",
 				"div\tTag"
 			],
@@ -204,19 +208,19 @@
 	"buffers":
 	[
 		{
-			"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
+			"file": "client/ui/app/DIV integration/multipleDivs.html",
 			"settings":
 			{
-				"buffer_size": 1588,
+				"buffer_size": 4988,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/ui/app/DIV integration/table.html",
+			"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
 			"settings":
 			{
-				"buffer_size": 7495,
+				"buffer_size": 1780,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -225,17 +229,16 @@
 			"file": "client/ui/app/DIV integration/chartJS.html",
 			"settings":
 			{
-				"buffer_size": 1131,
+				"buffer_size": 1140,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/ui/app/DIV integration/multipleDivs.html",
+			"file": "client/stylesheets/packery.css",
 			"settings":
 			{
-				"buffer_size": 5007,
-				"encoding": "UTF-8",
+				"buffer_size": 756,
 				"line_ending": "Windows"
 			}
 		},
@@ -249,28 +252,37 @@
 			}
 		},
 		{
-			"file": "client/ui/app/DIV integration/chartJS.js",
-			"settings":
-			{
-				"buffer_size": 2639,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/ui/app/layout.html",
-			"settings":
-			{
-				"buffer_size": 2247,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "client/ui/app/nav.html",
 			"settings":
 			{
-				"buffer_size": 3862,
+				"buffer_size": 4389,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/IFrame integration/app.html",
+			"settings":
+			{
+				"buffer_size": 1095,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/IFrame integration/multipleCharts.html",
+			"settings":
+			{
+				"buffer_size": 1840,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/nav.js",
+			"settings":
+			{
+				"buffer_size": 571,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -323,39 +335,43 @@
 	"expanded_folders":
 	[
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/.meteor",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app"
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration"
 	],
 	"file_history":
 	[
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/vizApi.css",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/hub.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/.meteor/packages",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/packery.css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/multipleCharts.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/lib/router.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/layout.js",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/1chart.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/semantic.css",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/hub.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/app.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/router.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.html",
@@ -375,12 +391,10 @@
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/1chart.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/authenticationCheck.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/lib/main.js",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/test/app-test.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/test/test.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/vizApi.css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/cityBike.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/styles.css",
@@ -461,7 +475,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 64.0
 	},
 	"find_in_files":
 	{
@@ -667,19 +681,51 @@
 			[
 				{
 					"buffer": 0,
-					"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
+					"file": "client/ui/app/DIV integration/multipleDivs.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1588,
+						"buffer_size": 4988,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1395,
-								1395
+								2762,
+								2941
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 899.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/ui/app/DIV integration/onTheFlybarChart.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1780,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1589,
+								1589
 							]
 						],
 						"settings":
@@ -692,38 +738,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/ui/app/DIV integration/table.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7495,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6649,
-								6649
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1137.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -735,58 +749,56 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1131,
+						"buffer_size": 1140,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								606,
-								606
+								1075,
+								1075
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"git_gutter_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "client/ui/app/DIV integration/multipleDivs.html",
+					"file": "client/stylesheets/packery.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5007,
+						"buffer_size": 756,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3812,
-								3812
+								149,
+								149
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
 							"git_gutter_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
@@ -826,19 +838,115 @@
 				},
 				{
 					"buffer": 5,
-					"file": "client/ui/app/DIV integration/chartJS.js",
+					"file": "client/ui/app/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2639,
+						"buffer_size": 4389,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								90,
-								90
+								663,
+								663
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 497.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/ui/app/IFrame integration/app.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1046,
+								1046
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/ui/app/IFrame integration/multipleCharts.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								746,
+								746
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "client/ui/app/nav.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								568,
+								568
 							]
 						],
 						"settings":
@@ -850,74 +958,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 129.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "client/ui/app/layout.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2247,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1777,
-								1777
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 392.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "client/ui/app/nav.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3862,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1010,
-								1010
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"git_gutter_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 377.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
