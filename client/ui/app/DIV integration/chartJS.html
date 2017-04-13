@@ -4,22 +4,14 @@
         <div class="sixteen wide column">
             <h5 class="ui header">Javascript code in your SaaS platform when using Chart.js</h5>
          {{#markdown}}
-					function getTable() {
-					require.config({
-					baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
-				});
+			var app = qlik.openApp(AppGuid, qConfig);
+				table = app.createTable(["Country"], ["Sum(SalesAmount)"], { rows: 3000 });
 
-				require(["js/qlik"], function(qlik) {
-						var app = qlik.openApp(AppGuid, qConfig);
-						table = app.createTable(["Country"], ["Sum(SalesAmount)"], { rows: 3000 });
-
-				var listener = function() {
-						drawChartJs(table);
+			var listener = function() {
+				drawChartJs(table);
 			};
 
-			table.OnData.bind(listener); //If the data is received from Qlik Sense. Execute a function that draws a chart using your favorite library. 
-		})
-	}
+			table.OnData.bind(listener); //If the data is received from Qlik Sense. Execute a function that draws a chart using your favorite library. In this way you can also receive events if the state of Qlik Sense changed. (e.g. a selection has been made, and you need to refresh your chart.)
 {{/markdown}}
         </div>
         <div class="eight wide column">

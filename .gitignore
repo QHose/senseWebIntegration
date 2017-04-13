@@ -59,3 +59,4 @@ settings-development.json
 settings-development - Copy.json
 *.bat
 *.sublime-workspace
+*.ts

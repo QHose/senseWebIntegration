@@ -4,7 +4,21 @@
             <iframe src="{{hubURL}}"></iframe>
             {{else}}
                 <div class="ui container">
-                    <div class="ui orange message">We can't show this "screen" anymore, since is not part of the QAP.</div>
+                    <div class="ui orange message">
+                        <div class="header">
+                            The hub is not part of the QAP license
+                        </div>
+                        <ul class="list">
+                            <li>We can't show this "screen" anymore, since the hub not part of the QAP.</li>
+                            <li>Note: Qlik Sense Enterprise contains <b>all functionality.</b>The QAP functionality is almost the same as Qlik Sense Enterprise. The only difference is that <b>the hub is not available</b> (everything else, like our APIs, DEV-HUB, QMC are still available).</li>
+                            <li>Because we removed our client facing front-end: the hub, you will have to create your own front-end. Therefore you can only use the QAP license if you already have a website, Qlik Sense mashup or mobile app in which you want to embed Qlik Sense.</li>
+                        </ul>
+                    </div>
+                    <div class="ui very padded grid">
+                        <div class="column">
+                            <img class="ui fluid image" src="{{SaaSDemoURL}}/images/QAP verus Qlik sense enterprise functionality difference.png">
+                        </div>
+                    </div>
                 </div>
         {{/unless}}
     </div>
