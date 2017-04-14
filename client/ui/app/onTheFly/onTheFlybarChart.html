@@ -1,7 +1,7 @@
 <template name="onTheFlybarChart">
-    <div class="ui two column grid">
+    <div class="ui two column grid container">
         <div class="column">
-            <h5 class="ui header">Javascript code in your SaaS platform</h5>
+            <h5 class="ui header">Javascript code in your SaaS platform to create a chart on the fly</h5>
             <pre>
                 <code>
                   var app = qlik.openApp(appGuid, qConfig); app.visualization.create('barchart', ["Country", "=Sum(SalesAmount)"]).then(function(vis) { vis.show("chart") });  
@@ -10,10 +10,23 @@
             
             <div class="column">
                 <h5 class="ui header">Generated chart</h5>
-                <div id="chart" class="Qdiv grid-item"></div>
+                <div id="chart" class="Qdiv grid-item" style="width: 100%"></div>
             </div>
         </div>
     </div>
+  <!--   <div class="column">
+            <h5 class="ui header">Javascript code in your SaaS platform</h5>
+            <pre>
+                <code>
+                  var app = qlik.openApp(appGuid, qConfig); app.visualization.create('', ["", ""]).then(function(vis) { vis.show("chart") });  
+                </code>
+            </pre>                
+            
+            <div class="column">
+                <h5 class="ui header">Generated chart</h5>
+                <div id="chartFlexible" class="Qdiv grid-item" style="width: 100%"></div>
+            </div>
+        </div> -->
 </template>
 <template name="onTheFlyExplanation">
     <!-- <div class="ui message"> -->

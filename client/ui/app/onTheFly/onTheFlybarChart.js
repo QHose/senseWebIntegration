@@ -1,6 +1,7 @@
 Template.onTheFlybarChart.onRendered(function() {
     checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
     createQlikBarChart();
+    createflexibleChart();
     this.$('pre code').each(function(i, block) {
         hljs.highlightBlock(block);
     });
@@ -16,3 +17,12 @@ function createQlikBarChart() {
         });
     })
 }
+
+// function createflexibleChart() {
+//     require(["js/qlik"], function(qlik) {
+//         var app = qlik.openApp(Meteor.settings.public.multipleDivAppGuid, qConfig);
+//         app.visualization.create('barchart').then(function(vis) {
+//             vis.show("chartFlexible")
+//         });
+//     })
+// }
