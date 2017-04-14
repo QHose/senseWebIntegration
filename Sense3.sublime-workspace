@@ -246,7 +246,7 @@
 			"file": "client/ui/app/IFrame integration/hub.html",
 			"settings":
 			{
-				"buffer_size": 2683,
+				"buffer_size": 2829,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -327,9 +327,7 @@
 	[
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration"
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui"
 	],
 	"file_history":
 	[
@@ -721,7 +719,9 @@
 						{
 							"auto_complete": false,
 							"git_gutter_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -799,15 +799,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2683,
+						"buffer_size": 2829,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								648,
-								648
+								236,
+								236
 							]
 						],
 						"settings":
