@@ -2,11 +2,14 @@
     <div class="ui two column grid container">
         <div class="column">
             <h5 class="ui header">Javascript code in your SaaS platform to create a chart on the fly</h5>
-            <pre>
-                <code>
-                  var app = qlik.openApp(appGuid, qConfig); app.visualization.create('barchart', ["Country", "=Sum(SalesAmount)"]).then(function(vis) { vis.show("chart") });  
-                </code>
-            </pre>                
+           {{#markdown}}
+                var app = qlik.openApp(appGuid, qConfig); 
+
+                app.visualization.create(
+                    'barchart', ["Country", "=Sum(SalesAmount)"]
+                ).then(function(chart) {chart.show("yourDIV")});  
+                
+            {{/markdown}}            
             
             <div class="column">
                 <h5 class="ui header">Generated chart</h5>
