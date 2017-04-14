@@ -28,7 +28,7 @@
     </div>
 </template>
 <template name="hubExplanationText">
-    <div class="ui message">
+    <!-- <div class="ui message"> -->
         <div class="header">
             <h4>IFrame Integration: hub</h4>
         </div>
@@ -39,5 +39,5 @@
             <div class="item">In this example we included: {{hubURL}} </div>
             <div class="item">Note that using this generic link, the hub automatically shows only authorized data for the logged in user. (This is possible because we have sent a ticket to Qlik Sense with all the information about the user (userId and group memberships). Based on this we have created 1 security rule in the QMC: user.group = resource.name (filter: Stream_*) that ensures a flexible authorization concept</div>
         </div>
-    </div>
+    <!-- </div> -->
 </template>

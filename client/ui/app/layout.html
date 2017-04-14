@@ -41,12 +41,19 @@
                         {{> yield "aside"}}
                     </div>
                     <div class="row" style="padding-top: 10px">
-                        {{> yield "asideExplanation"}}
+                        <div class="ui styled accordion">
+                            <div class=" title">
+                                <i class="dropdown icon"></i> Technical information
+                            </div>
+                            <div class=" content">
+                                 {{> yield "asideExplanation"}}
+                            </div>                            
+                        </div>
+                       
                     </div>
                 </div>
                 <div class="thirteen wide column">
-                    <h3 class="ui dividing header">Qlik Sense embedded</h3>
-                     {{> yield}}
+                    <h3 class="ui dividing header">Qlik Sense embedded</h3> {{> yield}}
                 </div>
             </div>
         </div>
