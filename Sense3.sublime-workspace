@@ -238,7 +238,7 @@
 			"file": "client/ui/app/nav.html",
 			"settings":
 			{
-				"buffer_size": 5093,
+				"buffer_size": 5126,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -667,7 +667,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -769,15 +769,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5093,
+						"buffer_size": 5126,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2587,
-								2587
+								2498,
+								2498
 							]
 						],
 						"settings":
@@ -789,10 +789,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 255.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -856,7 +856,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -887,7 +887,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
