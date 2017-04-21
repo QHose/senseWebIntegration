@@ -35,8 +35,8 @@
         <div class="ui bulleted link list">
             <div class="item">This demo shows that you can integrate the Qlik Sense Hub using an IFrame. </div>
             <div class="item">With an HTML IFrame you can show a website inside another website.</div>
-            <div class="item">This is the most simple and loosely coupled integration. You will use our Qlik Sense client (the Hub) to display and modify content like apps and sheets</div>
-            <div class="item">In this example we included: {{hubURL}} </div>
+            <div class="item">This is the most simple and loosely coupled integration. You will use our Qlik Sense client (the Hub) to display and modify content like apps and sheets. Note that you can also create your own version of the hub. Using the <a href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/MashupAPI/qlik-global-interface.htm" target="_blank"> global API</a> you can request a list of streams and apps including their properties like images etc.</div>
+            <div class="item">In this example we included: {{hubURL}}, see <a href="https://github.com/QHose/senseWebIntegration/blob/master/client/ui/app/IFrame%20integration/app.html#L3" target="_blank">source</a> </div>
             <div class="item">Note that using this generic link, the hub automatically shows only authorized data for the logged in user. (This is possible because we have sent a ticket to Qlik Sense with all the information about the user (userId and group memberships). Based on this we have created 1 security rule in the QMC: user.group = resource.name (filter: Stream_*) that ensures a flexible authorization concept</div>
         </div>
     <!-- </div> -->
