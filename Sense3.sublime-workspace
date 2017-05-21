@@ -226,6 +226,32 @@
 			}
 		},
 		{
+			"file": "client/ui/uiHelpers.js",
+			"settings":
+			{
+				"buffer_size": 2963,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/IFrame integration/app.html",
+			"settings":
+			{
+				"buffer_size": 1584,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/multipleDivs.html",
+			"settings":
+			{
+				"buffer_size": 5377,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "client/ui/app/onTheFly/onTheFlybarChart.js",
 			"settings":
 			{
@@ -235,21 +261,11 @@
 			}
 		},
 		{
-			"contents": "<template name=\"nav\">\n    <div class=\"ui fixed inverted menu\">\n        <div class=\"ui column\">\n            <a class=\"item\" href=\"{{SaaSDemoURL}}/useCaseSelection\">Home</a>\n        </div>\n    </div>\n</template>\n<template name=\"sideMenu\">\n    <h3 class=\"ui dividing header\">Web integration examples <a href=\"https://youtu.be/zuNvZ_UTmow\" target=\"_blank\"><i class=\"help circle icon\"></i></a>\n</h3>\n    <div class=\"ui vertical fluid menu\">\n        <div class=\"item\">\n            <div class=\"header\">IFrame</div>\n            <div class=\"menu\">\n                <a class=\"ui item\" href=\"{{pathFor 'hub'}}\">The hub</a>\n                {{#unless QSE}}\n                    <a class=\"item\" href=\"{{pathFor 'app'}}\">Sheet - with menu</a>\n                    {{else}}\n                        <a class=\"item\" href=\"{{pathFor 'app'}}\">Sheet - without menu</a>\n                {{/unless}}\n                <!-- <a class=\"item\" href=\"{{pathFor '1chart'}}\">Single chart</a> -->\n                <a class=\"item\" href=\"{{pathFor 'multipleCharts'}}\">Multiple charts</a>\n            </div>\n        </div>\n        <div class=\"item\">\n            <div class=\"header\">DIV</div>\n            <div class=\"menu\">\n                <!-- <a class=\"item\" href=\"{{pathFor 'multipleDivs'}}\">Single chart</a> -->\n                <a class=\"item\" href=\"{{pathFor 'multipleDivs'}}\">Multiple charts</a>\n                <a class=\"item\" target=\"_blank\" href=\"{{cityBikeURL}}\">Citybike demo</a>\n            </div>\n        </div>\n        <div class=\"item\">\n            <div class=\"header\">Data only & On the fly</div>\n            <div class=\"menu\">\n                <!-- <a class=\"item\" href=\"{{pathFor 'multipleDivs'}}\">Single chart</a> -->\n                <a class=\"item\" href=\"{{pathFor 'onTheFlybarChart'}}\">Qlik Sense bar chart</a>\n                <!-- <a class=\"item\" href=\"{{pathFor 'tableUsingWidgets'}}\">Populate your own HTML table</a> -->\n                <!-- <a class=\"item\" href=\"{{pathFor 'google'}}\">Populate Google charts with Sense data</a> -->\n                <a class=\"item\" href=\"{{pathFor 'chartJS'}}\">Use your own chart library using data from our Engine</a>\n                <a class=\"item\" href=\"{{pathFor 'mobileApp'}}\">Mobile app using data from our Engine</a>\n                <a class=\"item\" href=\"https://youtu.be/vkuukgOKQZY?list=PLqJfqgR62cVCnEMwaaraNbWp3U5s_bwel&t=189\"  target=\"_blank\">Qlik Sense Bot</a>\n                <a class=\"item\" href=\"{{SaaSDemoURL}}/slides\" target=\"_blank\">Slide generator</a>\n            </div>\n        </div>\n        <div class=\"ui dropdown item\">\n            <i class=\"dropdown icon\"></i>\n            <div class=\"header\">External examples</div>\n            <div class=\"menu\">\n                <a class=\"item\" target=\"_blank\" href=\"http://branch.qlik.com\">Qlik Branch - Developer community</a>\n                <a class=\"item\" target=\"_blank\" href=\"http://webapps.qlik.com/#/\">Qlik demo - embedded demo apps</a>\n                <a class=\"item\" target=\"_blank\" href=\"http://playground.qlik.com/learn/noobs/intro\">Qlik playground - learn our APIs</a>\n                <a class=\"item\" target=\"_blank\" href=\"http://www.axisgroup.com/portfolio/\">Examples from our partner Axis group</a>\n            </div>\n        </div>\n        <div class=\"item\">\n            <!-- <div class=\"header\">QAP</div> -->\n            <div class=\"menu\">\n                <div class=\"ui toggle checkbox template item\">\n                    <input type=\"checkbox\" {{checked}} name=\"QAPSelector\">\n                    <label>\n                        <a class=\"item\" target=\"_blank\" href=\"https://youtu.be/yLTqzftDa7s?t=475\">Only show QAP options</a>\n                    </label>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n<template name=\"webIntegrationMessage\">\n    <div class=\"ui message\">\n        <!-- <i class=\"unlock alternate icon\"></i> -->\n        <div class=\"description\">\n            <p>The beauty of Qlik is it allows you choices for your integration. You can choose the level of web integration according to your business requirements. On the client side, you can choose to use our client/front-end or you can create your own.\n            </p>\n        </div>\n        <div class=\"ui accordion\">\n            <div class=\"title\">\n                <i class=\"dropdown icon\"></i>Read more...\n            </div>\n            <div class=\"content\">\n                <p>If you use the Qlik Sense client you have the following options.\n                    <ul>\n                        <li>You can integrate the hub, an app, a sheet or individual charts.\n                        </li>\n                        <li>In most cases you have the flexibility to control whether you would like to see our menu, our selection bar or whether or not you would like to provide initial selections or make the charts static so that no selections are possible at all.\n                        </li>\n                    </ul>\n                </p>\n            </div>\n        </div>\n    </div>\n</template>\n",
 			"file": "client/ui/app/nav.html",
-			"file_size": 5087,
-			"file_write_time": 131370967969382790,
 			"settings":
 			{
-				"buffer_size": 4990,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "settings-development.json",
-			"settings":
-			{
-				"buffer_size": 279,
+				"buffer_size": 5174,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -328,7 +344,6 @@
 	[
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration",
@@ -670,7 +685,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -700,7 +715,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -716,8 +731,8 @@
 						"selection":
 						[
 							[
-								2018,
-								2018
+								1113,
+								1113
 							]
 						],
 						"settings":
@@ -730,14 +745,109 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 663.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/ui/uiHelpers.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2963,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2355,
+								2339
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1716.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
+					"file": "client/ui/app/IFrame integration/app.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1584,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								375,
+								375
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/ui/app/DIV integration/multipleDivs.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5377,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2992,
+								2992
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 950.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "client/ui/app/onTheFly/onTheFlybarChart.js",
 					"semi_transient": false,
 					"settings":
@@ -764,72 +874,44 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "client/ui/app/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4990,
+						"buffer_size": 5174,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2447,
-								2447
+								2647,
+								2647
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"git_gutter_enabled": true,
+							"git_gutter_is_enabled": true,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 255.0,
+						"translation.y": 848.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "settings-development.json",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 279,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								230,
-								212
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "/C/Users/mbj/Documents/GitHub/social2/client/main.js",
 					"semi_transient": false,
 					"settings":
@@ -857,11 +939,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "client/ui/app/IFrame integration/hub.html",
 					"semi_transient": false,
 					"settings":
@@ -889,11 +971,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "lib/router.js",
 					"semi_transient": false,
 					"settings":
@@ -921,7 +1003,7 @@
 						"translation.y": 1653.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
