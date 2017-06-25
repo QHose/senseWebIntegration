@@ -60,3 +60,4 @@ settings-development - Copy.json
 *.bat
 *.sublime-workspace
 *.ts
+*.sublime-workspace

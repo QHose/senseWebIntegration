@@ -6,5 +6,11 @@
         "port": 81,
         "isSecure": false,
         "multipleDivAppGuid": "78f7312a-85c1-4428-b93e-0f2c1ea04b64"         
+    },
+    "sikka": {
+         "captcha": {
+             "siteKey": "your_new_site_key",
+             "secret":  "your_new_secret_key"
+         }
     }
 }

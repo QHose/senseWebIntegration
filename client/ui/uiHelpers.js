@@ -66,6 +66,12 @@ Template.registerHelper('QlikSenseDemoURL', function() {
     return QlikSenseDemoURL();
 });
 
+//url of the Qlik sense server for the js fiddles
+Template.registerHelper('QlikSenseDemoURLAnon', function() {
+    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/anon";
+});
+
+
 //only show stuff if it is part of qlik sense or QAP
 Template.registerHelper('QSE', function() {
     return Session.get('QAPOnly');
