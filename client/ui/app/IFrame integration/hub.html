@@ -28,7 +28,7 @@
     </div>
 </template>
 <template name="fiddleHub">
-    <script async src="//jsfiddle.net/qhose/v993fpgy/embed/html,css,result/"></script>
+    <iframe src="//jsfiddle.net/qhose/0nn9bvg6/embedded/html,css,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 </template>
 
 <template name="hubExplanationText">
@@ -37,7 +37,7 @@
         <h4>IFrame Integration: hub</h4>
     </div>
     <div class="ui bulleted link list">
-        <div class="item"><a class="item" href="{{pathFor 'fiddleAppSheet'}}">Play around with this API</a></div>
+        <div class="item"><a class="item" href="{{pathFor 'fiddleHub'}}">Play around with this API</a></div>
         {{> defaultTechnicalInformation}}
         <div class="item">This demo shows that you can integrate the Qlik Sense Hub using an IFrame. </div>
         <div class="item">With an HTML IFrame you can show a website inside another website.</div>
@@ -49,5 +49,5 @@
 </template>
 
 <template name="defaultTechnicalInformation">
-      <div class="item">You can generate the code to embed in your site using the <a target="_blank" href="{{QlikSenseDemoURLAnon}}/dev-hub/">the Sense dev-hub.</a> or use the Visual Studio Plugin.</div>
+    <div class="item">You can generate the code to embed in your site using the <a target="_blank" href="{{QlikSenseDemoURLAnon}}/dev-hub/">the Sense dev-hub.</a> or use the Visual Studio Plugin.</div>
 </template>
