@@ -13,13 +13,10 @@
     </div>
     <div class="ui bulleted link list">
         <div class="item"><a class="item" href="{{pathFor 'fiddleAppSheet'}}">Play around with this API</a></div>
-
+        {{> defaultTechnicalInformation}}
         <div class="item">The <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/AppIntegrationAPI/app-integration-api.htm">app integration API</a> provides parameters that can be used to create an URL that returns a complete HTML page containing the embedded app. This URL can be embedded in a web page, for example by including it in an iframe.</div>
         <div class="item">You can embed single Qlik Sense sheets or individual charts into an iframe.</div>
         <div class="item">Selection definitions can be added to the Base URL. You can make selections in a single field or in multiple fields. Multiple values are semicolon separated. <code> http[s]://servername/{virtual proxy}/sense/app/{appid}/sheet/{sheetid}/state/analysis/select/{field}/{value1;value2} </code> </div>
-        <!-- <div class="item">The example on the right uses an Iframe which refers to: {{appURL}}.</div> -->
-
-        <div class="item">You can generate the code to embed in your site using the <a target="_blank" href="{{QlikSenseDemoURLAnon}}/dev-hub/">the Sense dev-hub.</a> or use the Visual Studio Plugin.</div>
     </div>
     <!-- </div> -->
 </template>

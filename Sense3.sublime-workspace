@@ -212,19 +212,10 @@
 	"buffers":
 	[
 		{
-			"file": "client/ui/uiHelpers.js",
+			"file": "client/ui/app/IFrame integration/hub.html",
 			"settings":
 			{
-				"buffer_size": 3178,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/ui/app/DIV integration/multipleDivs.html",
-			"settings":
-			{
-				"buffer_size": 5310,
+				"buffer_size": 4630,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -233,7 +224,16 @@
 			"file": "client/ui/app/IFrame integration/app.html",
 			"settings":
 			{
-				"buffer_size": 1745,
+				"buffer_size": 1517,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/multipleDivs.html",
+			"settings":
+			{
+				"buffer_size": 4369,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -242,7 +242,7 @@
 			"file": "lib/router.js",
 			"settings":
 			{
-				"buffer_size": 3910,
+				"buffer_size": 4136,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -295,7 +295,6 @@
 	"expanded_folders":
 	[
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/.meteor",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui",
@@ -306,6 +305,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/cityBike.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/semantic.css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/settings-development.json",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.html",
@@ -332,7 +333,6 @@
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/vizApi.css",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.js",
@@ -366,7 +366,6 @@
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/cityBike.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/styles.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-development.json",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/compatibility/packery.pkgd.min.js",
@@ -481,6 +480,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"0nn9bvg6",
+			"http://jsfiddle.net/qhose/0nn9bvg6/embedded/html,css,result/",
 			"dev-hub",
 			"pathfor",
 			"createflexibleChart",
@@ -645,64 +646,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/ui/uiHelpers.js",
+					"file": "client/ui/app/IFrame integration/hub.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3178,
+						"buffer_size": 4630,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1542,
-								1542
-							],
-							[
-								1589,
-								1589
-							],
-							[
-								1607,
-								1607
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 102.0,
-						"translation.y": 377.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/ui/app/DIV integration/multipleDivs.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5310,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1998,
-								1998
+								4471,
+								4471
 							]
 						],
 						"settings":
@@ -714,33 +675,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 494.0,
+						"translation.y": 289.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "client/ui/app/IFrame integration/app.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1745,
+						"buffer_size": 1517,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								226,
-								226
+								1036,
+								670
 							]
 						],
 						"settings":
@@ -759,20 +714,52 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "lib/router.js",
+					"buffer": 2,
+					"file": "client/ui/app/DIV integration/multipleDivs.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3910,
+						"buffer_size": 4369,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1401,
-								1387
+								1795,
+								1795
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/router.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1175,
+								1175
 							]
 						],
 						"settings":
@@ -784,10 +771,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 395.0,
+						"translation.y": 620.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -810,18 +797,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -857,7 +837,7 @@
 	},
 	"select_project":
 	{
-		"height": 885.0,
+		"height": 1000.0,
 		"last_filter": "",
 		"selected_items":
 		[
@@ -877,7 +857,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -885,7 +865,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 295.0,
+	"side_bar_width": 513.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
