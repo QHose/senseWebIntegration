@@ -1,0 +1,1 @@
+{   "name": "senseweb",   "version": "1.0.0",   "scripts": {     "start": "METEOR_SETTINGS=$(cat settings.json) node main.js"   } }
