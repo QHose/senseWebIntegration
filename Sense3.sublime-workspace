@@ -221,6 +221,15 @@
 			}
 		},
 		{
+			"file": "client/ui/app/onTheFly/chartJS.html",
+			"settings":
+			{
+				"buffer_size": 1765,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "client/ui/app/IFrame integration/app.html",
 			"settings":
 			{
@@ -242,8 +251,35 @@
 			"file": "lib/router.js",
 			"settings":
 			{
-				"buffer_size": 4136,
+				"buffer_size": 4380,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 30 files for \"tableUsingWidgetsExplanation\"\n\nC:\\Users\\mbj\\Documents\\GitHub\\senseWebIntegration\\client\\ui\\app\\DIV integration\\table.html:\n  105      <!-- </div> -->\n  106  </template>\n  107: <template name=\"tableUsingWidgetsExplanation\">\n  108      <div class=\"ui message\">\n  109          <div class=\"header\">\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 338,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "client/ui/app/DIV integration/table.html",
+			"settings":
+			{
+				"buffer_size": 7608,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/nav.html",
+			"settings":
+			{
+				"buffer_size": 5174,
 				"line_ending": "Windows"
 			}
 		}
@@ -301,6 +337,7 @@
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/onTheFly",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/lib"
 	],
 	"file_history":
@@ -436,7 +473,7 @@
 	],
 	"find":
 	{
-		"height": 64.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
@@ -480,6 +517,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tableUsingWidgetsExplanation",
 			"0nn9bvg6",
 			"http://jsfiddle.net/qhose/0nn9bvg6/embedded/html,css,result/",
 			"dev-hub",
@@ -646,7 +684,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -662,8 +700,8 @@
 						"selection":
 						[
 							[
-								4471,
-								4471
+								2521,
+								2348
 							]
 						],
 						"settings":
@@ -675,27 +713,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 289.0,
+						"translation.y": 200.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/ui/app/IFrame integration/app.html",
+					"file": "client/ui/app/onTheFly/chartJS.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1517,
+						"buffer_size": 1765,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1036,
-								670
+								978,
+								978
 							]
 						],
 						"settings":
@@ -710,11 +748,43 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "client/ui/app/IFrame integration/app.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								496,
+								601
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "client/ui/app/DIV integration/multipleDivs.html",
 					"semi_transient": false,
 					"settings":
@@ -742,24 +812,30 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "lib/router.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4136,
+						"buffer_size": 4380,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1175,
-								1175
+								3771,
+								3784
 							]
 						],
 						"settings":
@@ -771,10 +847,119 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 620.0,
+						"translation.y": 546.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 338,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										216,
+										244
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/ui/app/DIV integration/table.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5115,
+								5115
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1008.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/ui/app/nav.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -782,7 +967,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 46.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -797,11 +982,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.375271936186,
 			1.0
 		],
 		"rows":
@@ -823,7 +1015,7 @@
 	"project": "Sense3.sublime-project",
 	"replace":
 	{
-		"height": 120.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -857,7 +1049,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -865,7 +1057,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 513.0,
+	"side_bar_width": 339.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
