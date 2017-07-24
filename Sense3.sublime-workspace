@@ -4,10 +4,6 @@
 		"selected_items":
 		[
 			[
-				"fon",
-				"font-size"
-			],
-			[
 				"n",
 				"!important〔value〕"
 			],
@@ -212,37 +208,63 @@
 	"buffers":
 	[
 		{
+			"file": "client/ui/app/onTheFly/mobileApp.html",
+			"settings":
+			{
+				"buffer_size": 136,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/onTheFly/onTheFlybarChart.html",
+			"settings":
+			{
+				"buffer_size": 2603,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "settings-example.json",
+			"settings":
+			{
+				"buffer_size": 401,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/onTheFly/onTheFlybarChart.js",
+			"settings":
+			{
+				"buffer_size": 895,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/ui/app/nav.html",
+			"settings":
+			{
+				"buffer_size": 5088,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/mbj/Documents/GitHub/social2/client/main.js",
+			"settings":
+			{
+				"buffer_size": 1325,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "client/ui/app/IFrame integration/hub.html",
 			"settings":
 			{
 				"buffer_size": 4630,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/ui/app/onTheFly/chartJS.html",
-			"settings":
-			{
-				"buffer_size": 1765,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/ui/app/IFrame integration/app.html",
-			"settings":
-			{
-				"buffer_size": 1517,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/ui/app/DIV integration/multipleDivs.html",
-			"settings":
-			{
-				"buffer_size": 4369,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -253,33 +275,6 @@
 			{
 				"buffer_size": 4380,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 30 files for \"tableUsingWidgetsExplanation\"\n\nC:\\Users\\mbj\\Documents\\GitHub\\senseWebIntegration\\client\\ui\\app\\DIV integration\\table.html:\n  105      <!-- </div> -->\n  106  </template>\n  107: <template name=\"tableUsingWidgetsExplanation\">\n  108      <div class=\"ui message\">\n  109          <div class=\"header\">\n\n1 match in 1 file\n",
-			"settings":
-			{
-				"buffer_size": 338,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "client/ui/app/DIV integration/table.html",
-			"settings":
-			{
-				"buffer_size": 7608,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/ui/app/nav.html",
-			"settings":
-			{
-				"buffer_size": 5174,
 				"line_ending": "Windows"
 			}
 		}
@@ -342,39 +337,32 @@
 	],
 	"file_history":
 	[
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/cityBike.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/semantic.css",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/settings-development.json",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.js",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/settings-example.json",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/packery.css",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/.meteor/packages",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/lib/router.js",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/hub.html",
-		"/C/Users/mbj/Documents/GitHub/social2/client/main.js",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/onTheFly/mobileApp.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/onTheFly/onTheFlybarChart.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/app.html",
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/onTheFly/onTheFlybarChart.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/nav.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/multipleCharts.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/app.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/1chart.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/hub.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/onTheFlybarChart.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/nav.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/lib/router.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/layout.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/chartJS.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/packery.css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/vizApi.css",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/uiHelpers.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.html",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/.meteor/packages",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/jmpress/slideGenerator.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/table.js",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/semantic.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/googleChart.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/multipleDivs.js",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/.meteor/packages",
@@ -403,6 +391,7 @@
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/layout.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets/pre prettyprint .css",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/cityBike.html",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration/styles.css",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/settings-development.json",
 		"/C/Users/MBJ/Documents/GitHub/senseWebIntegration/client/compatibility/packery.pkgd.min.js",
@@ -469,20 +458,23 @@
 		"/C/Users/Qlik/Meteor projects/firstmeteor/lib/router.js",
 		"/C/Users/Qlik/Meteor projects/senseIntegration/model/things.js",
 		"/C/Users/Qlik/Meteor projects/senseIntegration/client/lib/app.ng.js",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/categoryForm.html"
+		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/categoryForm.html",
+		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Cart/cartShow.js",
+		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Cart/cartShow.html",
+		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Order/show.html",
+		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Order/show.js",
+		"/C/Users/Qlik/Meteor projects/firstmeteor/client/stylesheets/semantic.css",
+		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Reports/ordersByPickUpDay.html"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 64.0
 	},
 	"find_in_files":
 	{
 		"height": 102.0,
 		"where_history":
 		[
-			"C:\\Users\\mbj\\Documents\\GitHub\\senseWebIntegration\\client\\ui\\app",
-			"C:\\Users\\mbj\\Documents\\GitHub\\senseWebIntegration\\client",
-			"C:\\Users\\mbj\\Documents\\GitHub\\senseWebIntegration\\client\\ui",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\ui\\app",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\ui\\app\\DIV integration",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\stylesheets",
@@ -517,13 +509,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"tableUsingWidgetsExplanation",
-			"0nn9bvg6",
-			"http://jsfiddle.net/qhose/0nn9bvg6/embedded/html,css,result/",
-			"dev-hub",
-			"pathfor",
-			"createflexibleChart",
-			"createflexibleChart ",
 			"column",
 			"getTable",
 			"google",
@@ -684,36 +669,34 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/ui/app/IFrame integration/hub.html",
+					"file": "client/ui/app/onTheFly/mobileApp.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4630,
+						"buffer_size": 136,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2521,
-								2348
+								123,
+								123
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"git_gutter_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 200.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
@@ -721,56 +704,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "client/ui/app/onTheFly/chartJS.html",
+					"file": "client/ui/app/onTheFly/onTheFlybarChart.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1765,
+						"buffer_size": 2603,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								978,
-								978
+								2018,
+								2018
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/ui/app/IFrame integration/app.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1517,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								496,
-								601
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
+							"git_gutter_enabled": true,
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
@@ -784,27 +736,27 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "client/ui/app/DIV integration/multipleDivs.html",
+					"buffer": 2,
+					"file": "settings-example.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4369,
+						"buffer_size": 401,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1795,
-								1795
+								401,
+								401
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
+							"auto_complete": true,
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -812,85 +764,33 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 4,
-					"file": "lib/router.js",
+					"buffer": 3,
+					"file": "client/ui/app/onTheFly/onTheFlybarChart.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4380,
+						"buffer_size": 895,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3771,
-								3784
+								267,
+								267
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"git_gutter_is_enabled": true,
+							"git_gutter_enabled": true,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 546.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 338,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										216,
-										244
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								91,
-								91
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -900,44 +800,45 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "client/ui/app/DIV integration/table.html",
+					"buffer": 4,
+					"file": "client/ui/app/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7608,
+						"buffer_size": 5088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5115,
-								5115
+								1391,
+								1391
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
+							"git_gutter_enabled": true,
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1008.0,
+						"translation.y": 255.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "client/ui/app/nav.html",
-					"semi_transient": true,
+					"buffer": 5,
+					"file": "/C/Users/mbj/Documents/GitHub/social2/client/main.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5174,
+						"buffer_size": 1325,
 						"regions":
 						{
 						},
@@ -950,13 +851,79 @@
 						],
 						"settings":
 						{
-							"git_gutter_is_enabled": true,
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/ui/app/IFrame integration/hub.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "lib/router.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1633,
+								1633
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1653.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -967,7 +934,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 46.0
 	},
 	"input":
 	{
@@ -982,18 +949,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.375271936186,
 			1.0
 		],
 		"rows":
@@ -1015,7 +975,7 @@
 	"project": "Sense3.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 120.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1049,7 +1009,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1057,7 +1017,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 339.0,
+	"side_bar_width": 541.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
