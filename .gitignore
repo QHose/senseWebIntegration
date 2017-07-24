@@ -61,3 +61,4 @@ settings-development - Copy.json
 *.sublime-workspace
 *.ts
 *.sublime-workspace
+config/settings.json
