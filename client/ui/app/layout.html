@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <!-- Site Properities -->
-        <title>Your SaaS platform with Qlik Sense embedded</title>
+        <title>Embed Qlik Sense - Your SaaS platform with Qlik Sense embedded</title>
         <!-- Qlik Sense required headers -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -32,9 +32,9 @@
     </div>
 </template>
 <template name="regionLayout">
+    {{> yield "nav"}} {{> sAlert}}
     <div class="ui internally celled grid">
         <div class="sixteen wide column">
-            {{> yield "nav"}} {{> sAlert}}
             <div class="ui stackable grid">
                 <div class="three wide column">
                     <div class="row">
@@ -58,7 +58,9 @@
             </div>
         </div>
     </div>
+    {{> EmbedFooter }}
 </template>
+
 <template name="oneColumnCenteredLayout">
     <div class="ui two column centered grid">
         <div class="column">{{> yield }}</div>
