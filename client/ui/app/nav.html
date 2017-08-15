@@ -1,9 +1,35 @@
 <template name="nav">
-    <div class="ui fixed inverted menu">
+    <div class="row general header">
+        <div class="col-md-12">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="{{SaaSDemoURL}}/">HOME</a></li>
+                <li class="active"><a href="{{webIntegrationDemo}}">EMBED QLIK SENSE</a></li>
+                <li><a href="{{SaaSDemoURL}}/{{pathFor 'selfService'}}">SELF SERVICE</a></li>
+                <li><a href="{{SaaSDemoURL}}/{{pathFor 'impress'}}">SASS PROVISIONING</a></li>
+                <li><a href="{{SaaSDemoURL}}/{{pathFor 'documentation'}}">DEEP DIVE QLIK APIS</a></li>
+                <li><a href="{{SaaSDemoURL}}/{{pathFor 'documentation'}}?tab=video">VIDEO LIBRARY</a></li>
+            </ul>    
+            <ul class="nav navbar-nav navbar-right">
+                <li class="label">DISPLAY CONTENT FOR:</li>                
+                <li class="dropdown">
+                    <!-- Load BOOTSTRAP first, its throwing everything off  -->
+                    <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{userRole}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data="Developer">Developer</a></li>
+                        <li><a href="#" data="Product Owner">Product Owner</a></li>
+                        <li><a href="#" data="Hosting Ops Professional">Hosting Ops Professional</a></li>
+                        <li><a href="#" data="Business Analyst">Business Analyst</a></li>
+                        <li><a href="#" data="C-Level executive, non-technical">C-Level executive, non-technical</a></li>
+                    </ul> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--<div class="ui fixed inverted menu">
         <div class="ui column">
             <a class="item" href="{{SaaSDemoURL}}/useCaseSelection">Home</a>
         </div>
-    </div>
+    </div>-->
 </template>
 <template name="sideMenu">
     <h3 class="ui dividing header">Web integration examples <a href="https://youtu.be/zuNvZ_UTmow" target="_blank"><i class="help circle icon"></i></a>
