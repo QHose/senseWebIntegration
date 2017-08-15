@@ -4,13 +4,14 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-base@1.0.4             # Packages every Meteor app needs to have
+meteor-base@1.1.0             # Packages every Meteor app needs to have
 mobile-experience@1.0.4       # Packages for a great mobile UX
-mongo@1.1.14                   # The database Meteor supports right now
+mongo@1.1.18                   # The database Meteor supports right now
 blaze-html-templates@1.0.4    # Compile .html files into Meteor Blaze views
 session@1.1.7                 # Client-side reactive dictionary for your app
 jquery@1.11.10                  # Helpful client-side library
-tracker@1.1.1                 # Meteor's client-side reactive programming library
+tracker@1.1.3                 # Meteor's client-side reactive programming library
+meteorhacks:sikka 			#firewall
 
 es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers.
 
@@ -24,8 +25,8 @@ stevezhu:lodash
 juliancwirko:s-alert
 semantic:ui
 flemay:less-autoprefixer
-standard-minifier-css@1.3.2
-standard-minifier-js@1.2.1
+standard-minifier-css@1.3.4
+standard-minifier-js@2.1.0
 # msavin:mongol
 # alanning:roles
 # accounts-password@1.3.3
@@ -34,8 +35,9 @@ aslagle:reactive-table
 # houston:admin
 # shell-server@0.2.1
 # modules
-reactive-var
+reactive-var@1.0.11
 # u2622:persistent-session
 practicalmeteor:mocha
 simple:highlight.js
-markdown
+markdown@1.0.12
+dynamic-import

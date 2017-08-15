@@ -226,27 +226,19 @@
 			}
 		},
 		{
-			"file": "client/ui/uiHelpers.js",
+			"file": "settings-example.json",
 			"settings":
 			{
-				"buffer_size": 2963,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/ui/app/IFrame integration/app.html",
-			"settings":
-			{
-				"buffer_size": 1584,
+				"buffer_size": 401,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/ui/app/DIV integration/multipleDivs.html",
+			"file": "client/ui/app/onTheFly/onTheFlybarChart.js",
 			"settings":
 			{
-				"buffer_size": 5377,
+				"buffer_size": 895,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -255,7 +247,7 @@
 			"file": "client/ui/app/nav.html",
 			"settings":
 			{
-				"buffer_size": 5174,
+				"buffer_size": 5088,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -272,7 +264,7 @@
 			"file": "client/ui/app/IFrame integration/hub.html",
 			"settings":
 			{
-				"buffer_size": 3964,
+				"buffer_size": 4630,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -281,18 +273,9 @@
 			"file": "lib/router.js",
 			"settings":
 			{
-				"buffer_size": 3438,
+				"buffer_size": 4380,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "```\nLOAD \n\tRowNo() as Row,\n\tRecNo() as CSVRowNo, //use this as sort otherwise QRS API gets wrong sheets (if sheets occur twice)\n\t[Level 1],\n\t[Level 2],\n\t[Level 3],\n\t[Level 4],\n\ttrim(SubField(Resources, ',')) as [Partial Workshop]\n FROM [lib://Import demo (qlikdemosaas_qlik)/SaaS presentation input.csv]\n(txt, utf8, embedded labels, delimiter is ',', msq);\n```\n",
-			"settings":
-			{
-				"buffer_size": 361,
-				"line_ending": "Windows",
-				"name": "```"
 			}
 		}
 	],
@@ -344,6 +327,7 @@
 	[
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client",
+		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/stylesheets",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/DIV integration",
@@ -353,7 +337,6 @@
 	],
 	"file_history":
 	[
-		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/onTheFly/onTheFlybarChart.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/nav.js",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/multipleCharts.html",
 		"/C/Users/mbj/Documents/GitHub/senseWebIntegration/client/ui/app/IFrame integration/app.html",
@@ -480,7 +463,8 @@
 		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Cart/cartShow.html",
 		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Order/show.html",
 		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Order/show.js",
-		"/C/Users/Qlik/Meteor projects/firstmeteor/client/stylesheets/semantic.css"
+		"/C/Users/Qlik/Meteor projects/firstmeteor/client/stylesheets/semantic.css",
+		"/C/Users/Qlik/Meteor projects/firstmeteor/client/templates/app/Reports/ordersByPickUpDay.html"
 	],
 	"find":
 	{
@@ -491,7 +475,6 @@
 		"height": 102.0,
 		"where_history":
 		[
-			"C:\\Users\\mbj\\Documents\\GitHub\\senseWebIntegration\\client\\ui",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\ui\\app",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\ui\\app\\DIV integration",
 			"C:\\Users\\MBJ\\Documents\\GitHub\\senseWebIntegration\\client\\stylesheets",
@@ -526,8 +509,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"createflexibleChart",
-			"createflexibleChart ",
 			"column",
 			"getTable",
 			"google",
@@ -688,7 +669,7 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -718,7 +699,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -734,8 +715,8 @@
 						"selection":
 						[
 							[
-								333,
-								333
+								2018,
+								2018
 							]
 						],
 						"settings":
@@ -751,62 +732,63 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/ui/uiHelpers.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2963,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2355,
-								2339
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1716.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "client/ui/app/IFrame integration/app.html",
+					"buffer": 2,
+					"file": "settings-example.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1584,
+						"buffer_size": 401,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								375,
-								375
+								401,
+								401
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/ui/app/onTheFly/onTheFlybarChart.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"git_gutter_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -819,51 +801,19 @@
 				},
 				{
 					"buffer": 4,
-					"file": "client/ui/app/DIV integration/multipleDivs.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5377,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2992,
-								2992
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 950.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "client/ui/app/nav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5174,
+						"buffer_size": 5088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2647,
-								2647
+								1391,
+								1391
 							]
 						],
 						"settings":
@@ -876,14 +826,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 848.0,
+						"translation.y": 255.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "/C/Users/mbj/Documents/GitHub/social2/client/main.js",
 					"semi_transient": false,
 					"settings":
@@ -911,16 +861,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "client/ui/app/IFrame integration/hub.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3964,
+						"buffer_size": 4630,
 						"regions":
 						{
 						},
@@ -943,30 +893,31 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "lib/router.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3438,
+						"buffer_size": 4380,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2966,
-								2994
+								1633,
+								1633
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"git_gutter_enabled": true,
+							"git_gutter_is_enabled": true,
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -975,35 +926,7 @@
 						"translation.y": 1653.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 361,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								361
-							]
-						],
-						"settings":
-						{
-							"auto_name": "```",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
