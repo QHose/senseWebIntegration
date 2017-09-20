@@ -1,11 +1,11 @@
 {
     "public": {
         "virtualProxyClientUsage": "meteor",
-        "QRSHost":"integration.qlik.com", 
-        "host": "integration.qlik.com",
+        "QRSHost":"localqrs", 
+        "host": "localhost",
         "portMeteorQRS": 80,
-        "port": 443,
+        "port": 81,
         "isSecure": false,
-        "multipleDivAppGuid": "2f91e93b-6d13-497d-9e49-aea3b44a63fb"
+        "multipleDivAppGuid": "5451b8ed-cd7d-445d-b63e-ab63d86618e5"
     }
 }
