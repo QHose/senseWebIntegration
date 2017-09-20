@@ -10,12 +10,26 @@
 .grid-item {
   float: left;
   width: 45%;
-  height: 400px;
+  height: calc(100vh/3);
   /*background: #e6e5e4;*/
   /*border: 2px solid #DEDEDE;*/
   /*margin: 20px;
   padding: 10px;*/
 }
+
+Qdiv {
+    height: 25%;
+    width: 40%;
+}
+
+.QlistBox {
+    width: 250px;
+}
+
+/*.QScatter {
+    height: 25%;
+    width: 40%;
+}*/
 
 
 /*.grid-item:hover {

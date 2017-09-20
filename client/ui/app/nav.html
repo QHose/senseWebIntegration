@@ -1,23 +1,46 @@
 <template name="nav">
-    <div class="ui fixed inverted menu">
+    <div class="row general header">
+        <div class="col-md-12">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="{{SaaSDemoURL}}/">HOME</a></li>
+                <li class="active"><a href="{{webIntegrationDemo}}">EMBED QLIK SENSE</a></li>
+                <li><a href="{{SaaSDemoURL}}/{{pathFor 'selfService'}}">SELF SERVICE</a></li>
+                <li><a href="{{SaaSDemoURL}}/{{pathFor 'impress'}}">SASS PROVISIONING</a></li>
+                <li><a href="{{SaaSDemoURL}}/{{pathFor 'documentation'}}">DEEP DIVE QLIK APIS</a></li>
+                <li><a href="{{SaaSDemoURL}}/{{pathFor 'documentation'}}?tab=video">VIDEO LIBRARY</a></li>
+            </ul>    
+            <ul class="nav navbar-nav navbar-right">
+                <li class="label">DISPLAY CONTENT FOR:</li>                
+                <li class="dropdown">
+                    <!-- Load BOOTSTRAP first, its throwing everything off  -->
+                    <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{userRole}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data="Developer">Developer</a></li>
+                        <li><a href="#" data="Product Owner">Product Owner</a></li>
+                        <li><a href="#" data="Hosting Ops Professional">Hosting Ops Professional</a></li>
+                        <li><a href="#" data="Business Analyst">Business Analyst</a></li>
+                        <li><a href="#" data="C-Level executive, non-technical">C-Level executive, non-technical</a></li>
+                    </ul> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--<div class="ui fixed inverted menu">
         <div class="ui column">
             <a class="item" href="{{SaaSDemoURL}}/useCaseSelection">Home</a>
         </div>
-    </div>
+    </div>-->
 </template>
 <template name="sideMenu">
     <h3 class="ui dividing header">Web integration examples <a href="https://youtu.be/zuNvZ_UTmow" target="_blank"><i class="help circle icon"></i></a>
-</h3>
+    </h3>
     <div class="ui vertical fluid menu">
         <div class="item">
             <div class="header">IFrame</div>
             <div class="menu">
-                <a class="ui item" href="{{pathFor 'hub'}}">The hub</a>
-                {{#unless QSE}}
-                    <a class="item" href="{{pathFor 'app'}}">Sheet - with menu</a>
-                    {{else}}
-                        <a class="item" href="{{pathFor 'app'}}">Sheet - without menu</a>
-                {{/unless}}
+                <a class="ui item" href="{{pathFor 'hub'}}">The hub</a> {{#unless QSE}}
+                <a class="item" href="{{pathFor 'app'}}">Sheet - with menu</a> {{else}}
+                <a class="item" href="{{pathFor 'app'}}">Sheet - without menu</a> {{/unless}}
                 <!-- <a class="item" href="{{pathFor '1chart'}}">Single chart</a> -->
                 <a class="item" href="{{pathFor 'multipleCharts'}}">Multiple charts</a>
             </div>
@@ -27,19 +50,20 @@
             <div class="menu">
                 <!-- <a class="item" href="{{pathFor 'multipleDivs'}}">Single chart</a> -->
                 <a class="item" href="{{pathFor 'multipleDivs'}}">Multiple charts</a>
-                <a class="item" target="_blank" href="{{cityBikeURL}}">Citybike demo</a>
+                <a class="item" target="_blank" href="{{cityBikeURL}}">Example: Citybike</a>
+                <a class="item" target="_blank" href="https://webapps.qlik.com/marketing360/index.html#/dashboard">Example: Marketing 360</a>
             </div>
         </div>
         <div class="item">
             <div class="header">Data only & On the fly</div>
             <div class="menu">
                 <!-- <a class="item" href="{{pathFor 'multipleDivs'}}">Single chart</a> -->
-                <a class="item" href="{{pathFor 'onTheFlybarChart'}}">Qlik Sense bar chart</a>
+                <a class="item" href="{{pathFor 'onTheFlybarChart'}}">Create Sense chart with javascript</a>
                 <!-- <a class="item" href="{{pathFor 'tableUsingWidgets'}}">Populate your own HTML table</a> -->
                 <!-- <a class="item" href="{{pathFor 'google'}}">Populate Google charts with Sense data</a> -->
                 <a class="item" href="{{pathFor 'chartJS'}}">Use your own chart library using data from our Engine</a>
                 <a class="item" href="{{pathFor 'mobileApp'}}">Mobile app using data from our Engine</a>
-                <a class="item" href="https://youtu.be/vkuukgOKQZY?list=PLqJfqgR62cVCnEMwaaraNbWp3U5s_bwel&t=189"  target="_blank">Qlik Sense Bot</a>
+                <a class="item" href="https://youtu.be/vkuukgOKQZY?list=PLqJfqgR62cVCnEMwaaraNbWp3U5s_bwel&t=189" target="_blank">Qlik Sense Bot</a>
                 <a class="item" href="{{SaaSDemoURL}}/slides" target="_blank">Slide generator</a>
             </div>
         </div>

@@ -25,60 +25,39 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="sixteen wide column">
                 <div class="grid">
-                    <div id="QV01" class="grid-item "></div>
-                    <!-- <div id="QV02" class=" grid-item "></div> -->
+                    <div id="QV01" class="column grid-item "></div>
                     <div id="QV03" class="column grid-item "></div>
                     <div id="QV04" class="column QScatter grid-item "></div>
                     <div id="QV05" class="column QlistBox grid-item "></div>
-                    <!-- <div id="QV06" class=" grid-item "></div> -->
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<template name="fiddleDIV">
+    <iframe src="//jsfiddle.net/qhose/uj3abbde/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+</template>
 <template name="multipleDivExplanationText">
-    <!-- <div class="ui message"> -->
-        <div class="header">
-            <h4>DIV tag Integration</h4>
-        </div>
-        <div class="ui bulleted link list">
-            {{> divTagDefaultBullet}}
-        </div>
-    <!-- </div> -->
+    <div class="header">
+        <h4>DIV tag Integration</h4>
+    </div>
+    <div class="ui bulleted link list">
+        {{> divTagDefaultBullet}}
+    </div>
 </template>
 <template name="divTagDefaultBullet">
-    <div class="item">Use the <a href="https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/Platform/Content/Integration/embed-qlik-sense.htm">Mashup APIs</a> when you want to display Qlik Sense objects on your website. Amongst many other functions, it allows you to get objects, add buttons, create bookmarks and interact with fields.</div>
+    <div class="item"><a class="item" href="{{pathFor 'fiddleDIV'}}">Play around with this API</a></div>
+    {{> defaultTechnicalInformation}}
+
+    <div class="item">Use the <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.0/Subsystems/Platform/Content/Integration/embed-qlik-sense.htm">Mashup APIs</a> when you want to display Qlik Sense objects on your website. Amongst many other functions, it allows you to get objects, add buttons, create bookmarks and interact with fields.</div>
     <div class="item">Using the APIs we can obtain all data and properties of the app, like the title of the app: "{{SenseLayout.qTitle}}". (Press "F12" - "console" to see all properties.)</div>
-    <div class="item">You can generate the code to embed in your site using the <a href="{{QlikSenseDemoURL}}/dev-hub/">the Sense dev-hub.</a> or use the Visual Studio Plugin.</div>
-    <div class="item">Qlik Sense generates the charts and in this demo we make use of an external javascript package <a href="http://packery.metafizzy.co">"packery"</a> to make the DIVs "draggable". This to just give you an idea what you can do with this technology.</div>
-    <div class="item">You can also just use the data from our associative engine, and <a href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/SelectionAPI/qlik-selectionState-interface.htm">set selections</a> or <a href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/Dev-Hub/Content/MashupEditor/mashup-editor-field-list-builder.htm">get field values</a> or "hypercubes" (<a href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/TableAPI/qlik-table-interface.htm"> tables</a>) and create your own vizualization or HTML element.</div>
-    <div class="item">Play around with this API on <a target="_blank" href="http://jsfiddle.net/dlumkeman/9a69ye4b/">JSFiddle</a></div>
+    <div class="item">You can generate the code to embed in your site using the <a target="_blank" href="{{QlikSenseDemoURL}}/dev-hub/">the Sense dev-hub.</a> or use the Visual Studio Plugin.</div>
+    <div class="item">Qlik Sense generates the charts and in this demo we make use of an external javascript package <a target="_blank" href="http://packery.metafizzy.co">"packery"</a> to make the DIVs "draggable". This to just give you an idea what you can do with this technology.</div>
+    <div class="item">You can also just use the data from our associative engine, and <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/SelectionAPI/qlik-selectionState-interface.htm">set selections</a> or <a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/Dev-Hub/Content/MashupEditor/mashup-editor-field-list-builder.htm">get field values</a> or "hypercubes" (<a target="_blank" href="https://help.qlik.com/en-US/sense-developer/3.1/Subsystems/APIs/Content/TableAPI/qlik-table-interface.htm"> tables</a>) and create your own vizualization or HTML element.</div>
     <div class="item">View the source <a target="_blank" href="https://github.com/QHose/senseWebIntegration/blob/master/client/ui/app/DIV%20integration/multipleDivs.html#L31">HTML</a> and <a target="_blank" href="https://github.com/QHose/senseWebIntegration/blob/master/client/ui/app/DIV%20integration/multipleDivs.js#L71"> javascript</a></div>
-    <!--     <div class="item">The DIV tags connect to the local require.js on your server which connects to the Sense Server</div>
-    <div class="item">Ensure you copy the current Qlik Sense version of our fonts, CSS and require.js to your webserver.</div> -->
 </template>
-<!-- <div class="ui two column doubling grid js-packery">
-        <div class="column">
-            <div class="ui segment">
-                <div id="QV01" class="ui  Qdiv"></div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="ui segment">
-                <div id="QV02" class="ui  Qdiv"></div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="ui segment">
-                <div id="QV03" class="ui  Qdiv"></div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="ui segment">
-                <div id="QV04" class="ui  Qdiv"></div>
-            </div>
-        </div>
-    </div> -->
