@@ -24,15 +24,14 @@
     }
     
     echo "STEP delete old build files"
-    Remove-PathToLongDirectory $BUILD_DIR
+    # Remove-PathToLongDirectory $BUILD_DIR
 
     echo "STEP build new meteor bundle"
-    meteor build --architecture=os.linux.x86_64 --allow-superuser --directory $BUILD_DIR
+    # meteor build --architecture=os.linux.x86_64 --allow-superuser --directory $BUILD_DIR
 
     echo "STEP copy dockerfile to bundle folder, so docker can build the image"
     Copy-Item Dockerfile $BUNDLE_DIR
     Copy-Item startNode.sh $BUNDLE_DIR
-    Copy-Item settings-development-example.json $BUNDLE_DIR    
 
     echo  "STEP go to bundle dir" 
     cd "$BUNDLE_DIR"
