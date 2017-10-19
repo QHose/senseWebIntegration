@@ -3,10 +3,10 @@
     $BASE_APP_NAME = "sensewebintegration"
     $BUILD_DIR = ".\.build"
     $BUNDLE_DIR = $BUILD_DIR+"\bundle"
-    $VERSION = "2.0.0"
+    $VERSION = Get-Date -format yyyyMMdd-Hmm
     $DOCKER_TAG = "qhose/" + $BASE_APP_NAME + ":" + $VERSION
 
-    
+
     function Remove-PathToLongDirectory 
     {
         Param(
