@@ -3,7 +3,10 @@ meteor startup.bat
 *.sublime-workspace
 node_modules/
 .build/
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

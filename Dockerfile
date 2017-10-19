@@ -18,5 +18,5 @@ RUN npm install \
 # cd to the dir where the startup script is
 WORKDIR /sensewebintegration
 
-## the settings.json file has been linked (via a volume from windows to linux) to the /meteorQRS/config directory. startNode.sh will execute node including the settings.json
+# the settings.json file has been linked (via a volume from windows to linux) to the /senseWebIntegration/config directory. startNode.sh will execute node including the settings.json
 CMD ["bash", "./startNode.sh"]

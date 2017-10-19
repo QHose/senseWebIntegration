@@ -5,8 +5,8 @@
     $BUNDLE_DIR = $BUILD_DIR+"\bundle"
     $VERSION = Get-Date -format yyyyMMdd-Hmm
     $DOCKER_TAG = "qhose/" + $BASE_APP_NAME + ":" + $VERSION
-
-
+    Write-Host "Creating a new QRSMeteor docker image, and publish it to docker hub: $DOCKER_TAG"
+    
     function Remove-PathToLongDirectory 
     {
         Param(
@@ -25,7 +25,6 @@
     
     echo "STEP delete old build files"
     Remove-PathToLongDirectory $BUILD_DIR
-    # Remove-Item $BUNDLE_DIR* -recurse -Force
 
     echo "STEP build new meteor bundle"
     meteor build --architecture=os.linux.x86_64 --allow-superuser --directory $BUILD_DIR
