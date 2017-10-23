@@ -4,8 +4,8 @@
 
 iframe {
     border: none;
-    width: 100%; 
-    height: calc(100vh - 150px);
+    width: 100%;
+    height: calc(100vh);
 }
 
 body {
@@ -37,7 +37,7 @@ body {
     padding: 5em 0em;
 }
 
-.ui.bulleted.link.list > .item a {
+.ui.bulleted.link.list>.item a {
     color: black;
 }
 
