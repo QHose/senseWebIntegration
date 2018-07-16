@@ -1,7 +1,4 @@
 //http://www.chartjs.org/docs/#getting-started-creating-a-chart
-Template.chartJS.onCreated(function() {
-    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
-})
 
 Template.chartJS.onRendered(function() {
     getTable();

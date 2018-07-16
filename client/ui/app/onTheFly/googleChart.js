@@ -1,7 +1,3 @@
-Template.google.onCreated(function() {
-    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
-})
-
 Template.google.onRendered(function() {
     getTable(this); //get the data for the chart, and provide the current blaze layout template, so it can store the table json there.
 })

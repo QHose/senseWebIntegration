@@ -1,5 +1,4 @@
 Template.onTheFlybarChart.onRendered(function() {
-    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
     createQlikBarChart();
     // createflexiblehCart();
     this.$('pre code').each(function(i, block) {

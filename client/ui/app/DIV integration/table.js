@@ -143,7 +143,6 @@ Template.tableUsingWidgets.onRendered(function() {
 })
 
 Template.tableUsingWidgets.onCreated(function() {
-    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
     getTable(this);
 })
 

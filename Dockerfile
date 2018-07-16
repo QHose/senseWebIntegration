@@ -1,4 +1,4 @@
-FROM node:4.8.3
+FROM node:8.9.3
 # Set one or more individual labels
 LABEL maintainer="Martijn Biesbroek"
 EXPOSE 3000
@@ -12,8 +12,7 @@ ADD . /sensewebintegration
 WORKDIR /sensewebintegration/programs/server
 
 # make sure all the NPM modules are downloaded again (via the settings in the package.json file in the server bundle\...\server folder)
-RUN npm install \
-  && npm cache clear
+RUN npm install
 
 # cd to the dir where the startup script is
 WORKDIR /sensewebintegration

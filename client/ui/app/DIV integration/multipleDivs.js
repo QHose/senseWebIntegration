@@ -35,8 +35,6 @@ Template.multipleDivs.events({
 })
 
 Template.multipleDivs.onRendered(function() {
-    checkAuthenticatedInQlik(encodeURIComponent(window.location.href));
-
     var app = setupQlikSenseDivs();
     setupPackery(this);
     Session.set('allowInteractions', true);
