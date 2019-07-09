@@ -12,7 +12,7 @@ Template.registerHelper('host', function() {
 
 //HUB
 Template.registerHelper('hubURL', function() {
-    return "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "hub";
+    return "https://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "hub";
 });
 
 //APP
@@ -58,7 +58,7 @@ Template.registerHelper('chartIframeURL', function() {
 
 //url of QRS Meteor Server
 Template.registerHelper('SaaSDemoURL', function() {
-    return "http://" + Meteor.settings.public.QRSHost + ":" + Meteor.settings.public.portMeteorQRS
+    return "https://" + Meteor.settings.public.QRSHost + ":" + Meteor.settings.public.portMeteorQRS
 });
 
 //url of the Qlik sense server
@@ -68,7 +68,7 @@ Template.registerHelper('QlikSenseDemoURL', function() {
 
 //url of the Qlik sense server for the js fiddles
 Template.registerHelper('QlikSenseDemoURLAnon', function() {
-    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/anon";
+    return "https://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/anon";
 });
 
 
@@ -78,10 +78,10 @@ Template.registerHelper('QSE', function() {
 });
 
 QlikSenseDemoURL = function QlikSenseDemoURL() {
-    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage;
+    return "https://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage;
 }
 
 //url of the Qlik sense server
 Template.registerHelper('cityBikeURL', function() {
-    return "http://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage + "/extensions/DemoMashup/home.html";
+    return "https://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage + "/extensions/DemoMashup/home.html";
 });
