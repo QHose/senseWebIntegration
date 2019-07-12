@@ -1,7 +1,7 @@
 <template name="hub">
     <div class="ui segment ">
         {{#unless QSE}}
-            <iframe src="{{fiddleHub}}"></iframe>
+            <iframe src="{{hubURL}}"></iframe>
             {{else}}
                 <div class="ui container">
                     <div class="ui icon negative message">
@@ -37,7 +37,7 @@
         <h4>IFrame Integration: hub</h4>
     </div>
     <div class="ui bulleted link list">
-        <!-- <div class="item"><a class="item" href="{{pathFor 'fiddleHub'}}">Play around with this API</a></div> -->
+        <div class="item"><a class="item" href="{{pathFor 'fiddleHub'}}">Play around with this API</a></div>
         {{> defaultTechnicalInformation}}
         <div class="item">This demo shows that you can integrate the Qlik Sense Hub using an IFrame. </div>
         <div class="item">With an HTML IFrame you can show a website inside another website.</div>
