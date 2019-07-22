@@ -5,7 +5,7 @@ Meteor.startup(function() {
 
 checkAuthenticatedInQlik = function checkAuthenticatedInQlik(sourceURL = encodeURIComponent(window.location.href)) {
 	require.config({
-        baseUrl: "http://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
+        baseUrl: "https://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "resources"
     });
 
     console.log('Basic HTML page created, next check if user is authenticated in Qlik Sense to ensure all charts render properly...');

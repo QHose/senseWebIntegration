@@ -1,8 +1,8 @@
 {
     "public": {
         "virtualProxyClientUsage": "meteor",
-        "host": "desktop-78nsnfm",
-        "portMeteorQRS": 3000,
+        "host": "localqrs",
+        "portMeteorQRS": 80,
         "port": 443,
         "isSecure": true,
         "multipleDivAppGuid": "707f3302-bc45-41a2-8ece-ff0451627a98"         
