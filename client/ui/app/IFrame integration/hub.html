@@ -1,7 +1,8 @@
 <template name="hub">
     <div class="ui segment ">
         {{#unless QSE}}
-            <iframe src="{{hubURL}}"></iframe>
+        {{>fiddleHub}}
+            <!-- <iframe src="{{hubURL}}"></iframe> -->
             {{else}}
                 <div class="ui container">
                     <div class="ui icon negative message">
@@ -28,7 +29,7 @@
     </div>
 </template>
 <template name="fiddleHub">
-    <iframe src="//jsfiddle.net/qhose/0nn9bvg6/embedded/html,css,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    <iframe src="//jsfiddle.net/qhose/0nn9bvg6/embedded/result,html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 </template>
 
 <template name="hubExplanationText">
