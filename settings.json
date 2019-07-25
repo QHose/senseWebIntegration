@@ -3,8 +3,8 @@
         "virtualProxyClientUsage": "meteor",
         "host": "desktop-78nsnfm",
         "portMeteorQRS": 3000,
-        "port": 443,
-        "isSecure": true,
-        "multipleDivAppGuid": "707f3302-bc45-41a2-8ece-ff0451627a98"         
+        "port": 81,
+        "isSecure": false,
+        "multipleDivAppGuid": "59e4baa8-e04b-4307-86bb-2a669780564c"         
     }
 }

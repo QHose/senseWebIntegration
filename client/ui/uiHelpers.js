@@ -5,6 +5,7 @@ qConfig = {
     isSecure: Meteor.settings.public.isSecure,
 };
 
+var prefix = Meteor.settings.public.isSecure? 'https://':'http://'
 
 Template.registerHelper('host', function() {
     return Meteor.settings.public.host;
@@ -12,7 +13,7 @@ Template.registerHelper('host', function() {
 
 //HUB
 Template.registerHelper('hubURL', function() {
-    return "https://" + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "hub";
+    return prefix + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "hub";
 });
 
 //APP
@@ -24,15 +25,15 @@ Template.registerHelper('appURL', function() {
         appGUID = Meteor.settings.public.multipleDivAppGuid
     }
 
-    if (Session.get('QAPOnly')) //show the link without menu
-    //http://presales1:81/single/?appid=78f7312a-85c1-4428-b93e-0f2c1ea04b64&sheet=PumJhh&opt=currsel
-url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single/?appid=" + appGUID + "&sheet=VUkssjz&opt=currsel";
+    if (Session.get('QAPOnly')) //show the link without menu    
+    {
+        url = prefix + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single/?appid=" + appGUID + "&sheet=VUkssjz&opt=currsel";
+    }
+    else {
+        url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "sense/app/" + appGUID + '/sheet/VUkssjz/state/analysis';
+    }
 
-else {
-    url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "sense/app/" + appGUID + '/sheet/VUkssjz/state/analysis';
-}
-
-    // console.log('the generated IFrame URL is: ' + url);
+    console.log('the generated IFrame URL is: ' + url);
     return url;
 });
 
@@ -49,7 +50,7 @@ Template.registerHelper('chartIframeURL', function() {
         appGUID = Meteor.settings.public.multipleDivAppGuid
     }
 
-    url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single?appid=" + Meteor.settings.public.multipleDivAppGuid + '&obj=LVqUFme';
+    url = prefix + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single?appid=" + Meteor.settings.public.multipleDivAppGuid + '&obj=LVqUFme';
 
     // console.log('the generated IFrame URL is: ' + url);
     return url;
@@ -58,7 +59,7 @@ Template.registerHelper('chartIframeURL', function() {
 
 //url of QRS Meteor Server
 Template.registerHelper('SaaSDemoURL', function() {
-    return "https://" + Meteor.settings.public.QRSHost + ":" + Meteor.settings.public.portMeteorQRS
+    return prefix + Meteor.settings.public.QRSHost + ":" + Meteor.settings.public.portMeteorQRS
 });
 
 //url of the Qlik sense server
@@ -68,7 +69,7 @@ Template.registerHelper('QlikSenseDemoURL', function() {
 
 //url of the Qlik sense server for the js fiddles
 Template.registerHelper('QlikSenseDemoURLAnon', function() {
-    return "https://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/anon";
+    return prefix + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/anon";
 });
 
 
@@ -78,10 +79,10 @@ Template.registerHelper('QSE', function() {
 });
 
 QlikSenseDemoURL = function QlikSenseDemoURL() {
-    return "https://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage;
+    return prefix + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage;
 }
 
 //url of the Qlik sense server
 Template.registerHelper('cityBikeURL', function() {
-    return "https://" + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage + "/extensions/DemoMashup/home.html";
+    return prefix + Meteor.settings.public.host + ":" + Meteor.settings.public.port + "/" + Meteor.settings.public.virtualProxyClientUsage + "/extensions/DemoMashup/home.html";
 });
