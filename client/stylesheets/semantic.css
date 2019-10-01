@@ -5,7 +5,7 @@
 iframe {
     border: none;
     width: 100%;
-    height: calc(100vh);
+    height: 90vh;
 }
 
 body {

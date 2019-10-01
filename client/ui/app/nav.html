@@ -41,14 +41,13 @@
                 <a class="ui item" href="{{pathFor 'hub'}}">The hub</a> {{#unless QSE}}
                 <a class="item" href="{{pathFor 'app'}}">Sheet - with menu</a> {{else}}
                 <a class="item" href="{{pathFor 'app'}}">Sheet - without menu</a> {{/unless}}
-                <!-- <a class="item" href="{{pathFor '1chart'}}">Single chart</a> -->
-                <!-- <a class="item" href="{{pathFor 'multipleCharts'}}">Multiple charts</a> -->
+                <a class="item" href="{{pathFor '1chart'}}">Single chart</a>
+                <a class="item" href="{{pathFor 'multipleCharts'}}">Multiple charts</a>
             </div>
         </div>
         <div class="item">
             <div class="header">DIV</div>
             <div class="menu">
-                <!-- <a class="item" href="{{pathFor 'multipleDivs'}}">Single chart</a> -->
                 <a class="item" href="{{pathFor 'multipleDivs'}}">Multiple charts</a>
                 <a class="item" target="_blank" href="https://webapps.qlik.com/marketing360/index.html#/dashboard">Example: Marketing 360</a>
             </div>
@@ -56,14 +55,9 @@
         <div class="item">
             <div class="header">Data only & On the fly</div>
             <div class="menu">
-                <!-- <a class="item" href="{{pathFor 'multipleDivs'}}">Single chart</a> -->
                 <a class="item" href="{{pathFor 'onTheFlybarChart'}}">Create Sense charts with javascript</a>
-                <!-- <a class="item" href="{{pathFor 'tableUsingWidgets'}}">Populate your own HTML table</a> -->
-                <!-- <a class="item" href="{{pathFor 'google'}}">Populate Google charts with Sense data</a> -->
-                <a class="item" href="{{pathFor 'chartJS'}}">Use your own chart library using data from our Engine</a>
-                <a class="item" href="{{pathFor 'mobileApp'}}">Mobile app using data from our Engine</a>
+                <a class="item" href="{{pathFor 'chartJS'}}">Use your own chart library using data from our Engine</a>                
                 <a class="item" href="https://youtu.be/fciqrjhF_bQ?t=9" target="_blank">Qlik Insight Bot</a>
-                <!-- <a class="item" href="{{SaaSDemoURL}}/slides" target="_blank">Slide generator</a> -->
             </div>
         </div>
         <div class="ui dropdown item">
@@ -71,13 +65,14 @@
             <div class="header">External examples</div>
             <div class="menu">
                 <a class="item" target="_blank" href="https://developer.qlik.com/garden">Qlik Branch - Developer community</a>
+                <a class="item" target="_blank" href="https://qlikbranch-slack-invite.herokuapp.com/">Qlik Branch - Slack channel</a>                
                 <a class="item" target="_blank" href="http://webapps.qlik.com/#/">Qlik demo - embedded demo apps</a>
-                <!-- <a class="item" target="_blank" href="http://playground.qlik.com/learn/noobs/intro">Qlik playground - learn our APIs</a> -->
+                <a class="item" href="{{pathFor 'mobileApp'}}">Mobile app using data from our Engine</a>
                 <a class="item" target="_blank" href="http://www.axisgroup.com/portfolio/">Examples from our partner Axis group</a>
             </div>
         </div>
         <div class="item">
-            <!-- <div class="header">QAP</div> -->
+            
             <div class="menu">
                 <div class="ui toggle checkbox template item">
                     <input type="checkbox" {{checked}} name="QAPSelector">

@@ -46,12 +46,6 @@ Template.multipleDivs.onRendered(function() {
 });
 
 function setupQlikSenseDivs() {
-    // var currentAppId = Session.get('currentAppId');
-    // if (!currentAppId) {
-    //     currentAppId = 'bd195c18-e1af-4e52-997f-774cc58eeb59' //set a default value for demo purposes
-    //     console.log('We try to make a mashup for this app guid: ' + currentAppId);
-    //     Session.set('currentAppId', currentAppId);
-    // }
     console.log('the settings to connect to Sense are: ', qConfig)
 
     require(["js/qlik"], function(qlik) {
@@ -71,8 +65,8 @@ function setupQlikSenseDivs() {
             app.getObject('QV03', 'PYcyD', options); //customers per country bar
             app.getObject('QV04', 'VzxsQBD', options); //customers scatter
             app.getObject('QV05', 'VaQjnV', options); //listbox
-            //app.getObject('QV06', 'LVqUFme', options); //map
-            // app.getObject('QV02', 'eBwDCmJ', options); //sales over time linechart
+            app.getObject('QV06', 'LVqUFme', options); //map
+            app.getObject('QV02', 'eBwDCmJ', options); //sales over time linechart
 
             getAppLayout(app, this); //this equals the multipleDivs template
         })
