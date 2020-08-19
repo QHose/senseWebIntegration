@@ -7,6 +7,22 @@ iframe {
     width: 100%;
     height: 90vh;
 }
+.ui.vertical.menu .menu .item {
+    color: black;
+}
+
+a:focus,
+a:hover{
+    border: 1px solid red;
+}
+
+.asideExplanation a {
+    text-decoration: none;
+    border-bottom: #EA215A 0.125em solid;
+  }
+.asideExplanation .item {
+    color: black !important;
+}
 
 body {
     background-color: #FFFFFF;

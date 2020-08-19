@@ -1,8 +1,8 @@
 <template name="hub">
     <div class="ui segment ">
         {{#unless QSE}}
-        {{>fiddleHub}}
-            <!-- <iframe src="{{hubURL}}"></iframe> -->
+        <!-- {{>fiddleHub}} -->
+            <iframe src="{{hubURL}}"></iframe>
             {{else}}
                 <div class="ui container">
                     <div class="ui icon negative message">
@@ -11,11 +11,11 @@
                             <div class="header">
                                 The hub is not part of the QAP license </div>
                             <ul class="list">
-                                <li>We can't show this "screen" anymore, since the hub not part of the QAP <a target="_blank" href="https://youtu.be/yLTqzftDa7s?t=475">(video).</a>
+                                <li><a target="_blank" href="https://youtu.be/yLTqzftDa7s?t=475">We can't show this "screen" anymore, since the hub not part of the QAP (video).</a>
                                 </li>
                                 <li>Note: Qlik Sense Enterprise contains <b>all functionality.</b>The QAP functionality is almost the same as Qlik Sense Enterprise. The only difference is that <b>the hub is not available</b> (everything else, like our APIs, DEV-HUB, QMC are still available). With the hub you normally create apps and sheet and charts. (The other option is that you can use the APIs)</li>
                                 <li>Because we removed our client facing front-end: the hub, you will have to create your own front-end. Therefore you can only use the QAP license if you already have a website, Qlik Sense mashup or mobile app in which you want to embed Qlik Sense.</li>
-                                <li>Because there is no hub, you will have to create your app on a separate Qlik Sense Enterprise environment and import it later on in the QAP (<a target="_blank" href="https://youtu.be/yLTqzftDa7s?t=363">video</a>). But off course you can always use our APIs to do anything you like. For example, if you embed a sheet, you will have to build your own sheet navigation buttons in your website or via a extension.</li>
+                                <li><a target="_blank" href="https://youtu.be/yLTqzftDa7s?t=363">Because there is no hub, you will have to create your app on a separate Qlik Sense Enterprise environment and import it later on in the QAP (video)</a>). But off course you can always use our APIs to do anything you like. For example, if you embed a sheet, you will have to build your own sheet navigation buttons in your website or via a extension.</li>
                             </ul>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
         <h4>IFrame Integration: hub</h4>
     </div>
     <div class="ui bulleted link list">
-        <div class="item"><a class="item" href="{{pathFor 'fiddleHub'}}">Play around with this API</a></div>
+        <!-- <div class="item"><a class="item" href="{{pathFor 'hubURL'}}">Play around with this API</a></div> -->
         {{> defaultTechnicalInformation}}
         <div class="item">This demo shows that you can integrate the Qlik Sense Hub using an IFrame. </div>
         <div class="item">With an HTML IFrame you can show a website inside another website.</div>
