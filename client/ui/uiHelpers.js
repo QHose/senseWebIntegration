@@ -27,10 +27,10 @@ Template.registerHelper('appURL', function() {
 
     if (Session.get('QAPOnly')) //show the link without menu    
     {
-        url = prefix + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single/?appid=" + appGUID + "&sheet=VUkssjz&opt=currsel";
+        url = prefix + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single/?appid=" + appGUID + "&sheet=f4d81a06-1a01-4354-8566-e7df5577a4db&opt=currsel";
     }
     else {
-        url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "sense/app/" + appGUID + '/sheet/VUkssjz/state/analysis';
+        url = (qConfig.isSecure ? "https://" : "http://") + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "sense/app/" + appGUID + '/sheet/f4d81a06-1a01-4354-8566-e7df5577a4db/state/analysis';
     }
 
     console.log('the generated IFrame URL is: ' + url);
@@ -50,7 +50,7 @@ Template.registerHelper('chartIframeURL', function() {
         appGUID = Meteor.settings.public.multipleDivAppGuid
     }
 
-    url = prefix + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single?appid=" + Meteor.settings.public.multipleDivAppGuid + '&obj=LVqUFme';
+    url = prefix + qConfig.host + (qConfig.port ? ":" + qConfig.port : "") + qConfig.prefix + "single?appid=" + Meteor.settings.public.multipleDivAppGuid + '&obj=pvFsfn';
 
     // console.log('the generated IFrame URL is: ' + url);
     return url;
