@@ -22,7 +22,7 @@ Meteor.startup(function () {
   );
 
   // https://guide.meteor.com/security#csp.
-  // BrowserPolicy.content.disallowInlineScripts();
+  BrowserPolicy.content.disallowInlineScripts();
 
   WebApp.rawConnectHandlers.use((_, res, next) => {
     // Cache control
