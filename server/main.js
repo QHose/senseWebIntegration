@@ -4,22 +4,22 @@ import helmet from "helmet";
 
 Meteor.startup(function () {
   WebApp.addHtmlAttributeHook(() => ({ lang: 'en' }));
-  WebApp.connectHandlers.use(helmet.frameguard());  // defaults to sameorigin
-  WebApp.connectHandlers.use(
-    helmet.contentSecurityPolicy({
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "'unsafe-inline'"],
-        connectSrc: ['*'],
-        imgSrc: ["'self'", 'https://*.qlik.com', 'https://user-images.githubusercontent.com', 'https://lucidchart.com', 'https://github.com'],
-        styleSrc: ["'self'", "'unsafe-inline'", 'https://*.qlik.com', 'https://fonts.googleapis.com/css'],
-        frameSrc: ['https://integrationdemo1.qlik.com', 'https://integrationdemo2.qlik.com', 'https://integrationdemo3.qlik.com', 'https://*.qlik.com']
-      }
-    }),
+  // WebApp.connectHandlers.use(helmet.frameguard());  // defaults to sameorigin
+  // WebApp.connectHandlers.use(
+  //   helmet.contentSecurityPolicy({
+  //     directives: {
+  //       defaultSrc: ["'self'"],
+  //       scriptSrc: ["'self'", "'unsafe-inline'"],
+  //       connectSrc: ['*'],
+  //       imgSrc: ["'self'", 'https://*.qlik.com', 'https://user-images.githubusercontent.com', 'https://lucidchart.com', 'https://github.com'],
+  //       styleSrc: ["'self'", "'unsafe-inline'", 'https://*.qlik.com', 'https://fonts.googleapis.com/css'],
+  //       frameSrc: ['https://integrationdemo1.qlik.com', 'https://integrationdemo2.qlik.com', 'https://integrationdemo3.qlik.com', 'https://*.qlik.com']
+  //     }
+  //   }),
 
-    // crossOriginResourcePolicy: { policy: "cross-origin" },
-    // crossOriginEmbedderPolicy: false,
-  );
+  //   // crossOriginResourcePolicy: { policy: "cross-origin" },
+  //   // crossOriginEmbedderPolicy: false,
+  // );
 
   //https://guide.meteor.com/security#csp
   // BrowserPolicy.content.disallowInlineScripts();

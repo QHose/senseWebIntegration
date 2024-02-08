@@ -5,6 +5,15 @@
     "start": "METEOR_SETTINGS=$(cat settings.json) node main.js"
   },
   "dependencies": {
-    "@babel/runtime": "^7.22.15"
+    "@babel/runtime": "^7.22.15",
+    "desandro-matches-selector": "^2.0.2",
+    "ev-emitter": "^2.1.2",
+    "fizzy-ui-utils": "^3.0.0",
+    "get-size": "^3.0.0",
+    "helmet": "^7.1.0",
+    "jquery": "^3.7.1",
+    "outlayer": "^2.1.1",
+    "unidragger": "^3.0.1",
+    "unipointer": "^2.4.0"
   }
 }
