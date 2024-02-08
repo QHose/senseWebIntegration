@@ -9,7 +9,7 @@ Meteor.startup(function () {
     helmet.contentSecurityPolicy({
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "'unsafe-inline'"],
+        scriptSrc: ["'self'"], //scriptSrc: ["'self'", "'unsafe-inline'"],
         connectSrc: ['*'],
         imgSrc: ["'self'", 'https://*.qlik.com', 'https://user-images.githubusercontent.com', 'https://lucidchart.com', 'https://github.com'],
         styleSrc: ["'self'", "'unsafe-inline'", 'https://*.qlik.com', 'https://fonts.googleapis.com/css'],
@@ -22,7 +22,9 @@ Meteor.startup(function () {
   );
 
   // https://guide.meteor.com/security#csp.
+  //https://docs.meteor.com/packages/browser-policy
   BrowserPolicy.content.disallowInlineScripts();
+  BrowserPolicy.framing.disallow();
 
   WebApp.rawConnectHandlers.use((_, res, next) => {
     // Cache control
